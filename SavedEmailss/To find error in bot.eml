@@ -1,0 +1,88 @@
+Delivered-To: manishadas1710@gmail.com
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+	by mx.google.com with SMTPS id l8sor781013uao
+	.69.2020.08.26.14.11.33        for
+	<manishadas1710@gmail.com>        (Google Transport Security); Wed, 26
+	Aug 2020 14:11:33 -0700 (PDT)
+X-Received: by 2002:ab0:3b42:: with SMTP id o2mr10050389uaw.139.1598476292722;
+ Wed, 26 Aug 2020 14:11:32 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1598476293; cv=none; d=google.com;
+	s=arc-20160816;
+	b=Tic11rBSWlecmwI2iz1jEnjOakymSzms1DAB6Gq2fyywe4gz+oHkM49qrkAbIChwV1K4tRA87tH
+	qG7R+24Cbe5ZUVhcoJM/5ivVDdvRSuMifRHi6F9+gPmyf7c0B2cdH1hKDSY87WSBOmCg80k0iHFaY
+	GcILCrifetLo6tcOOFWSNDNaj3S+412haLbCGJ1A3UMsUnOsVxYH2WCy2nRIx2v1UjiKDcJaDes6m
+	+tRmdzAo39GDWYVa5zS2ntFsQG4BM6oAcTEmVz/auFcOO65YbpjL4n5gksveiUHTfyC9EMZ9KkJ1e
+	fZsXgk3u8Oz6Tqzqgd+OQRd7Lop2LUZgjwTg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+	s=arc-20160816;
+	h=to:subject:message-id:date:from:mime-version:dkim-signature;
+	bh=Y1y0uhfhLVz+WCKJgUnKi1FHzXyaq43cOAhv3NA4e6Y=;
+	b=zSIalAmzcDh7BieZK5o76pUz7IJ4+2/q1eL4jKeXiw75HgS/HToft4g55d5wl/QVTPxUcSIpgf+
+	6/+MJTZg23ce4UdAmacxOg05La1euUxNT9VSLJOs3cZCMsWUCyNeQ0QnDY+k5cFm7jnAAmI0vZHMs
+	fCznRRHGUJQx3zhdmCzbzrU4y39KT5G8EWggXb74b89n/p/QrCutsPn7VF5yDVLkTpF5k6SGxU60j
+	1P172s6ltDpI+sJ9LgMr6l8LSOGSk8TYEOFZxoqbBmGjYyYf+JHK1beD+ccDUOA7xf0JfWgP/d3E9
+	e/jm8DKkPuxi/92cpffV3QolFuRM0U3LhS3Q==
+ARC-Authentication-Results: i=1; mx.google.com; dkim=pass
+	header.i=@nitjsr-ac-in.20150623.gappssmtp.com header.s=20150623
+	header.b=HpWpjFl1; spf=neutral
+	(google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of 2017ugcs010@nitjsr.ac.in)
+	smtp.mailfrom=2017ugcs010@nitjsr.ac.in
+Return-Path: <2017ugcs010@nitjsr.ac.in>
+Received-SPF: neutral (google.com: 209.85.220.41 is neither permitted nor
+ denied by best guess record for domain of 2017ugcs010@nitjsr.ac.in)
+ client-ip=209.85.220.41;
+Authentication-Results: mx.google.com; dkim=pass
+	header.i=@nitjsr-ac-in.20150623.gappssmtp.com header.s=20150623
+	header.b=HpWpjFl1; spf=neutral
+	(google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of 2017ugcs010@nitjsr.ac.in)
+	smtp.mailfrom=2017ugcs010@nitjsr.ac.in
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=nitjsr-ac-in.20150623.gappssmtp.com; s=20150623;
+	h=mime-version:from:date:message-id:subject:to;
+	bh=Y1y0uhfhLVz+WCKJgUnKi1FHzXyaq43cOAhv3NA4e6Y=;
+	b=HpWpjFl1r+8vD3Hyi8nEg0tkjfBPt1KYg7Qp6keWJyBC/Y+B92ba22PBvAHSepIZLhmpU776bhj
+	PPi9l4bNA0+/M7e+FwGd1ZioMXeyIJjTq0sqS7MQ8W4uN9zhE7ArGp26hXS8PeTR8gR7YXVD8izOL
+	bMmN0AGjBkqoIblwaOs4M8zUJ/PYWNv5hb0siodT7baiBZDogQc/oNeP8PJmTi2uJmwHdoC7F9QwY
+	SEijtGXgBlLNJyi5Nfo/aG6uA7x547LXHALQaag/51HEazFM4TbCOHbv1XEBSu6lhn+q8GVRxccJZ
+	XV47L1/Vj/56dw4JSzH4dvy65rjZeTBqfmDQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;       
+ d=1e100.net; s=20161025;       
+ h=x-gm-message-state:mime-version:from:date:message-id:subject:to;       
+ bh=Y1y0uhfhLVz+WCKJgUnKi1FHzXyaq43cOAhv3NA4e6Y=;       
+ b=gzzs4KdDBOapXLo5Vdvci9XwfBbHDkGR6dlBrMBtcsl8chA1r8PIi6uRRiR1b2xpV4        
+ x9gQAYjw/rjUiQxh6oRhC9stgYwbq586TANNEIpZH5ar8iA/cm1MimamX+Te0LB00+b9        
+ 0Q1yXYwVfbuPi63U5fsifgzZvbS/tO/zsEcLQDoQUc2/dlIoeisvye7KisOThnZ++8EP        
+ EplDa7vGLxvEWbBp7IE63hsKaXTrKJmcuJTcyAasb0EUInY5ULG1zk/hdiiDNoQU9s5W        
+ JPSmO04eDTz6D1T+HInWizvSsYFTmDaMYxqNweRDR3NsJEZENlRB7RV7zB9W2qqHZwmD        
+ lCaQ==
+X-Gm-Message-State: AOAM533sgLN7+PTUyjkhXl3DxZwBWz5EUEpRzyFovOn3RoEdLX1segI1
+	4vncgfJHYexfkCIhmS3X+RlD2brnaZwG4jOe3eZiGJM+KhU=
+X-Google-Smtp-Source: =?us-ascii?q?ABdhPJzCnxJ3AqM8CbQYG=2FQGR=2FGFfjBzGReBCf4qUpEG=2FmGq9zG7iXyXG7tlc?=
+ =?us-ascii?q?wh=2FgC6ZYeU43X0PpS1Rln0jFPrSbms=3D?=
+MIME-Version: 1.0
+From: Manisha Das <2017ugcs010@nitjsr.ac.in>
+Date: Thu, 27 Aug 2020 02:41:18 +0530
+Message-ID: <CAN=5i_3dr_3+xbMMz_=0CZhvm+oR5njGLYs-cvAE5ZJF96TSOg@mail.gmail.com>
+Subject: To find error: in bot
+To: manishadas1710@gmail.com
+Uid: 13195
+Folder: INBOX
+PlainText: Test msg.
+HtmlBody: <div dir="ltr">Test msg.</div>
+Content-Type: multipart/alternative; boundary="=-zg9zpLLaI+oaJRMbARx5Kg=="
+
+--=-zg9zpLLaI+oaJRMbARx5Kg==
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: base64
+Content-Id: <18e20412-5562-46b1-a3bc-6858348572a2>
+
+VGVzdCBtc2cuDQo=
+
+--=-zg9zpLLaI+oaJRMbARx5Kg==
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: base64
+Content-Id: <d919d2d8-52d8-40ed-8128-8e6027ca388a>
+
+PGRpdiBkaXI9Imx0ciI+VGVzdCBtc2cuPC9kaXY+DQo=
+
+--=-zg9zpLLaI+oaJRMbARx5Kg==--

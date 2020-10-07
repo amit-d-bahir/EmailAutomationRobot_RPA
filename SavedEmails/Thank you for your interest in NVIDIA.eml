@@ -1,0 +1,285 @@
+Delivered-To: amitbahir2323@gmail.com
+Received: from wd5-az-prod-mail-nat.myworkday.com (wd5-az-prod-mail-nat.myworkday.com. [209.177.169.161])
+	by mx.google.com with ESMTPS id bk13si415722pjb
+	.153.2020.10.06.11.56.50        for
+	<amitbahir2323@gmail.com>        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+	Tue, 06 Oct 2020 11:56:50 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJyIe/WpLtQwUQmmDJI+uk7bdTeeMBkI9v23aT4rrMmnWgTqELuEoMmsFwQTP1Jpuxi5FSK9
+X-Received: by 2002:a62:7a0a:0:b029:152:192d:9231 with SMTP id
+ v10-20020a627a0a0000b0290152192d9231mr5957872pfc.61.1602010610750;       
+ Tue, 06 Oct 2020 11:56:50 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1602010610; cv=none; d=google.com;
+	s=arc-20160816;
+	b=XuuqQzp1sNBd0NHuaxxFfGyV+MGg0ScdrOtDbsytTe+Z01yuSn2sfAanlnt3rINqNhppgOUP/Mq
+	jxEBoJcqbjvTmCfd+B1AV4TlZA7N+Lb6wedLpw9mIFMSGZc60ZBbFU9JJvZkiOFRPRkhtxmf24fVU
+	QN/s+ANg8Vf5HKByhgtuX/8rxt3s/r4+SbEzHc21svCYZ5l3+R+Q5nS2zeQk1GNVJ7BJWHTqUKKye
+	92rMSgGVo1IbcOL+NinBLTS5z98m5pDkjzumD/pdXaYeYoU00WcW7JV3J1OMtt+10zPYoUsRpNaqJ
+	b/saipv1xaiLuG7xeCuIejqOb5md59dJMLhw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+	s=arc-20160816;
+	h=date:content-transfer-encoding:mime-version:subject:message-id:to:reply-to:
+	from:dkim-signature:dkim-filter;
+	bh=l/7F+NgFitM640LekftWwVhWgqy5WKT1DYi9/gCQWrc=;
+	b=ub0RWosek33z0TJtV2i+FRUm1+ReZN5Ee8tSiyPgYFSCxJV39B/XPcPUI5ubKu5NHNijRU2zJPq
+	HRRr3kNIadOpIPfWuuctnZomY/SUOisnQ9ZZ8/IZViUbzt5LKcM9+Nyy/ykfS2cleKZ2kpGRdn0aW
+	qoY9f35WeD+1j4LbRLR590qkPsG01b/pD8t25iw+TKrzxNC18NYbgd0dh6Z8EW5jsiJkDBi6T9zI7
+	4vEL+yfOFDJjKnHY2isMN7omFiJzsXPKUywAEhMbKTVUMfBDyhqf4LbfYJIZzcCMUZGRp8z4/HYK8
+	xlM2IY0GZPNjoKKU+aKxRRPGXzRmNlI4Mx4A==
+ARC-Authentication-Results: i=1; mx.google.com;
+	dkim=pass header.i=@myworkday.com header.s=0s07jfp5 header.b=QoRFt8pR;
+	spf=pass
+	(google.com: domain of nvidia@myworkday.com designates 209.177.169.161 as permitted sender)
+	smtp.mailfrom=nvidia@myworkday.com;
+	dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=myworkday.com
+Return-Path: <nvidia@myworkday.com>
+Received-SPF: pass (google.com: domain of nvidia@myworkday.com designates
+ 209.177.169.161 as permitted sender) client-ip=209.177.169.161;
+Authentication-Results: mx.google.com;
+	dkim=pass header.i=@myworkday.com header.s=0s07jfp5 header.b=QoRFt8pR;
+	spf=pass
+	(google.com: domain of nvidia@myworkday.com designates 209.177.169.161 as permitted sender)
+	smtp.mailfrom=nvidia@myworkday.com;
+	dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=myworkday.com
+X-MSH: v 0.10.0
+DKIM-Filter: OpenDKIM Filter v2.11.0 wd5-az-prod-mail-nat.myworkday.com
+ 3FE592C68A0A
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=myworkday.com;
+	s=0s07jfp5; t=1602010610;
+	bh=l/7F+NgFitM640LekftWwVhWgqy5WKT1DYi9/gCQWrc=;
+	h=From:Reply-To:To:Subject:Date:From;
+	b=QoRFt8pR4fDc2lRHJJjU7+CIIEH78S2t2Ts9OPUvIXOVleedBqEFrgr+9syP+UEQaj4Y9s58nJB
+	NU8wFo68ZCoo4NwfTaj6BUQhA74BGCsmaJYxxRe07MWYNRKrHQPiuimXJFz/1B8C3oHlQBuC4OfdN
+	Encimh4r5+1bquGuY5M=
+From: NVIDIA HR <nvidia@myworkday.com>
+Reply-To: donotreply@nvidia.com
+To: amitbahir2323@gmail.com
+Message-ID: <810683912.2343424.1602010610247.JavaMail.wday@s-4f5bjl2.sys.az1.cust.pdx.wd>
+Subject: Thank you for your interest in NVIDIA
+MIME-Version: 1.0
+Date: Tue,  6 Oct 2020 18:56:50 +0000 (UTC)
+Uid: 13597
+Folder: INBOX
+HtmlBody: <!doctype html><html
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:v="urn:schemas-microsoft-com:vml"><head><META http-equiv="Content-Type"
+ content="text/html; charset=UTF-8"><title></title><style
+ type="text/css">body, table {  font-family: Verdana, Arial, sans-serif; 
+ font-size: 12px; width:100%;}div {  padding-top:5px;  padding-bottom:5px;}img
+ {  border:0px;}</style></head><body><div><table style="height: 110px;
+ background-color: #ffffff; margin-left: auto; margin-right: auto;"
+ width="100%"> <tbody> <tr> <td style="width: 251px; text-align: center;
+ vertical-align: middle;"><img
+ =?utf-8?q?src=3D=22https=3A=2F=2Fgallery=2Emailchimp=2Ecom=2F8cbfeee87441dc4c6014fa8a8=2F?=
+ =?utf-8?q?images=2Fdde025f2-c65f-46ac-a225-795bfd927832=2Epng=22?=
+ width="250" /></td> </tr> </tbody> </table> <br></div><div>Dear Amit Bahir
+ -<br><br>We want to confirm that your application for the AI/Machine Learning
+ Intern, Metropolis - Summer 2021 role has been received.<br><br>We are always
+ looking for amazing people to join us in doing their =?utf-8?b?bGlmZeKAmXM=?=
+ work at NVIDIA, and =?utf-8?b?d2XigJlyZQ==?= grateful that you took the time
+ to apply for this opportunity.<br><br>We will review your application against
+ the open position, and contact you to arrange an interview if the role is a
+ good match for your qualifications.<br><br>Thanks again for your interest in
+ NVIDIA.<br><br>Best Regards,<br><br>The NVIDIA Recruiting
+ Team<br><br></div><div><div style="text-align: center;"><strong>Keep Current
+ on NVIDIA</strong></div><br><div style="text-align: center;">Subscribe to
+ the<a href="https://blogs.nvidia.com" target="_blank"
+ rel="noopener">&nbsp;NVIDIA blog</a>, follow us on<a
+ href="https://www.facebook.com/NVIDIA" target="_blank"
+ rel="noopener">&nbsp;Facebook</a>,<a href="https://twitter.com/nvidia"
+ target="_blank" rel="noopener">&nbsp;Twitter</a>,<a
+ href="https://www.linkedin.com/company/nvidia" target="_blank"
+ rel="noopener">&nbsp;LinkedIn</a>&nbsp;and<a
+ href="https://www.instagram.com/nvidia" target="_blank"
+ rel="noopener">&nbsp;Instagram</a>, and view NVIDIA videos on<a
+ href="https://www.youtube.com/nvidia" target="_blank"
+ rel="noopener">&nbsp;YouTube</a>&nbsp;and images on<a
+ href="https://www.flickr.com/photos/nvidia" target="_blank"
+ rel="noopener">&nbsp;Flickr</a>.<br><div><br><table style="height: 15px;
+ max-width: 700px" width="80%", align="center"><br><tbody><br><tr><br><td
+ style="text-align: center; vertical-align: top; width: 1px;"></td><br><td
+ style="text-align: center; vertical-align: top;"><a
+ href="https://blogs.nvidia.com"><img class="" style="display: block;
+ margin-left: auto; margin-right: auto;"
+ =?utf-8?q?src=3D=22https=3A=2F=2Fcdn-images=2Emailchimp=2Ecom=2Ficons=2Fsocial-block-v2=2Fc?=
+ =?utf-8?q?olor-link-48=2Epng=22?= width="24" height="24" /></td><br><td
+ style="text-align: center; vertical-align: top;"><a
+ href="https://www.facebook.com/NVIDIA"><img class="" style="display: block;
+ margin-left: auto; margin-right: auto;"
+ =?utf-8?q?src=3D=22https=3A=2F=2Fcdn-images=2Emailchimp=2Ecom=2Ficons=2Fsocial-block-v2=2Fc?=
+ =?utf-8?q?olor-facebook-48=2Epng=22?= width="24" height="24"
+ /></a></td><br><td style="text-align: center; vertical-align: top;"><a
+ href="https://twitter.com/nvidia"><img class="" style="display: block;
+ margin-left: auto; margin-right: auto;"
+ =?utf-8?q?src=3D=22https=3A=2F=2Fcdn-images=2Emailchimp=2Ecom=2Ficons=2Fsocial-block-v2=2Fc?=
+ =?utf-8?q?olor-twitter-48=2Epng=22?= width="24" height="24"
+ /></a></td><br><td style="text-align: center; vertical-align: top;"><a
+ href="https://www.linkedin.com/company/nvidia"><img class="" style="display:
+ block; margin-left: auto; margin-right: auto;"
+ =?utf-8?q?src=3D=22https=3A=2F=2Fcdn-images=2Emailchimp=2Ecom=2Ficons=2Fsocial-block-v2=2Fc?=
+ =?utf-8?q?olor-linkedin-48=2Epng=22?= width="24" height="24"
+ /></a></td><br><td style="text-align: center; vertical-align: top;"><a
+ href="https://www.instagram.com/nvidia"><img class="" style="display: block;
+ margin-left: auto; margin-right: auto;"
+ =?utf-8?q?src=3D=22https=3A=2F=2Fcdn-images=2Emailchimp=2Ecom=2Ficons=2Fsocial-block-v2=2Fc?=
+ =?utf-8?q?olor-instagram-48=2Epng=22?= width="24" height="24"
+ /></a></td><br><td style="text-align: center; vertical-align: top;"><a
+ href="https://www.youtube.com/nvidia"><img class="" style="display: block;
+ margin-left: auto; margin-right: auto;"
+ =?utf-8?q?src=3D=22https=3A=2F=2Fcdn-images=2Emailchimp=2Ecom=2Ficons=2Fsocial-block-v2=2Fc?=
+ =?utf-8?q?olor-youtube-48=2Epng=22?= width="24" height="24"
+ /></a></td><br><td style="text-align: center; vertical-align: top;"><a
+ href="https://www.flickr.com/photos/nvidia"><img class="" style="display:
+ block; margin-left: auto; margin-right: auto;"
+ =?utf-8?q?src=3D=22https=3A=2F=2Fcdn-images=2Emailchimp=2Ecom=2Ficons=2Fsocial-block-v2=2Fc?=
+ =?utf-8?q?olor-flickr-48=2Epng=22?= width="24" height="24" /></a></td><br><td
+ style="text-align: center; vertical-align: top; width:
+ 1px"></td><br></tr><br></tbody><br></table><br></div></div>	     <div>
+	    <!--[if mso | IE]>	      <table border="0" cellpadding="0"
+ cellspacing="0" width="600" align="center" style="width:600px;">	        <tr>
+	          <td
+ style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+	      <![endif]-->	    <div style="margin:0 auto;max-width:600px;">
+	      <table cellpadding="0" cellspacing="0"
+ style="font-size:0px;width:100%;" align="center" border="0">	        <tbody>
+	          <tr>	            <td
+ style="text-align:center;vertical-align:top;font-size:0px;padding:20px
+ 0px;"></td>	          </tr>	        </tbody>	      </table>	    </div>
+	    <!--[if mso | IE]>	      </td></tr></table>	      <![endif]-->
+	    <!--[if mso | IE]>	      <table border="0" cellpadding="0"
+ cellspacing="0" width="600" align="center" style="width:600px;">	        <tr>
+	          <td
+ style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+	      <![endif]-->	    <div style="margin:0 auto;max-width:600px;">
+	      <table cellpadding="0" cellspacing="0"
+ style="font-size:0px;width:100%;" align="center" border="0">	        <tbody>
+	          <tr>	            <td
+ style="text-align:center;vertical-align:top;font-size:0px;padding:20px
+ 0px;"></td>	          </tr>	        </tbody>	      </table>	    </div>
+	    <!--[if mso | IE]>	      </td></tr></table>	      <![endif]-->     
+ <!--[if mso | IE]>	      <table border="0" cellpadding="0" cellspacing="0"
+ width="600" align="center" style="width:600px;">	        <tr>	          <td
+ style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+	      <![endif]--><div xmlns:wd="urn:com.workday/bsvc" style="margin:0
+ auto;max-width:600px;"><table border="0" align="center"
+ style="font-size:0px;width:100%;" cellspacing="0"
+ cellpadding="0"><tbody><tr><td
+ style="text-align:center;vertical-align:top;font-size:0px;padding:20px
+ 0px;"><!--[if mso | IE]>	 <table border="0" cellpadding="0"
+ cellspacing="0"><tr><td style="vertical-align:top;width:600px;">
+	      <![endif]--><div
+ =?utf-8?q?style=3D=22vertical-align=3Atop=3Bdisplay=3Ainline-block=3Bfont-size=3A13px?=
+ =?utf-8?q?=3Btext-align=3Aleft=3Bwidth=3A100%=3B=22?=
+ class="mj-column-per-100" aria-labelledby="mj-column-per-100"><table
+ border="0" width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td
+ align="center"
+ style="word-break:break-word;font-size:0px;padding-bottom:0px;"><div
+ =?utf-8?q?style=3D=22cursor=3Aauto=3Bcolor=3A#98a0a6=3Bfont-family=3ARoboto=3Bfont-size?=
+ =?utf-8?q?=3A12px=3Bfont-weight=3A400=3Bline-height=3A22px=3B=22=3EThis?=
+ email was intended for
+ amitbahir2323@gmail.com</div></td></tr></tbody></table></div><!--[if mso |
+ IE]>	      </td></tr></table>
+	      <![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+	      </td></tr></table>	      <![endif]--></body></html>
+Content-Type: text/html; charset=utf-8
+
+<!doctype html><html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<style type="text/css">body, table {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px; width:100%;
+}
+div {
+  padding-top:5px;
+  padding-bottom:5px;
+}
+img 
+{
+  border:0px;
+}</style>
+</head>
+<body><div>
+<table style="height: 110px; background-color: #ffffff; margin-left: auto; margin-right: auto;" width="100%"> <tbody> <tr> <td style="width: 251px; text-align: center; vertical-align: middle;"><img src="https://gallery.mailchimp.com/8cbfeee87441dc4c6014fa8a8/images/dde025f2-c65f-46ac-a225-795bfd927832.png" width="250" /></td> </tr> </tbody> </table> <br>
+</div><div>
+Dear Amit Bahir -<br>
+<br>We want to confirm that your application for the AI/Machine Learning Intern, Metropolis - Summer 2021 role has been received.<br>
+<br>We are always looking for amazing people to join us in doing their life’s work at NVIDIA, and we’re grateful that you took the time to apply for this opportunity.<br>
+<br>We will review your application against the open position, and contact you to arrange an interview if the role is a good match for your qualifications.<br>
+<br>Thanks again for your interest in NVIDIA.<br>
+<br>Best Regards,<br>
+<br>The NVIDIA Recruiting Team<br><br>
+</div><div>
+<div style="text-align: center;"><strong>Keep Current on NVIDIA</strong></div><br><div style="text-align: center;">Subscribe to the<a href="https://blogs.nvidia.com" target="_blank" rel="noopener">&nbsp;NVIDIA blog</a>, follow us on<a href="https://www.facebook.com/NVIDIA" target="_blank" rel="noopener">&nbsp;Facebook</a>,<a href="https://twitter.com/nvidia" target="_blank" rel="noopener">&nbsp;Twitter</a>,<a href="https://www.linkedin.com/company/nvidia" target="_blank" rel="noopener">&nbsp;LinkedIn</a>&nbsp;and<a href="https://www.instagram.com/nvidia" target="_blank" rel="noopener">&nbsp;Instagram</a>, and view NVIDIA videos on<a href="https://www.youtube.com/nvidia" target="_blank" rel="noopener">&nbsp;YouTube</a>&nbsp;and images on<a href="https://www.flickr.com/photos/nvidia" target="_blank" rel="noopener">&nbsp;Flickr</a>.<br><div><br><table style="height: 15px; max-width: 700px" width="80%", align="center"><br><tbody><br><tr><br><td style="text-align: center; vertical-align: top; width: 1px;"></td><br><td style="text-align: center; vertical-align: top;"><a href="https://blogs.nvidia.com"><img class="" style="display: block; margin-left: auto; margin-right: auto;" src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-link-48.png" width="24" height="24" /></td><br><td style="text-align: center; vertical-align: top;"><a href="https://www.facebook.com/NVIDIA"><img class="" style="display: block; margin-left: auto; margin-right: auto;" src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-facebook-48.png" width="24" height="24" /></a></td><br><td style="text-align: center; vertical-align: top;"><a href="https://twitter.com/nvidia"><img class="" style="display: block; margin-left: auto; margin-right: auto;" src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png" width="24" height="24" /></a></td><br><td style="text-align: center; vertical-align: top;"><a href="https://www.linkedin.com/company/nvidia"><img class="" style="display: block; margin-left: auto; margin-right: auto;" src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-linkedin-48.png" width="24" height="24" /></a></td><br><td style="text-align: center; vertical-align: top;"><a href="https://www.instagram.com/nvidia"><img class="" style="display: block; margin-left: auto; margin-right: auto;" src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-instagram-48.png" width="24" height="24" /></a></td><br><td style="text-align: center; vertical-align: top;"><a href="https://www.youtube.com/nvidia"><img class="" style="display: block; margin-left: auto; margin-right: auto;" src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-youtube-48.png" width="24" height="24" /></a></td><br><td style="text-align: center; vertical-align: top;"><a href="https://www.flickr.com/photos/nvidia"><img class="" style="display: block; margin-left: auto; margin-right: auto;" src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-flickr-48.png" width="24" height="24" /></a></td><br><td style="text-align: center; vertical-align: top; width: 1px"></td><br></tr><br></tbody><br></table><br></div>
+</div>
+	     <div>
+	    <!--[if mso | IE]>
+	      <table border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:600px;">
+	        <tr>
+	          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+	      <![endif]-->
+	    <div style="margin:0 auto;max-width:600px;">
+	      <table cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0">
+	        <tbody>
+	          <tr>
+	            <td style="text-align:center;vertical-align:top;font-size:0px;padding:20px 0px;"></td>
+	          </tr>
+	        </tbody>
+	      </table>
+	    </div>
+	    <!--[if mso | IE]>
+	      </td></tr></table>
+	      <![endif]-->
+	    <!--[if mso | IE]>
+	      <table border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:600px;">
+	        <tr>
+	          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+	      <![endif]-->
+	    <div style="margin:0 auto;max-width:600px;">
+	      <table cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0">
+	        <tbody>
+	          <tr>
+	            <td style="text-align:center;vertical-align:top;font-size:0px;padding:20px 0px;"></td>
+	          </tr>
+	        </tbody>
+	      </table>
+	    </div>
+	    <!--[if mso | IE]>
+	      </td></tr></table>
+	      <![endif]-->
+      <!--[if mso | IE]>
+	      <table border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:600px;">
+	        <tr>
+	          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+	      <![endif]--><div xmlns:wd="urn:com.workday/bsvc" style="margin:0 auto;max-width:600px;">
+<table border="0" align="center" style="font-size:0px;width:100%;" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="text-align:center;vertical-align:top;font-size:0px;padding:20px 0px;">
+<!--[if mso | IE]>
+	 <table border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:600px;">
+	      <![endif]-->
+<div style="vertical-align:top;display:inline-block;font-size:13px;text-align:left;width:100%;" class="mj-column-per-100" aria-labelledby="mj-column-per-100">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td align="center" style="word-break:break-word;font-size:0px;padding-bottom:0px;">
+<div style="cursor:auto;color:#98a0a6;font-family:Roboto;font-size:12px;font-weight:400;line-height:22px;">This email was intended for amitbahir2323@gmail.com</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]>
+	      </td></tr></table>
+	      <![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]>
+	      </td></tr></table>
+	      <![endif]-->
+</body>
+</html>

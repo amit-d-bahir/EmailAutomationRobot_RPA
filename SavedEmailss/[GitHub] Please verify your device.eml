@@ -1,0 +1,86 @@
+Delivered-To: manishadas1710@gmail.com
+Received: from github-lowworker-6349a71.ac4-iad.github.net (github-lowworker-6349a71.ac4-iad.github.net [10.52.18.20])
+	by smtp.github.com (Postfix) with ESMTP id 12D1990001C
+	for <manishadas1710@gmail.com>; Mon, 24 Aug 2020 14:14:57 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxGyY+J8ec7K+ytJyXvBWFNvfjmLKZg9U4roaRVJbwpuwQsPOCxvifB8EdFl0v/GbtByt1q
+X-Received: by 2002:a0c:f74a:: with SMTP id e10mr6836496qvo.128.1598303697400;       
+ Mon, 24 Aug 2020 14:14:57 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1598303697; cv=none; d=google.com;
+	s=arc-20160816;
+	b=L4djeq3vypFd9iNtxJDv6x5pK5t42kLcT+9P2gCh9V8/zWy7o8TBm+2+3WxIvlbBaGvvo5kvl8E
+	EcHNGKvUMZOVsldUvFBHz0dJw7A045f5Vt5gJp1Czu9Ri5nPS9QMj2E9++NOZusCzC+y1G9TnMQcJ
+	K8PesTjFf0U3Cjlk1WLqKfvEf1i7q4p8+GzeTKZuiFPFBWbqy1vIMm5A8SPmNP54M4EVrI56g4nz6
+	8zWMnTbEYy2BFs7L14vzHVhcGakPiko9DFWIeOxeXX80WZ30xm5WlK+QusDO8tdHmkFuQb0f1uXoZ
+	x4VDisiZHNkQbsaKHpaRppwLf3kao/fwL0Sw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+	s=arc-20160816;
+	h=content-transfer-encoding:mime-version:subject:message-id:to:from:date:
+	dkim-signature;
+	bh=xbpkhTDD9iEZDhnLdOUIBH6Y5z4BfyKHfS5SItzfmbY=;
+	b=tfOw+sBGrSuo75lKTVX9TzQkchWonadpQZ+x6xYiIouEBzgUPzbBM56AEkcVfe5JlSlbVnXlcGT
+	JPAL84AfYmD/QfmUs07Bg7BtRsDyFRjHuKpiK++gdS/IPRbIQ2KKwOa0uUlK8T3vwUZ3a+mIOewcI
+	scJHfIiGPnLZgGnk8o27gi7GGmRp5LnWjszA8xlS/bkcoE4/bRZHU4Hd4/rIrdR+2o2b6AGWjWoYp
+	q3dIavsEhYKn2fr0pmNBNFENFw3V6JDc+i9SRoXjceDrSxdhn+A4f0/IVOxEF3Rm1JKSio63oBl8r
+	4AQ3RYH8u4u1NcUNnWoFoOb/9LZVvdr/SSng==
+ARC-Authentication-Results: i=1; mx.google.com;
+	dkim=pass (test mode) header.i=@github.com header.s=pf2014 header.b=JlXFWvV9;
+	spf=pass
+	(google.com: domain of noreply@github.com designates 192.30.252.210 as permitted sender)
+	smtp.mailfrom=noreply@github.com;
+	dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=github.com
+Return-Path: <noreply@github.com>
+Received-SPF: pass (google.com: domain of noreply@github.com designates
+ 192.30.252.210 as permitted sender) client-ip=192.30.252.210;
+Authentication-Results: mx.google.com;
+	dkim=pass (test mode) header.i=@github.com header.s=pf2014 header.b=JlXFWvV9;
+	spf=pass
+	(google.com: domain of noreply@github.com designates 192.30.252.210 as permitted sender)
+	smtp.mailfrom=noreply@github.com;
+	dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=github.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=github.com; s=pf2014;
+	t=1598303697;
+	bh=xbpkhTDD9iEZDhnLdOUIBH6Y5z4BfyKHfS5SItzfmbY=; h=Date:From:To:Subject:From;
+	b=JlXFWvV9PLi+apJA3M11VhVTpRFzpjZ4RbZDfBq+ztLRuaLp395fVuEZRdxMYuD6TBb2+FX7I1y
+	UYOxzneVtdUpi5EVkepQ1VuuE9Ax7kfmLSvvBWjmAZUntSxd40qWpyf4bxbLUf5sTV2EcTDabed37
+	jf6OrKgTgnv6R2L3Mbo=
+Date: Mon, 24 Aug 2020 14:14:57 -0700
+From: GitHub <noreply@github.com>
+To: manishadas1710 <manishadas1710@gmail.com>
+Message-ID: <5f442dd13d80_2a311964473aa@github-lowworker-6349a71.ac4-iad.github.net.mail>
+Subject: [GitHub] Please verify your device
+MIME-Version: 1.0
+X-Auto-Response-Suppress: All
+Uid: 13161
+Folder: INBOX
+PlainText: Hey manishadas1710!A sign in attempt requires further verification
+ because we did not recognize your device. To complete the sign in, enter the
+ verification code on the unrecognized device.Device: Chrome on
+ WindowsVerification code: 892133If you did not attempt to sign in to your
+ account, your password may be compromised. Visit
+ https://github.com/settings/security to create a new, strong password for
+ your GitHub account.If you'd like to automatically verify devices in the
+ future, consider enabling two-factor authentication on your account. Visit
+ https://docs.github.com/articles/configuring-two-factor-authentication to
+ learn about two-factor authentication.If you decide to enable two-factor
+ authentication, ensure you retain access to one or more account recovery
+ methods. See
+ =?us-ascii?q?https=3A=2F=2Fdocs=2Egithub=2Ecom=2Farticles=2Fconfiguring-two-factor-authe?=
+ =?us-ascii?q?ntication-recovery-methods?= in the GitHub Help.Thanks,The
+ GitHub Team
+Content-Type: text/plain; charset=us-ascii
+
+Hey manishadas1710!
+
+A sign in attempt requires further verification because we did not recognize your device. To complete the sign in, enter the verification code on the unrecognized device.
+
+Device: Chrome on Windows
+Verification code: 892133
+
+If you did not attempt to sign in to your account, your password may be compromised. Visit https://github.com/settings/security to create a new, strong password for your GitHub account.
+
+If you'd like to automatically verify devices in the future, consider enabling two-factor authentication on your account. Visit https://docs.github.com/articles/configuring-two-factor-authentication to learn about two-factor authentication.
+
+If you decide to enable two-factor authentication, ensure you retain access to one or more account recovery methods. See https://docs.github.com/articles/configuring-two-factor-authentication-recovery-methods in the GitHub Help.
+
+Thanks,
+The GitHub Team

@@ -1,0 +1,373 @@
+Delivered-To: manishadas1710@gmail.com
+Received: from MjI3NTg5Nw (unknown) by ismtpd0008p1maa1.sendgrid.net (SG)
+	with HTTP id F3wMvDRxS1mk0Lrg1dZq5g Sat, 22 Aug 2020 12:49:15.113 +0000 (UTC)
+X-Google-Smtp-Source: ABdhPJyeeCpJMlHXx/xTD6+xPySTOxYQ4BJ+RYVElEm6dSysJCogClPZ55iJNHBijN+fWDQBkieb
+X-Received: by 2002:aa7:ce90:: with SMTP id y16mr7200818edv.325.1598100558274;       
+ Sat, 22 Aug 2020 05:49:18 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1598100558; cv=none; d=google.com;
+	s=arc-20160816;
+	b=wPfjOo/avKymdYL2YjOERg+VWt9cmo0RVRGRd3PP0Ceo7s8On75dMp9+M5qpPAnrScAxYSUaiNC
+	JF0pYCCfA73eM9PSnlPmM6g9v+ircm3SUwyLVbNYVMw+fWq8rg5OSNi9lD7b74kNP+TNAq9AmV1+2
+	uWwzuzeRF2JLc8HL9lI7xx4gk2pXVI+74cDKL5SfSSPSW4++oKrL4Yoc56BEJuhCqYLKJPM1XNyv7
+	v6R7hCZa/QfgTJcirojZyZ3+a3xKwYQ9XRLMA7CqnRKVHdRb5siPv3A0Isjp2k2GoBPHIAFVqFj8P
+	sK+XgMCNe8IGTGHXOx+pPG1rolDyvtlpuybw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+	s=arc-20160816;
+	h=subject:message-id:to:reply-to:mime-version:from:date:dkim-signature:
+	dkim-signature;
+	bh=tCDF1u/HA7MXYYFtYeYmpn2M3qqiar+5R3/WIzhYT2U=;
+	b=RfGpk6oX2xigc6t8ngYzIUlHTU0prURhpnmSHpJ/Y4z5rnmr9yD9eIegveIju3Gb1FCm30K/Mxf
+	GYiBRFRn2R1zJh12WZrffKwTbjZg+2og1itEvPgiYZ5wDWUCz87NYjAt3y5ZVRYoqmvca7oznVm1h
+	m9qZbby+9r7VFsmoajwjfLkodtLaZZECPgWqAtXoHQnDtVuwvxSZBja4NebvUNmiRAGdOs2jQLJHR
+	DizulHkkv+wn3pw486dZiSkkkzP6aeL4b6lWUBCoOJqyh2FFp+DdT50VaBN1D4dtBcWLQe4KJZwD9
+	PNV/FvGvGGm5lCN3npvkE5WX8rPAgMlDsoNw==
+ARC-Authentication-Results: i=1; mx.google.com;
+	dkim=pass header.i=@hackerearth.com header.s=s1 header.b=WYpul8Xj;
+	dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=G1sRCQ7f;
+	spf=pass
+	(google.com: domain of bounces+2275897-33e4-manishadas1710=gmail.com@sendgrid.hackerearth.com designates 149.72.180.109 as permitted sender)
+	smtp.mailfrom=
+	"bounces+2275897-33e4-manishadas1710=gmail.com@sendgrid.hackerearth.com";
+	dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=hackerearth.com
+Return-Path: <bounces+2275897-33e4-manishadas1710=gmail.com@sendgrid.hackerearth.com>
+Received-SPF: pass (google.com: domain of
+ bounces+2275897-33e4-manishadas1710=gmail.com@sendgrid.hackerearth.com
+ designates 149.72.180.109 as permitted sender) client-ip=149.72.180.109;
+Authentication-Results: mx.google.com;
+	dkim=pass header.i=@hackerearth.com header.s=s1 header.b=WYpul8Xj;
+	dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=G1sRCQ7f;
+	spf=pass
+	(google.com: domain of bounces+2275897-33e4-manishadas1710=gmail.com@sendgrid.hackerearth.com designates 149.72.180.109 as permitted sender)
+	smtp.mailfrom=
+	"bounces+2275897-33e4-manishadas1710=gmail.com@sendgrid.hackerearth.com";
+	dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=hackerearth.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-type:from:mime-version:reply-to:to:subject:x-feedback-id;
+	s=smtpapi;
+	bh=tCDF1u/HA7MXYYFtYeYmpn2M3qqiar+5R3/WIzhYT2U=;
+	b=G1sRCQ7f71RTEOn8pd0gFNgpOCeA5ZgrRLU8M3yFbZksVlIpygl1ZcEyjoOypI/d46+0njAY9fi
+	CpuNj4/97Hr2zfSB7NxFiHTVAMixpMJQDVbjI2/F9bXi/8c5DwnDA9HkyZ9ufEGKFwK9Az0GQ1Fla
+	sJaaNtRYuJq1RMrdbSs=
+Date: Sat, 22 Aug 2020 12:49:15 +0000 (UTC)
+From: HackerEarth Support <support@hackerearth.com>
+MIME-Version: 1.0
+Reply-To: gkrishnan@tekion.com
+To: manishadas1710@gmail.com
+Message-ID: <F3wMvDRxS1mk0Lrg1dZq5g@ismtpd0008p1maa1.sendgrid.net>
+Subject: Your submissions for Campus Placement 3 have been received
+X-SG-EID: =?us-ascii?q?kN3dpsIEi6s47FY2CdvFHqduFyRtnG8Y1aw4zzMBMRQswKI=2F1lrokW96nQV7k?=
+ =?us-ascii?q?M1+plP4MBtJuITpng?=
+ =?us-ascii?q?_THT4xf9rglxaVomc=2Fn2U3izKAWc1PSKvoCVMEX63FL5nTzHmlS+fcPPuVJWft?=
+ =?us-ascii?q?crMsiLaO67hwN1NrZ?=
+ =?us-ascii?q?_np8gSuRzafuV2MytBWa8BY520t1SB7WELINrpBig6ilntIXcyAJVVs7FjxFA6?=
+ =?us-ascii?q?dOTqDkukma6hKW5CC?= X4cQWweSEMXWoQOkTCq5cV
+X-SG-ID: =?us-ascii?q?U8uJsNn4bTKo9D=2F2Og90TqwDaqnL0IlhAJKk+iJtlw7sB6+S8sB2U1YlBKRMe?=
+ =?us-ascii?q?DVf1FWr1lWdZb2t+=2F?=
+ =?us-ascii?q?_P0qm3iHrS4oyHLaUj=2FcvHClAYkverIwnC=2FmAenRfl472QfiSjkzw7oDOPKo=2F2?=
+ =?us-ascii?q?J4bfJTec8btm+whp4?= D1cOAOAt9eQ6s2I=
+X-Feedback-ID: =?us-ascii?q?2275897=3A1dW5tTDNYASNdgyHsPQ6s4PmT0FgqBZtRUhxyRIqspk=3D=3A2YrXwFMc?=
+ =?us-ascii?q?CNlF6kh4Cm=2FrDFYA2bJ4ZuSEw+k0B2PCrYJ54=2F4pSG=2FrlAod9BVzrMKB=3ASG?=
+Uid: 13131
+Folder: INBOX
+PlainText: Hello Manisha Das,You have successfully completed the Campus
+ Placement 3 and we have received all your submissions.The summary of your
+ test is as follows:Programming questionsTotal number of questions:
+ 3Submitted: 3Objective questionsTotal number of questions: 15Submitted: 15If
+ you have any queries, send an e-mail to gkrishnan@tekion.comRegards,Team
+ Tekion Corp
+HtmlBody: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html
+ xmlns="http://www.w3.org/1999/xhtml"><head><meta content="text/html;
+ charset=utf-8" http-equiv="Content-Type" /><title></title></head><body><table
+ border="0" cellpadding="0" cellspacing="0" height="100%" id="bodyTable"
+ style='font-family: "Arial"' width="100%"><tr><td align="center"
+ valign="top"><table border="0" cellpadding="0" cellspacing="0"
+ id="emailContainer" style='font-family: "Arial"; background-color: #f0f0f0;
+ padding: 30px 30px 0 30px' width="600"><tr><td align="center"
+ valign="top"><table border="0" cellpadding="0" cellspacing="0" height="50"
+ id="emailHeader" style='font-family: "Arial"; padding: 0 0 20px 0; font-size:
+ 13px' width="100%"><tr><!-- if white labelled option is enabled for a
+ company, do not show hackerearth logo --><!-- Show the user image and the
+ username if there is a user object --><td align="right" class="no-mp"
+ style="margin: 0; padding: 0" valign="middle" width="50"><a
+ class="user-avatar"
+ =?us-ascii?q?href=3D=22http=3A=2F=2Fdelivery=2Ehackerearth=2Ecom=2Fls=2Fclick=3Fupn=3DQp-2B53esd?=
+ =?us-ascii?q?42-2BVcpUyywiJYwpD7VakTdn0lGf0ykEj-2BjGCS4MkAKbkX263ZuWiSAMe5?=
+ =?us-ascii?q?x9t5IYhsuJY-2Fk2-2BwlzQVychKLoEbiv-2F1FQREcjbL3rw4BYOjy4pSPBv?=
+ =?us-ascii?q?Gj-2BKxfiaX9g-2Bhf2mxNMLE2X9DlU-2FJub5DfJyVyQDZ1opp35Fus5yjM2?=
+ =?us-ascii?q?aYhHoDo3gZUAk1A7BtMIgdX77eG-2FCh0F2A6RCZbr-2FAgyq6iGrA8eTyd-2?=
+ =?us-ascii?q?FV3dhHFmjUWmh3MuLAIPpEUKvF8x0zvbQpuF7Z8udkRdGF5y-2Fuspsr7hn3O?=
+ =?us-ascii?q?aau3KkfZjk-3DxFZ1=5FdS-2BSR5dIDQc0WcCX0cF5fKUknwgjd3rSTarUbIu3g?=
+ =?us-ascii?q?3-2BpkSGImTVbOjeUkEjJaeIA8kHQmAmkfK-2FcEw3MKCKcD24wHFA4SwDlgp?=
+ =?us-ascii?q?0C277G97Kk-2F83VnaiDtECx2p-2BUZyUFksTFoH2GxBWo6jA1GZP-2FzfkT8?=
+ =?us-ascii?q?n7Zfc-2B8knnkfXE72rjXziqB2R6XyYEObz0D1ud4corRjeHXLtd-2FrdcM5s?=
+ =?us-ascii?q?pAF-2F5UGp2agJqcwEpFO7jC-2Bj2xNdUlzo8wQid1hDnNLsnEEqiyPlbgGoA?=
+ =?us-ascii?q?4QC9ZDiodKdG8Z3kjWNeCBtFxPPRcYvoKhqpEUK18cb3fa7LK9sz64ES2RDDZ?=
+ =?us-ascii?q?zCkkIivXPgk93ewBAD67Veg17hEMVZCSwCYZZATx8927TUCT4p-2BdWXTx=22?=
+ style="text-decoration: none"><img alt="manishadas1710" height="30"
+ onerror="if(typeof
+ handle_avatar_error=='function'){handle_avatar_error(this);}"
+ =?us-ascii?q?src=3D=22https=3A=2F=2Fhe-s3=2Es3=2Eamazonaws=2Ecom=2Fmedia=2Favatars=2Fmanishadas1?=
+ =?us-ascii?q?710=2Fresized=2F30=2Fd408ddbwhatsapp=5Fimage=5F2019-09-08=5Fat=5F6=2E59=2E57=5Fpm?=
+ =?us-ascii?q?=2Ejpeg=22?= style="border-radius: 3px" width="30"
+ /></a></td></tr></table></td></tr><tr><td align="center" valign="top"><table
+ border="0" cellpadding="0" cellspacing="0" id="emailBody" style='font-family:
+ "Arial"; background-color: #fff; font-size: 13px; -webkit-box-shadow: 0 1px
+ 2px 0 rgba(156, 163, 168, 0.5); -moz-box-shadow: 0 1px 2px 0 rgba(156, 163,
+ 168, 0.5); -ms-box-shadow: 0 1px 2px 0 rgba(156, 163, 168, 0.5); color:
+ #46535e; border-radius: 3px' width="100%"><tr><td align="left"
+ valign="top"><div class="center-content" style="font-size: 14px; line-height:
+ 24px; color: #46535e; padding: 0 20px 30px"><p>Hello Manisha Das,</p><p>You
+ have successfully completed the Campus Placement 3 and we have received all
+ your submissions.</p><p><strong>The summary of your test is as
+ follows:</strong></p><ul class="ul-left" style="padding-left:
+ 0"><li><strong>Programming questions</strong><ul><li>Total number of
+ questions: 3</li><li>Submitted: 3</li></ul></li><li><strong>Objective
+ questions</strong><ul><li>Total number of questions: 15</li><li>Submitted:
+ 15</li></ul></li></ul><p>If you have any queries, send an e-mail to <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Fdelivery=2Ehackerearth=2Ecom=2Fls=2Fclick=3Fupn=3DQp-2B53esd?=
+ =?us-ascii?q?42-2BVcpUyywiJYwpD7VakTdn0lGf0ykEj-2BjGCS4MkAKbkX263ZuWiSAMe5?=
+ =?us-ascii?q?x9t5IYhsuJY-2Fk2-2BwlzQVychKLoEbiv-2F1FQREcjbL3qin5PHpLkRyz5n?=
+ =?us-ascii?q?MH1kyAToJrFDPdrk4EArE7y1PBsKIgbudlx6RoqSzEooX-2FlT1B6OFX2dXsY?=
+ =?us-ascii?q?rtt6cE50eWgQLucVj7f6eW0npqkaL9HtWRokL1WKtOueEAlP2sZ8oqhKnAChs?=
+ =?us-ascii?q?-2FcRtWAMi-2BVkFMmDvoHfmjBbiic87Kg6PX3UNGA-3D-3Dg7ES=5FdS-2BSR5?=
+ =?us-ascii?q?dIDQc0WcCX0cF5fKUknwgjd3rSTarUbIu3g3-2BpkSGImTVbOjeUkEjJaeIA8?=
+ =?us-ascii?q?kHQmAmkfK-2FcEw3MKCKcD24wHFA4SwDlgp0C277G97Kk-2F83VnaiDtECx2p?=
+ =?us-ascii?q?-2BUZyUFksTFoH2GxBWo6jA1GZP-2FzfkT8n7Zfc-2B8knnkfXE72rgpAg6p2?=
+ =?us-ascii?q?R4IhNyRtHYKxP6dVGw9O9zJxZZEzBdjMoaGX-2Fw6CI4TxtpcmelQ2UyBIrYv?=
+ =?us-ascii?q?9AJZWQSYe5Hzo-2FnQBdovw-2Bb1FF-2Fy0ny215-2FGGu9R0JwgDKm7VZmhd?=
+ =?us-ascii?q?bCXyzdpbQ0PEfwtC1XtPaZ2htHIx5Yj-2FdQb2JWhCsGYp1SjbGuY17Zlgcym?=
+ =?us-ascii?q?vWp8sjjFCu1VRbFwQdETwoy08F6jGUonk3uI=22?=
+ style="text-decoration:
+ none">gkrishnan@tekion.com</a></p><p>Regards,</p><p>Team Tekion
+ Corp</p></div></td></tr></table></td></tr><tr><td align="center"
+ valign="top"><table border="0" cellpadding="0" cellspacing="20"
+ id="emailFooter" style='font-family: "Arial"; font-size: 12px; color: #666'
+ width="100%"><tr><td align="center" class="gray-text" id="address"
+ style="color: #9CA3A8; padding-top: 20px" valign="bottom"></td></tr><!-- niot
+ remove header --></table></td></tr></table></td></tr></table><img
+ =?us-ascii?q?src=3D=22http=3A=2F=2Fdelivery=2Ehackerearth=2Ecom=2Fwf=2Fopen=3Fupn=3DWSCQdJIC4YTz?=
+ =?us-ascii?q?nsQsvFec8fJ-2BYmPqGSlKMzCjEzrM6URE9jIht2VGsYh0u7LfXM5TW0dF-2B?=
+ =?us-ascii?q?9SuDzVrLQ4AfMlgSAZu-2B4CbROk-2B35b6bMDwaRJGUAHZoOqMb4D3-2BFH6?=
+ =?us-ascii?q?cFMvb33OHZ5fEZySM-2FOOLHVoK9TlLYCFSJNzh6bjbEgtVnFcwR4lC-2Bwwp?=
+ =?us-ascii?q?JgwCKZwvW-2BYJLCg86AiE9P76OoAnwn1mhbUimSRRCKzeZEkHNRI5eSs11C1?=
+ =?us-ascii?q?AysyDBfxj9KofeXLRacG7o1dwu8nabmRiFPvrV8TubR-2F9imOrIvyU0m2CK5?=
+ =?us-ascii?q?H5BSA606vYZOiCDl-2FZwgZ1VV0F0WjOcfFR-2FNBPl6IRffQ8oc9D2-2BR2z?=
+ =?us-ascii?q?7Z7gPCm4v3UE-2FsoJ62YfXSAaR5JYMF=22?= alt="" width="1"
+ height="1" border="0" style="height:1px !important;width:1px
+ !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0
+ !important;margin-right:0 !important;margin-left:0 !important;padding-top:0
+ !important;padding-bottom:0 !important;padding-right:0
+ !important;padding-left:0 !important;"/></body></html><img
+ src="https://www.hackerearth.com/falcon/open/113178915/" style="display: none
+ !important; font-size: 0px; overflow: hidden; mso-hide: all; max-height: 0
+ !important; max-width: 0 !important; width: 0; height: 0;"/>
+Content-Type: multipart/alternative; boundary="=-oWALzQV53+Bwz2anD7S9aw=="
+
+--=-oWALzQV53+Bwz2anD7S9aw==
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Id: <a5c61434-24a1-4811-8178-d30fa1b05063>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hello Manisha Das,
+You have successfully completed the Campus Placement 3 and we have rec=
+eived all your submissions.
+The summary of your test is as follows:
+
+Programming questionsTotal number of questions: 3Submitted: 3Objective=
+ questionsTotal number of questions: 15Submitted: 15
+
+If you have any queries, send an e-mail to gkrishnan@tekion.com
+Regards,
+Team Tekion Corp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--=-oWALzQV53+Bwz2anD7S9aw==
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Id: <0a28a7c7-e193-4d3b-a245-48f89aa479ca>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http:/=
+/www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head>
+<meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Typ=
+e" />
+<title></title>
+</head>
+<body>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" height=3D"100%=
+" id=3D"bodyTable" style=3D'font-family: "Arial"' width=3D"100%">
+<tr>
+<td align=3D"center" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" id=3D"emailCon=
+tainer" style=3D'font-family: "Arial"; background-color: #f0f0f0; padd=
+ing: 30px 30px 0 30px' width=3D"600">
+<tr>
+<td align=3D"center" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" height=3D"50" =
+id=3D"emailHeader" style=3D'font-family: "Arial"; padding: 0 0 20px 0;=
+ font-size: 13px' width=3D"100%">
+<tr>
+<!-- if white labelled option is enabled for a company, do not show ha=
+ckerearth logo -->
+<!-- Show the user image and the username if there is a user object --=
+>
+<td align=3D"right" class=3D"no-mp" style=3D"margin: 0; padding: 0" va=
+lign=3D"middle" width=3D"50">
+<a class=3D"user-avatar" href=3D"http://delivery.hackerearth.com/ls/cl=
+ick?upn=3DQp-2B53esd42-2BVcpUyywiJYwpD7VakTdn0lGf0ykEj-2BjGCS4MkAKbkX2=
+63ZuWiSAMe5x9t5IYhsuJY-2Fk2-2BwlzQVychKLoEbiv-2F1FQREcjbL3rw4BYOjy4pSP=
+BvGj-2BKxfiaX9g-2Bhf2mxNMLE2X9DlU-2FJub5DfJyVyQDZ1opp35Fus5yjM2aYhHoDo=
+3gZUAk1A7BtMIgdX77eG-2FCh0F2A6RCZbr-2FAgyq6iGrA8eTyd-2FV3dhHFmjUWmh3Mu=
+LAIPpEUKvF8x0zvbQpuF7Z8udkRdGF5y-2Fuspsr7hn3Oaau3KkfZjk-3DxFZ1_dS-2BSR=
+5dIDQc0WcCX0cF5fKUknwgjd3rSTarUbIu3g3-2BpkSGImTVbOjeUkEjJaeIA8kHQmAmkf=
+K-2FcEw3MKCKcD24wHFA4SwDlgp0C277G97Kk-2F83VnaiDtECx2p-2BUZyUFksTFoH2Gx=
+BWo6jA1GZP-2FzfkT8n7Zfc-2B8knnkfXE72rjXziqB2R6XyYEObz0D1ud4corRjeHXLtd=
+-2FrdcM5spAF-2F5UGp2agJqcwEpFO7jC-2Bj2xNdUlzo8wQid1hDnNLsnEEqiyPlbgGoA=
+4QC9ZDiodKdG8Z3kjWNeCBtFxPPRcYvoKhqpEUK18cb3fa7LK9sz64ES2RDDZzCkkIivXP=
+gk93ewBAD67Veg17hEMVZCSwCYZZATx8927TUCT4p-2BdWXTx" style=3D"text-decor=
+ation: none"><img alt=3D"manishadas1710" height=3D"30" onerror=3D"if(t=
+ypeof handle_avatar_error=3D=3D'function'){handle_avatar_error(this);}=
+" src=3D"https://he-s3.s3.amazonaws.com/media/avatars/manishadas1710/r=
+esized/30/d408ddbwhatsapp_image_2019-09-08_at_6.59.57_pm.jpeg" style=3D=
+"border-radius: 3px" width=3D"30" /></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"center" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" id=3D"emailBod=
+y" style=3D'font-family: "Arial"; background-color: #fff; font-size: 1=
+3px; -webkit-box-shadow: 0 1px 2px 0 rgba(156, 163, 168, 0.5); -moz-bo=
+x-shadow: 0 1px 2px 0 rgba(156, 163, 168, 0.5); -ms-box-shadow: 0 1px =
+2px 0 rgba(156, 163, 168, 0.5); color: #46535e; border-radius: 3px' wi=
+dth=3D"100%">
+<tr>
+<td align=3D"left" valign=3D"top">
+<div class=3D"center-content" style=3D"font-size: 14px; line-height: 2=
+4px; color: #46535e; padding: 0 20px 30px">
+<p>Hello Manisha Das,</p>
+<p>You have successfully completed the Campus Placement 3 and we have =
+received all your submissions.</p>
+<p><strong>The summary of your test is as follows:</strong></p>
+<ul class=3D"ul-left" style=3D"padding-left: 0">
+<li><strong>Programming questions</strong><ul><li>Total number of ques=
+tions: 3</li><li>Submitted: 3</li></ul></li><li><strong>Objective ques=
+tions</strong><ul><li>Total number of questions: 15</li><li>Submitted:=
+ 15</li></ul></li>
+</ul>
+<p>If you have any queries, send an e-mail to <a href=3D"http://delive=
+ry.hackerearth.com/ls/click?upn=3DQp-2B53esd42-2BVcpUyywiJYwpD7VakTdn0=
+lGf0ykEj-2BjGCS4MkAKbkX263ZuWiSAMe5x9t5IYhsuJY-2Fk2-2BwlzQVychKLoEbiv-=
+2F1FQREcjbL3qin5PHpLkRyz5nMH1kyAToJrFDPdrk4EArE7y1PBsKIgbudlx6RoqSzEoo=
+X-2FlT1B6OFX2dXsYrtt6cE50eWgQLucVj7f6eW0npqkaL9HtWRokL1WKtOueEAlP2sZ8o=
+qhKnAChs-2FcRtWAMi-2BVkFMmDvoHfmjBbiic87Kg6PX3UNGA-3D-3Dg7ES_dS-2BSR5d=
+IDQc0WcCX0cF5fKUknwgjd3rSTarUbIu3g3-2BpkSGImTVbOjeUkEjJaeIA8kHQmAmkfK-=
+2FcEw3MKCKcD24wHFA4SwDlgp0C277G97Kk-2F83VnaiDtECx2p-2BUZyUFksTFoH2GxBW=
+o6jA1GZP-2FzfkT8n7Zfc-2B8knnkfXE72rgpAg6p2R4IhNyRtHYKxP6dVGw9O9zJxZZEz=
+BdjMoaGX-2Fw6CI4TxtpcmelQ2UyBIrYv9AJZWQSYe5Hzo-2FnQBdovw-2Bb1FF-2Fy0ny=
+215-2FGGu9R0JwgDKm7VZmhdbCXyzdpbQ0PEfwtC1XtPaZ2htHIx5Yj-2FdQb2JWhCsGYp=
+1SjbGuY17ZlgcymvWp8sjjFCu1VRbFwQdETwoy08F6jGUonk3uI" style=3D"text-dec=
+oration: none">gkrishnan@tekion.com</a></p>
+<p>Regards,</p>
+<p>Team Tekion Corp</p>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"center" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"20" id=3D"emailFo=
+oter" style=3D'font-family: "Arial"; font-size: 12px; color: #666' wid=
+th=3D"100%">
+<tr>
+<td align=3D"center" class=3D"gray-text" id=3D"address" style=3D"color=
+: #9CA3A8; padding-top: 20px" valign=3D"bottom"></td>
+</tr>
+<!-- niot remove header -->
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<img src=3D"http://delivery.hackerearth.com/wf/open?upn=3DWSCQdJIC4YTz=
+nsQsvFec8fJ-2BYmPqGSlKMzCjEzrM6URE9jIht2VGsYh0u7LfXM5TW0dF-2B9SuDzVrLQ=
+4AfMlgSAZu-2B4CbROk-2B35b6bMDwaRJGUAHZoOqMb4D3-2BFH6cFMvb33OHZ5fEZySM-=
+2FOOLHVoK9TlLYCFSJNzh6bjbEgtVnFcwR4lC-2BwwpJgwCKZwvW-2BYJLCg86AiE9P76O=
+oAnwn1mhbUimSRRCKzeZEkHNRI5eSs11C1AysyDBfxj9KofeXLRacG7o1dwu8nabmRiFPv=
+rV8TubR-2F9imOrIvyU0m2CK5H5BSA606vYZOiCDl-2FZwgZ1VV0F0WjOcfFR-2FNBPl6I=
+RffQ8oc9D2-2BR2z7Z7gPCm4v3UE-2FsoJ62YfXSAaR5JYMF" alt=3D"" width=3D"1"=
+ height=3D"1" border=3D"0" style=3D"height:1px !important;width:1px !i=
+mportant;border-width:0 !important;margin-top:0 !important;margin-bott=
+om:0 !important;margin-right:0 !important;margin-left:0 !important;pad=
+ding-top:0 !important;padding-bottom:0 !important;padding-right:0 !imp=
+ortant;padding-left:0 !important;"/>
+</body>
+</html>
+<img src=3D"https://www.hackerearth.com/falcon/open/113178915/" style=3D=
+"display: none !important; font-size: 0px; overflow: hidden; mso-hide:=
+ all; max-height: 0 !important; max-width: 0 !important; width: 0; hei=
+ght: 0;"/>
+
+--=-oWALzQV53+Bwz2anD7S9aw==--

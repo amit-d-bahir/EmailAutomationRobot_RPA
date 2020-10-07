@@ -1,0 +1,9 @@
+Dear Sir/Ma'am,
+
+Unusual activity has been detected on the system at {0}
+
+Error Message:
+{1}
+
+Regards,
+Email Automation Robot

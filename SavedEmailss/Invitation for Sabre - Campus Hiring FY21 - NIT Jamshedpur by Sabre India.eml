@@ -1,0 +1,500 @@
+Delivered-To: manishadas1710@gmail.com
+Received: from MjI3NTg5Nw (unknown) by ismtpd0001p1maa1.sendgrid.net (SG)
+	with HTTP id JzEYsRdDRmyOzgVo9lRMeg Tue, 25 Aug 2020 14:04:38.981 +0000 (UTC)
+X-Google-Smtp-Source: ABdhPJy2Vek4PPpjerbyUHaFGAL3tPVoxBOsmmHQz3CbiKfDIikDliqOxQgm+qFTk56BmhIqSL6x
+X-Received: by 2002:a05:6402:b76:: with SMTP id
+ cb22mr1169857edb.30.1598364282678;        Tue, 25 Aug 2020 07:04:42 -0700
+ (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1598364282; cv=none; d=google.com;
+	s=arc-20160816;
+	b=gmbuWztaVRJK/AJcxH8BfvsemuEEBMRuAcIUH/mSAnb6a78lplj05R3g08jlMsur+bbz5Oqqc9V
+	zjANuVS3mTWEUlo1BNJubqKXaFOpoZnTsrQ+qlhb7N3KgS2RoojucnXDJYSuUULjNmfj2U6HkTFI+
+	iywxctcygV53KPP6dzF/SXp297cV2RWYePWtSQiqZrwy3Cpv5dVMyFG6NGBvxdJm+To+M0TN7qWWV
+	ncR6cjJThOLRe/HQuRNCbzWR3Yxh1iPORMpNxYKJx9uFFHwyshnnA/FBKugYm5KNBDzysvBEgqE/l
+	w8/TJ2zEMc7LH5bbrA641/09mm/PYIl88TPA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+	s=arc-20160816;
+	h=subject:message-id:to:reply-to:mime-version:from:date:dkim-signature:
+	dkim-signature;
+	bh=70D4PZnOalzxgBWzMsUpIeWIwEolKu+wyt79ymW0MG0=;
+	b=sQgjebqua7Ex+m2uesnHDWGgpOIz+RhH6IYpoQxzQ2K3OfsC4e+DTBuBeWyI34606pDZT4tyyak
+	aV+daOqpffwpwU7IscLoNjLcHhRKc51u22vAHILUJGi1HDnhwlKJ+ulg0gE3CbtLe5PQrqq057A8X
+	pzR/NbFgwRyHciaTucsJDX/c8PbKulPGKF/No75qYbEo1nFtXBRvJbsu7dTsiwgZavW7Lye+JG9d6
+	6NiL3uej0W7UmoBE/7YkLYC0oMgWJJ3/5fJC7lxQlIptBF9XHAvRZ0SRsa5h+GBua5z7uI3KqMEOe
+	5LEMlabJek80P33M1XTxFoY8J6MV2VvRTIjg==
+ARC-Authentication-Results: i=1; mx.google.com;
+	dkim=pass header.i=@hackerearth.com header.s=s1 header.b=qJxuR4oG;
+	dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=Sb9stQ4c;
+	spf=pass
+	(google.com: domain of bounces+2275897-33e4-manishadas1710=gmail.com@sendgrid.hackerearth.com designates 149.72.157.46 as permitted sender)
+	smtp.mailfrom=
+	"bounces+2275897-33e4-manishadas1710=gmail.com@sendgrid.hackerearth.com";
+	dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=hackerearth.com
+Return-Path: <bounces+2275897-33e4-manishadas1710=gmail.com@sendgrid.hackerearth.com>
+Received-SPF: pass (google.com: domain of
+ bounces+2275897-33e4-manishadas1710=gmail.com@sendgrid.hackerearth.com
+ designates 149.72.157.46 as permitted sender) client-ip=149.72.157.46;
+Authentication-Results: mx.google.com;
+	dkim=pass header.i=@hackerearth.com header.s=s1 header.b=qJxuR4oG;
+	dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=Sb9stQ4c;
+	spf=pass
+	(google.com: domain of bounces+2275897-33e4-manishadas1710=gmail.com@sendgrid.hackerearth.com designates 149.72.157.46 as permitted sender)
+	smtp.mailfrom=
+	"bounces+2275897-33e4-manishadas1710=gmail.com@sendgrid.hackerearth.com";
+	dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=hackerearth.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-type:from:mime-version:reply-to:to:subject:x-feedback-id;
+	s=smtpapi;
+	bh=70D4PZnOalzxgBWzMsUpIeWIwEolKu+wyt79ymW0MG0=;
+	b=Sb9stQ4c14vSIzvsOp3X4S1ESinQzAtUye49ELeb/k5ItG/BKyYCxO3/gbtPAtkhq/V+YQNfqVl
+	2Z33WG7VutesU1JQol2zKQBnD4dAlpYLFQV2dMt5QIC/Xqe96xU7espECL/hTkZc8+wMHZh11X/be
+	ultI5u6Mm4lvcuCzDXM=
+Date: Tue, 25 Aug 2020 14:04:39 +0000 (UTC)
+From: HackerEarth Support <support@hackerearth.com>
+MIME-Version: 1.0
+Reply-To: Joel.DSa@sabre.com
+To: manishadas1710@gmail.com
+Message-ID: <JzEYsRdDRmyOzgVo9lRMeg@ismtpd0001p1maa1.sendgrid.net>
+Subject: Invitation for Sabre - Campus Hiring FY21 - NIT Jamshedpur by Sabre
+ India
+X-SG-EID: =?us-ascii?q?kN3dpsIEi6s47FY2CdvFHqduFyRtnG8Y1aw4zzMBMRTYntkz+j9VANTD4UbZv?=
+ =?us-ascii?q?qYPZiMJAp+5mDZWUN?=
+ =?us-ascii?q?_wRGhyBfuGNVruYd=2F0NXNg5L3ovil2ipXpbHZSoejFjVp2Sfxvz103HZ3cYWas?=
+ =?us-ascii?q?wG3D3WreUsFuuLajb?=
+ =?us-ascii?q?_ODjC6I1RROuK3toWdyCdSKikK7gIbGdPy1omB5q6kqG+PtsU2unfsBHAX9=2FDr?=
+ =?us-ascii?q?fnbSfSpZClPqSndA2?= Jed1tIn3sRo46NXyNjxa4W
+X-SG-ID: =?us-ascii?q?U8uJsNn4bTKo9D=2F2Og90Trg6ddjiEDVEuh30=2FyYwUfLKuFgVdmB0=2FSYr=2Fioeo?=
+ =?us-ascii?q?1j4VEveg+6ShJr6+U?=
+ =?us-ascii?q?_MInxX=2FGMApYZgcq61R0ClNlaY4yw+B76A27+bRiCOQYcdKGP06cKnM=2FVK7FQM?=
+ =?us-ascii?q?=2Frd=2F269uCCpdvJ+40?= c5DndEYbWLQrxPY/gOfJ+BLrGtbeLRZf94qG
+X-Feedback-ID: =?us-ascii?q?2275897=3A1dW5tTDNYASNdgyHsPQ6s4PmT0FgqBZtRUhxyRIqspk=3D=3AFc6k0xSH?=
+ =?us-ascii?q?3Xp382pWyRaYAtVJijvl13I9=2Flmyu9fm7WP+yNlgkd=2FP8g0iCuvlrmhHTWpI5?=
+ =?us-ascii?q?q9J70M2gFl2Klmixw=3D=3D=3ASG?=
+Uid: 13179
+Folder: INBOX
+PlainText: Hi Manisha Das,You have been invited to take Sabre - Campus Hiring
+ FY21 - NIT Jamshedpur by Sabre India.Test detailsOpens at: 26 Aug, 2020
+ (Wednesday) | 3:00p.m.Closes at: Aug 26, 2020 03:15 PM ISTTest Duration: 1
+ hrs 30 minsInvite Expiry Date: NoneTest Link:
+ =?us-ascii?q?http=3A=2F=2Fdelivery=2Ehackerearth=2Ecom=2Fls=2Fclick=3Fupn=3DQp-2B53esd42-2BV?=
+ =?us-ascii?q?cpUyywiJYwpD7VakTdn0lGf0ykEj-2BjH27Qmj1I4POxnbLy9rxAWoaZmb9cV?=
+ =?us-ascii?q?gTOmTs492MOsG-2BCA0RiGK8rHrEtQGHzZ14odYDZuMwMEC-2FTrabAEBIu52?=
+ =?us-ascii?q?s686n3II0mpzi6StEisT2AS7GrlMZt0pAUQy7DbvUW4BlYp1WIXdvkRXIe3qc?=
+ =?us-ascii?q?pD35Yo1=5FdS-2BSR5dIDQc0WcCX0cF5fKUknwgjd3rSTarUbIu3g3-2BpkSGIm?=
+ =?us-ascii?q?TVbOjeUkEjJaeIAswFB8lo1Wj8CPrgUMYDl-2Bvt80oUHdmpcruqLEHIgoMkm?=
+ =?us-ascii?q?bZB9tGT0RwXlhs-2FIrIJKkCeCLLPwPfQe6xXUi3O02NiwrIhDCLnPM6rkXuC?=
+ =?us-ascii?q?UHYjWhrAOcO-2BjtAZK9NrHG8CNb8zZ2A2a-2BBg5miCcNdx-2FFOqsADtvdU?=
+ =?us-ascii?q?-2FtsST8PInMsWuVvh-2FyWn3wZKsm7qjULa4ZE57JxGzFznyWlj0e8-2FdbA?=
+ =?us-ascii?q?1vg5sT8UmCeW4-2FfbPFGMvtOwXMCLR9wqAVEOu-2F5hqyQQ2dIfXAJwTx9xT?=
+ =?us-ascii?q?H04ID10Rh-2BIG-2BmAr9TbjikXfRosgF-2F93LhsE3Xqb9iWFrWInpUP5YvR?=
+ =?us-ascii?q?-2BrWtSqUNyH727m5d95Leq0NCsAUryipo-2FqMmfo-3D?= ImportantYou can
+ take this test anytime between the start date/time and end date/time.Once the
+ test starts, you cannot pause it. The test will run continuously for 1 hrs 30
+ mins.Before you beginBefore you take the Sabre - Campus Hiring FY21 - NIT
+ Jamshedpur, we recommend that you take the practice test a few days before
+ the actual test.Advantages of taking the practice testYou get familiar with
+ the HackerEarth Recruit platform including the proctoring settings. The
+ actual test may have fewer restrictions than the practice test. This advanced
+ familiarity will enable you to solve problems more efficiently during the
+ actual test.An automatic system-compatibility check is performed before you
+ start the test. If your system isn't compatible, you must make the required
+ changes before you take the actual test.In case you face technical issues
+ prior to or during the duration of the test, please write to
+ support@hackerearth.comRegards,Team Sabre India
+HtmlBody: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html
+ xmlns="http://www.w3.org/1999/xhtml"><head><meta content="text/html;
+ charset=utf-8" http-equiv="Content-Type" /><title></title></head><body><table
+ border="0" cellpadding="0" cellspacing="0" height="100%" id="bodyTable"
+ style='font-family: "Arial"' width="100%"><tr><td align="center"
+ valign="top"><table border="0" cellpadding="0" cellspacing="0"
+ id="emailContainer" style='font-family: "Arial"; background-color: #f0f0f0;
+ padding: 30px 30px 0 30px' width="600"><tr><td align="center"
+ valign="top"><table border="0" cellpadding="0" cellspacing="0" height="50"
+ id="emailHeader" style='font-family: "Arial"; padding: 0 0 20px 0; font-size:
+ 13px' width="100%"><tr><!-- if white labelled option is enabled for a
+ company, do not show hackerearth logo --><td align="left" class="no-mp"
+ id="logo" style="margin: 0; padding: 0" valign="middle"><img height="40"
+ =?us-ascii?q?src=3D=22https=3A=2F=2Fhe-s3=2Es3=2Eamazonaws=2Ecom=2Fmedia=2Fcache=2F62=2F67=2F6267dec?=
+ =?us-ascii?q?6cd8c2d78f91f392491a00133=2Epng=22?= width="164" /></td><!--
+ Show the user image and the username if there is a user object --><td
+ align="right" class="no-mp" style="margin: 0; padding: 0" valign="middle"
+ width="50"><a class="user-avatar"
+ =?us-ascii?q?href=3D=22http=3A=2F=2Fdelivery=2Ehackerearth=2Ecom=2Fls=2Fclick=3Fupn=3DQp-2B53esd?=
+ =?us-ascii?q?42-2BVcpUyywiJYwpD7VakTdn0lGf0ykEj-2BjGCS4MkAKbkX263ZuWiSAMey?=
+ =?us-ascii?q?J-2FDOD0eVGDm1dh3to4DvizSka4OpEWwk3TZCziXsn6jK6JfbJym8YFABe1q?=
+ =?us-ascii?q?Fw7VEtHVLOOArhTmoocz5FSnYJotZZwfVMcuKBgZB4KXMjD5eY9Qyj8wD-2BK?=
+ =?us-ascii?q?z3nrGlZDeeHhgv40rqsYjWfHoICawG7xLXrt13nrfyYJ9EeD-2BgYENCNEqCG?=
+ =?us-ascii?q?ZUpUn57HxuRrQh2PciMuRtrb80m4nxvteAIpEIJxc-2B7NTKq6oswai3Xbc-3?=
+ =?us-ascii?q?DwLgo=5FdS-2BSR5dIDQc0WcCX0cF5fKUknwgjd3rSTarUbIu3g3-2BpkSGImTV?=
+ =?us-ascii?q?bOjeUkEjJaeIAswFB8lo1Wj8CPrgUMYDl-2Bvt80oUHdmpcruqLEHIgoMkmbZ?=
+ =?us-ascii?q?B9tGT0RwXlhs-2FIrIJKkCeCLLPwPfQe6xXUi3O02NiwrIhDCLnPM6rkXuCUH?=
+ =?us-ascii?q?Yg-2BguH4UXa0vsMQiAVSaujwaxFibG-2F6r-2FYlsHnV1GiaoZkJjJHs-2Fr?=
+ =?us-ascii?q?jRUNrT30K-2BT9CVMFe4SmIY4vPF7jE8WiXZ-2Bo-2FZTsdCBF-2FmnryW68x?=
+ =?us-ascii?q?7QAXnzTe4iIUbQXnd5R-2FTHA6-2BDHBQtn3uOHGwCPrnCMtSd3XlLsckL-2F?=
+ =?us-ascii?q?6-2Bw4MwfV5koeQRy4h6ItsJ5iHyQ6YtVngl4P3-2BfRJ8dE-2B-2B9PSmXGm?=
+ =?us-ascii?q?jFfXcWJvXAJBoIQDmMFF1sMXryRSs9dc9ojzBE8XgdsQ-3D=22?=
+ style="text-decoration: none"><img alt="manishadas1710" height="30"
+ onerror="if(typeof
+ handle_avatar_error=='function'){handle_avatar_error(this);}"
+ =?us-ascii?q?src=3D=22https=3A=2F=2Fhe-s3=2Es3=2Eamazonaws=2Ecom=2Fmedia=2Favatars=2Fmanishadas1?=
+ =?us-ascii?q?710=2Fresized=2F30=2Fd408ddbwhatsapp=5Fimage=5F2019-09-08=5Fat=5F6=2E59=2E57=5Fpm?=
+ =?us-ascii?q?=2Ejpeg=22?= style="border-radius: 3px" width="30"
+ /></a></td></tr></table></td></tr><tr><td align="center" valign="top"><table
+ border="0" cellpadding="0" cellspacing="0" id="emailBody" style='font-family:
+ "Arial"; background-color: #fff; font-size: 13px; -webkit-box-shadow: 0 1px
+ 2px 0 rgba(156, 163, 168, 0.5); -moz-box-shadow: 0 1px 2px 0 rgba(156, 163,
+ 168, 0.5); -ms-box-shadow: 0 1px 2px 0 rgba(156, 163, 168, 0.5); color:
+ #46535e; border-radius: 3px' width="100%"><tr><td align="left"
+ valign="top"><div class="center-content" style="font-size: 14px; line-height:
+ 24px; color: #46535e; padding: 0 20px 30px"><p>Hi Manisha Das,</p><p>You have
+ been invited to take Sabre - Campus Hiring FY21 - NIT Jamshedpur by Sabre
+ India.</p><p><strong>Test details</strong></p><ul><li>Opens at: 26 Aug, 2020
+ (Wednesday) | 3:00p.m.</li><li>Closes at: Aug 26, 2020 03:15 PM
+ IST</li><li>Test Duration: 1 hrs 30 mins</li><li>Invite Expiry Date:
+ None</li><li>Test Link:
+ =?us-ascii?q?https=3A=2F=2Fwww=2Ehackerearth=2Ecom=2Fchallenges=2Ftest=2Fsabre-campus-hiri?=
+ =?us-ascii?q?ng-fy21-nit-jamshedpur-2=2F=3Flogin=3D3b0bd9719165f5e2d182245749674?=
+ =?us-ascii?q?7d4?=
+ </li></ul><p></p><p><strong>Important</strong></p><ul><li>You can take this
+ test anytime between the start date/time and end date/time.</li><li>Once the
+ test starts, you cannot pause it. The test will run continuously for 1 hrs 30
+ mins.</li></ul><p><strong>Before you begin</strong></p><p>Before you take the
+ Sabre - Campus Hiring FY21 - NIT Jamshedpur, we recommend that you take the
+ <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Fdelivery=2Ehackerearth=2Ecom=2Fls=2Fclick=3Fupn=3DQp-2B53esd?=
+ =?us-ascii?q?42-2BVcpUyywiJYwpD7VakTdn0lGf0ykEj-2BjGCS4MkAKbkX263ZuWiSAMey?=
+ =?us-ascii?q?J-2FDOD0eVGDm1dh3to4DvizSka4OpEWwk3TZCziXsn6jK6JfbJym8YFABe1q?=
+ =?us-ascii?q?Fw7VEtHVLOOArhTmoocz5FSnYPdhziktwlgQRcqq3TIcn1BT4Eez-2F5yuGDq?=
+ =?us-ascii?q?D6eDOKSG5XHs9WeWxMuJ9QmZ0D8G-2Fp6zkF0wp5z2bpOuOypfxwgtaJOYZi-?=
+ =?us-ascii?q?2FFNDdYn3xvfWRHQsxnQjDJgC6FWcR6AFuvvH2n3tSyzQUDKaq-2BYaM755GY?=
+ =?us-ascii?q?lcQFfjkyikq-2BtGUvhoN6ZhKpH-2B9CpMa-2BxG-2FcqvvzeIBVvndEy-2F0?=
+ =?us-ascii?q?MF3tcEwz6Gsv0jKULFPGCCOnQy-2BfIcz0gRqhiunsKDsjSpkoWRpkrGo12-2?=
+ =?us-ascii?q?FXzXLuDJsXNk2GFcim0Va5CvkSKNTSlmmy3ZC9M7jgXe3sk12QR-2F3zEmN1U?=
+ =?us-ascii?q?qR-2FOy9iG6Up0EDl3MqiwQIrRpf6i0dsU-2BxNBPi4iHAV12DpavmrNP7e-2?=
+ =?us-ascii?q?BnIQRZJD7a6pg-3D-3Dttwq=5FdS-2BSR5dIDQc0WcCX0cF5fKUknwgjd3rSTar?=
+ =?us-ascii?q?UbIu3g3-2BpkSGImTVbOjeUkEjJaeIAswFB8lo1Wj8CPrgUMYDl-2Bvt80oUH?=
+ =?us-ascii?q?dmpcruqLEHIgoMkmbZB9tGT0RwXlhs-2FIrIJKkCeCLLPwPfQe6xXUi3O02Ni?=
+ =?us-ascii?q?wrIhDCLnPM6rkXuCUHYh8XD709qhPhTXjwGXYQZEDXhjh8LtrOV-2FbnCssW2?=
+ =?us-ascii?q?O7pmECbO1ZNWMKnb7sgwQ1c8QiHrbACBt0vx7U8W7v2qiP52QkNjFrH96EGvf?=
+ =?us-ascii?q?XJGVms9Tc3koDPWdufXfVExPfftGoMIEBQHhnP3-2BkUYaWVMn8PbcHs4ufCq?=
+ =?us-ascii?q?0VV17LQ-2Fnb6d4W4MLzjvBtIbeABJZjnaogQ6ArOSxioIt1p2po-2FPIVs09?=
+ =?us-ascii?q?6dFA4i3t-2B6GSURchpTHsmv6oGMPtlUzfgTci1xVU-3D=22?=
+ style="text-decoration: none">practice test</a> a few days before the actual
+ test.</p><p>Advantages of taking the practice test</p><ul><li>You get
+ familiar with the HackerEarth Recruit platform including the proctoring
+ settings. The actual test may have fewer restrictions than the practice test.
+ This advanced familiarity will enable you to solve problems more efficiently
+ during the actual test.</li><li>An automatic system-compatibility check is
+ performed before you start the test. If your system isn't compatible, you
+ must make the required changes before you take the actual test.</li><li>In
+ case you face technical issues prior to or during the duration of the test,
+ please write to support@hackerearth.com</li></ul><p>Regards,</p><p>Team Sabre
+ India</p></div></td></tr></table></td></tr><tr><td align="center"
+ valign="top"><table border="0" cellpadding="0" cellspacing="20"
+ id="emailFooter" style='font-family: "Arial"; font-size: 12px; color: #666'
+ width="100%"><tr><td align="center" class="gray-text" id="address"
+ style="color: #9CA3A8; padding-top: 20px" valign="bottom"></td></tr><!-- niot
+ remove header --></table></td></tr></table></td></tr></table><img
+ =?us-ascii?q?src=3D=22http=3A=2F=2Fdelivery=2Ehackerearth=2Ecom=2Fwf=2Fopen=3Fupn=3DWSCQdJIC4YTz?=
+ =?us-ascii?q?nsQsvFec8fJ-2BYmPqGSlKMzCjEzrM6URE9jIht2VGsYh0u7LfXM5T-2FqzNd?=
+ =?us-ascii?q?Ylw3dqeexUz9GJ0NuOhDTFtdRBiJ4kB0bUH5vKpluYX7CdGUmJJxnwqE5A3xC?=
+ =?us-ascii?q?9gXCAOhZWSB0iblg8vxxHhrYPOHgNR0OFv9mEzwHT-2FLmCw0h-2FvQEl4YOZ?=
+ =?us-ascii?q?l3jBVyHTs-2F1phYhS6zy3SVkxeVL0Ri4RIBbUBXkMKaBo3gNySy9GZbHB8SY?=
+ =?us-ascii?q?soDzmkViR4fCUHIN2pAwDP91aayiPpVj-2BDOWj2K-2BAvG-2F9im4XLBOCfU?=
+ =?us-ascii?q?pwfsVMjrPKcEwzc-2FZTqumY-2BOClCeryD-2FtGVwiu-2Br3WdNSl-2F62Ho?=
+ =?us-ascii?q?evlZHDUtEqo3jzmHCjn9WoAaSD6BdqeB6PunymERIajVx7HwRoZWMypOKyqlG?=
+ =?us-ascii?q?iinN3ldIhxTVR4-3D=22?= alt="" width="1" height="1" border="0"
+ style="height:1px !important;width:1px !important;border-width:0
+ !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0
+ !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0
+ !important;padding-right:0 !important;padding-left:0
+ !important;"/></body></html><img
+ src="https://www.hackerearth.com/falcon/open/113297600/" style="display: none
+ !important; font-size: 0px; overflow: hidden; mso-hide: all; max-height: 0
+ !important; max-width: 0 !important; width: 0; height: 0;"/>
+Content-Type: multipart/alternative; boundary="=-uwUCVL4YX5q0U6/cFCtVFQ=="
+
+--=-uwUCVL4YX5q0U6/cFCtVFQ==
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Id: <012eece1-0da3-42da-8110-2042c58a8d87>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hi Manisha Das,
+You have been invited to take Sabre - Campus Hiring FY21 - NIT Jamshed=
+pur by Sabre India.
+Test details
+
+Opens at: 26 Aug, 2020 (Wednesday) | 3:00p.m.
+Closes at: Aug 26, 2020 03:15 PM IST
+Test Duration: 1 hrs 30 mins
+Invite Expiry Date: None
+Test Link: http://delivery.hackerearth.com/ls/click?upn=3DQp-2B53esd42=
+-2BVcpUyywiJYwpD7VakTdn0lGf0ykEj-2BjH27Qmj1I4POxnbLy9rxAWoaZmb9cVgTOmT=
+s492MOsG-2BCA0RiGK8rHrEtQGHzZ14odYDZuMwMEC-2FTrabAEBIu52s686n3II0mpzi6=
+StEisT2AS7GrlMZt0pAUQy7DbvUW4BlYp1WIXdvkRXIe3qcpD35Yo1_dS-2BSR5dIDQc0W=
+cCX0cF5fKUknwgjd3rSTarUbIu3g3-2BpkSGImTVbOjeUkEjJaeIAswFB8lo1Wj8CPrgUM=
+YDl-2Bvt80oUHdmpcruqLEHIgoMkmbZB9tGT0RwXlhs-2FIrIJKkCeCLLPwPfQe6xXUi3O=
+02NiwrIhDCLnPM6rkXuCUHYjWhrAOcO-2BjtAZK9NrHG8CNb8zZ2A2a-2BBg5miCcNdx-2=
+FFOqsADtvdU-2FtsST8PInMsWuVvh-2FyWn3wZKsm7qjULa4ZE57JxGzFznyWlj0e8-2Fd=
+bA1vg5sT8UmCeW4-2FfbPFGMvtOwXMCLR9wqAVEOu-2F5hqyQQ2dIfXAJwTx9xTH04ID10=
+Rh-2BIG-2BmAr9TbjikXfRosgF-2F93LhsE3Xqb9iWFrWInpUP5YvR-2BrWtSqUNyH727m=
+5d95Leq0NCsAUryipo-2FqMmfo-3D=20
+
+
+Important
+
+You can take this test anytime between the start date/time and end dat=
+e/time.
+Once the test starts, you cannot pause it. The test will run continuou=
+sly for 1 hrs 30 mins.
+
+Before you begin
+Before you take the Sabre - Campus Hiring FY21 - NIT Jamshedpur, we re=
+commend that you take the practice test a few days before the actual t=
+est.
+Advantages of taking the practice test
+
+You get familiar with the HackerEarth Recruit platform including the p=
+roctoring settings. The actual test may have fewer restrictions than t=
+he practice test. This advanced familiarity will enable you to solve p=
+roblems more efficiently during the actual test.
+An automatic system-compatibility check is performed before you start =
+the test. If your system isn't compatible, you must make the required =
+changes before you take the actual test.
+In case you face technical issues prior to or during the duration of t=
+he test, please write to support@hackerearth.com
+
+Regards,
+Team Sabre India
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--=-uwUCVL4YX5q0U6/cFCtVFQ==
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Id: <9d39c1f2-a0fd-47e6-8a77-b4f02a97fd92>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http:/=
+/www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head>
+<meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Typ=
+e" />
+<title></title>
+</head>
+<body>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" height=3D"100%=
+" id=3D"bodyTable" style=3D'font-family: "Arial"' width=3D"100%">
+<tr>
+<td align=3D"center" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" id=3D"emailCon=
+tainer" style=3D'font-family: "Arial"; background-color: #f0f0f0; padd=
+ing: 30px 30px 0 30px' width=3D"600">
+<tr>
+<td align=3D"center" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" height=3D"50" =
+id=3D"emailHeader" style=3D'font-family: "Arial"; padding: 0 0 20px 0;=
+ font-size: 13px' width=3D"100%">
+<tr>
+<!-- if white labelled option is enabled for a company, do not show ha=
+ckerearth logo -->
+<td align=3D"left" class=3D"no-mp" id=3D"logo" style=3D"margin: 0; pad=
+ding: 0" valign=3D"middle">
+<img height=3D"40" src=3D"https://he-s3.s3.amazonaws.com/media/cache/6=
+2/67/6267dec6cd8c2d78f91f392491a00133.png" width=3D"164" />
+</td>
+<!-- Show the user image and the username if there is a user object --=
+>
+<td align=3D"right" class=3D"no-mp" style=3D"margin: 0; padding: 0" va=
+lign=3D"middle" width=3D"50">
+<a class=3D"user-avatar" href=3D"http://delivery.hackerearth.com/ls/cl=
+ick?upn=3DQp-2B53esd42-2BVcpUyywiJYwpD7VakTdn0lGf0ykEj-2BjGCS4MkAKbkX2=
+63ZuWiSAMeyJ-2FDOD0eVGDm1dh3to4DvizSka4OpEWwk3TZCziXsn6jK6JfbJym8YFABe=
+1qFw7VEtHVLOOArhTmoocz5FSnYJotZZwfVMcuKBgZB4KXMjD5eY9Qyj8wD-2BKz3nrGlZ=
+DeeHhgv40rqsYjWfHoICawG7xLXrt13nrfyYJ9EeD-2BgYENCNEqCGZUpUn57HxuRrQh2P=
+ciMuRtrb80m4nxvteAIpEIJxc-2B7NTKq6oswai3Xbc-3DwLgo_dS-2BSR5dIDQc0WcCX0=
+cF5fKUknwgjd3rSTarUbIu3g3-2BpkSGImTVbOjeUkEjJaeIAswFB8lo1Wj8CPrgUMYDl-=
+2Bvt80oUHdmpcruqLEHIgoMkmbZB9tGT0RwXlhs-2FIrIJKkCeCLLPwPfQe6xXUi3O02Ni=
+wrIhDCLnPM6rkXuCUHYg-2BguH4UXa0vsMQiAVSaujwaxFibG-2F6r-2FYlsHnV1GiaoZk=
+JjJHs-2FrjRUNrT30K-2BT9CVMFe4SmIY4vPF7jE8WiXZ-2Bo-2FZTsdCBF-2FmnryW68x=
+7QAXnzTe4iIUbQXnd5R-2FTHA6-2BDHBQtn3uOHGwCPrnCMtSd3XlLsckL-2F6-2Bw4Mwf=
+V5koeQRy4h6ItsJ5iHyQ6YtVngl4P3-2BfRJ8dE-2B-2B9PSmXGmjFfXcWJvXAJBoIQDmM=
+FF1sMXryRSs9dc9ojzBE8XgdsQ-3D" style=3D"text-decoration: none"><img al=
+t=3D"manishadas1710" height=3D"30" onerror=3D"if(typeof handle_avatar_=
+error=3D=3D'function'){handle_avatar_error(this);}" src=3D"https://he-=
+s3.s3.amazonaws.com/media/avatars/manishadas1710/resized/30/d408ddbwha=
+tsapp_image_2019-09-08_at_6.59.57_pm.jpeg" style=3D"border-radius: 3px=
+" width=3D"30" /></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"center" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" id=3D"emailBod=
+y" style=3D'font-family: "Arial"; background-color: #fff; font-size: 1=
+3px; -webkit-box-shadow: 0 1px 2px 0 rgba(156, 163, 168, 0.5); -moz-bo=
+x-shadow: 0 1px 2px 0 rgba(156, 163, 168, 0.5); -ms-box-shadow: 0 1px =
+2px 0 rgba(156, 163, 168, 0.5); color: #46535e; border-radius: 3px' wi=
+dth=3D"100%">
+<tr>
+<td align=3D"left" valign=3D"top">
+<div class=3D"center-content" style=3D"font-size: 14px; line-height: 2=
+4px; color: #46535e; padding: 0 20px 30px">
+<p>Hi Manisha Das,</p>
+<p>You have been invited to take Sabre - Campus Hiring FY21 - NIT Jams=
+hedpur by Sabre India.</p>
+<p><strong>Test details</strong></p>
+<ul>
+<li>Opens at: 26 Aug, 2020 (Wednesday) | 3:00p.m.</li>
+<li>Closes at: Aug 26, 2020 03:15 PM IST</li>
+<li>Test Duration: 1 hrs 30 mins</li>
+<li>Invite Expiry Date: None</li>
+<li>Test Link: https://www.hackerearth.com/challenges/test/sabre-campu=
+s-hiring-fy21-nit-jamshedpur-2/?login=3D3b0bd9719165f5e2d1822457496747=
+d4 </li>
+</ul>
+<p></p>
+<p><strong>Important</strong></p>
+<ul>
+<li>You can take this test anytime between the start date/time and end=
+ date/time.</li>
+<li>Once the test starts, you cannot pause it. The test will run conti=
+nuously for 1 hrs 30 mins.</li>
+</ul>
+<p><strong>Before you begin</strong></p>
+<p>Before you take the Sabre - Campus Hiring FY21 - NIT Jamshedpur, we=
+ recommend that you take the <a href=3D"http://delivery.hackerearth.co=
+m/ls/click?upn=3DQp-2B53esd42-2BVcpUyywiJYwpD7VakTdn0lGf0ykEj-2BjGCS4M=
+kAKbkX263ZuWiSAMeyJ-2FDOD0eVGDm1dh3to4DvizSka4OpEWwk3TZCziXsn6jK6JfbJy=
+m8YFABe1qFw7VEtHVLOOArhTmoocz5FSnYPdhziktwlgQRcqq3TIcn1BT4Eez-2F5yuGDq=
+D6eDOKSG5XHs9WeWxMuJ9QmZ0D8G-2Fp6zkF0wp5z2bpOuOypfxwgtaJOYZi-2FFNDdYn3=
+xvfWRHQsxnQjDJgC6FWcR6AFuvvH2n3tSyzQUDKaq-2BYaM755GYlcQFfjkyikq-2BtGUv=
+hoN6ZhKpH-2B9CpMa-2BxG-2FcqvvzeIBVvndEy-2F0MF3tcEwz6Gsv0jKULFPGCCOnQy-=
+2BfIcz0gRqhiunsKDsjSpkoWRpkrGo12-2FXzXLuDJsXNk2GFcim0Va5CvkSKNTSlmmy3Z=
+C9M7jgXe3sk12QR-2F3zEmN1UqR-2FOy9iG6Up0EDl3MqiwQIrRpf6i0dsU-2BxNBPi4iH=
+AV12DpavmrNP7e-2BnIQRZJD7a6pg-3D-3Dttwq_dS-2BSR5dIDQc0WcCX0cF5fKUknwgj=
+d3rSTarUbIu3g3-2BpkSGImTVbOjeUkEjJaeIAswFB8lo1Wj8CPrgUMYDl-2Bvt80oUHdm=
+pcruqLEHIgoMkmbZB9tGT0RwXlhs-2FIrIJKkCeCLLPwPfQe6xXUi3O02NiwrIhDCLnPM6=
+rkXuCUHYh8XD709qhPhTXjwGXYQZEDXhjh8LtrOV-2FbnCssW2O7pmECbO1ZNWMKnb7sgw=
+Q1c8QiHrbACBt0vx7U8W7v2qiP52QkNjFrH96EGvfXJGVms9Tc3koDPWdufXfVExPfftGo=
+MIEBQHhnP3-2BkUYaWVMn8PbcHs4ufCq0VV17LQ-2Fnb6d4W4MLzjvBtIbeABJZjnaogQ6=
+ArOSxioIt1p2po-2FPIVs096dFA4i3t-2B6GSURchpTHsmv6oGMPtlUzfgTci1xVU-3D" =
+style=3D"text-decoration: none">practice test</a> a few days before th=
+e actual test.</p>
+<p>Advantages of taking the practice test</p>
+<ul>
+<li>You get familiar with the HackerEarth Recruit platform including t=
+he proctoring settings. The actual test may have fewer restrictions th=
+an the practice test. This advanced familiarity will enable you to sol=
+ve problems more efficiently during the actual test.</li>
+<li>An automatic system-compatibility check is performed before you st=
+art the test. If your system isn't compatible, you must make the requi=
+red changes before you take the actual test.</li>
+<li>In case you face technical issues prior to or during the duration =
+of the test, please write to support@hackerearth.com</li>
+</ul>
+<p>Regards,</p>
+<p>Team Sabre India</p>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"center" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"20" id=3D"emailFo=
+oter" style=3D'font-family: "Arial"; font-size: 12px; color: #666' wid=
+th=3D"100%">
+<tr>
+<td align=3D"center" class=3D"gray-text" id=3D"address" style=3D"color=
+: #9CA3A8; padding-top: 20px" valign=3D"bottom"></td>
+</tr>
+<!-- niot remove header -->
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<img src=3D"http://delivery.hackerearth.com/wf/open?upn=3DWSCQdJIC4YTz=
+nsQsvFec8fJ-2BYmPqGSlKMzCjEzrM6URE9jIht2VGsYh0u7LfXM5T-2FqzNdYlw3dqeex=
+Uz9GJ0NuOhDTFtdRBiJ4kB0bUH5vKpluYX7CdGUmJJxnwqE5A3xC9gXCAOhZWSB0iblg8v=
+xxHhrYPOHgNR0OFv9mEzwHT-2FLmCw0h-2FvQEl4YOZl3jBVyHTs-2F1phYhS6zy3SVkxe=
+VL0Ri4RIBbUBXkMKaBo3gNySy9GZbHB8SYsoDzmkViR4fCUHIN2pAwDP91aayiPpVj-2BD=
+OWj2K-2BAvG-2F9im4XLBOCfUpwfsVMjrPKcEwzc-2FZTqumY-2BOClCeryD-2FtGVwiu-=
+2Br3WdNSl-2F62HoevlZHDUtEqo3jzmHCjn9WoAaSD6BdqeB6PunymERIajVx7HwRoZWMy=
+pOKyqlGiinN3ldIhxTVR4-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"=
+0" style=3D"height:1px !important;width:1px !important;border-width:0 =
+!important;margin-top:0 !important;margin-bottom:0 !important;margin-r=
+ight:0 !important;margin-left:0 !important;padding-top:0 !important;pa=
+dding-bottom:0 !important;padding-right:0 !important;padding-left:0 !i=
+mportant;"/>
+</body>
+</html>
+<img src=3D"https://www.hackerearth.com/falcon/open/113297600/" style=3D=
+"display: none !important; font-size: 0px; overflow: hidden; mso-hide:=
+ all; max-height: 0 !important; max-width: 0 !important; width: 0; hei=
+ght: 0;"/>
+
+--=-uwUCVL4YX5q0U6/cFCtVFQ==--

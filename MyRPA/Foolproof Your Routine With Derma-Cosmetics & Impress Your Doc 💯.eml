@@ -1,0 +1,832 @@
+Delivered-To: manishadas1710@gmail.com
+Received: from p2-239131.ncm14.com (p2-239131.ncm14.com. [202.162.239.131])
+	by mx.google.com with ESMTPS id i125si7746451ybg
+	.95.2020.08.23.00.28.25        for
+	<manishadas1710@gmail.com>        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+	Sun, 23 Aug 2020 00:28:26 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJyk7q5zPl81KxODdIvxrSnUxvPeNfF22+KN6TFWAzYPb/fdi0ucR7xiBlI2v+hgYoJqXRZd
+X-Received: by 2002:a25:dc85:: with SMTP id y127mr431374ybe.462.1598167706044;       
+ Sun, 23 Aug 2020 00:28:26 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1598167706; cv=none; d=google.com;
+	s=arc-20160816;
+	b=V5xJJq0PMIhk9qwusyhdu7JY3jJ4MNKWNWnQLv/FEuNp8pmGbuNKWEm75N6LPHrwZNl2tMGkWj/
+	AqRV5YWM+7/8QzRRQlPg9CtlIu5eTLcViXMkPvkqTmrUueP7NtCgRRpHJsgaS15vQX+qglmT2sNfW
+	Xgoz+bRrfY6SEOyZrjevTC3thnK1h84hgnFcwry5zRTwcN0kEkl8WPCSRx8Lg6v+DcR5k7Nv0ohv3
+	voj1NtrVN3we2OAms2CA9d1Y3eRidkeQ4WPwTUgE/w8FONMYf3ifM7ueOlKdpE7CpaUNXx5Rpu/Cu
+	+X2W3uhg6miRc1tKbTym0fPbx7RyAMFr2pIw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+	s=arc-20160816;
+	h=mime-version:feedback-id:x_delivery:list-unsubscribe:message-id:subject:
+	reply-to:from:to:date:domainkey-signature:dkim-signature;
+	bh=2NGbZHcSeScfSA2FETjNHM6YoDkyIMoJc9aOqamadMg=;
+	b=0MbQ3PZVJhcQyOhm3hTAgSE+pATsNg+N2gh56uROArPaXTmAK5FmnkUw9JXYAzFGmopid6uzRZW
+	3Fmm4r5K6jEml8HB2PYFnsX4K2TEMpYebrHGJryN5cmBmtpsZeG2S6Ho6dh/VkPlOyEdn8sktjTY6
+	RRKTeB1AdGAcTu9t26e+oQQv36PfmWG+zwU1Z2LKf0CuGI2HtZYGwPKps9srriF3e06UpAr2q+M+b
+	+2CyedaDTRDInX+W3T57NF33bsVk+g9Q1s39kguukBCSrGMra/tjZ+OIPxCwjUHYF8+m8Af6poXE4
+	J5EUWEpZxzt23VT4yKcTWgABWPoMhC6eXO3Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+	dkim=pass header.i=@nykaa.com header.s=fnc header.b=f2ujcWSB; spf=pass
+	(google.com: domain of campaign-nykaasmart-85303-1493-12790103-manishadas1710=gmail.com@env.nykaa.com designates 202.162.239.131 as permitted sender)
+	smtp.mailfrom=
+	"campaign-nykaasmart-85303-1493-12790103-manishadas1710=gmail.com@env.nykaa.com";
+	dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=nykaa.com
+Return-Path: =?us-ascii?q?=3Ccampaign-nykaasmart-85303-1493-12790103-manishadas1710=3Dgmail?=
+ =?us-ascii?q?=2Ecom=40env=2Enykaa=2Ecom=3E?=
+Received-SPF: pass (google.com: domain of
+ =?us-ascii?q?campaign-nykaasmart-85303-1493-12790103-manishadas1710=3Dgmail=2E?=
+ =?us-ascii?q?com=40env=2Enykaa=2Ecom?= designates 202.162.239.131 as
+ permitted sender) client-ip=202.162.239.131;
+Authentication-Results: mx.google.com;
+	dkim=pass header.i=@nykaa.com header.s=fnc header.b=f2ujcWSB; spf=pass
+	(google.com: domain of campaign-nykaasmart-85303-1493-12790103-manishadas1710=gmail.com@env.nykaa.com designates 202.162.239.131 as permitted sender)
+	smtp.mailfrom=
+	"campaign-nykaasmart-85303-1493-12790103-manishadas1710=gmail.com@env.nykaa.com";
+	dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=nykaa.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=fnc; d=nykaa.com;
+	h=Date:To:From:Reply-To:Subject:Message-ID:List-Unsubscribe:MIME-Version:
+	Content-Type;
+	bh=UoembO1hl9BmS6rq9792NVkuiMY=;
+	b=f2ujcWSBIep3n96QYvit94oVv9vxvZr1SF8wFkAuyJaaZyi0RXy28Ko+EEU3sZQiV/UGwB7ORJz
+	f+t9LaE+fy+GL9nK/fQM333ZM2uTQ9incPgVkKDy/4xLgvKKlF6SZ2cdrtDguGOyuQsECRDMPX5MY
+	BP/ZG56TuK5jLedBuuY=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=fnc; d=nykaa.com;
+ =?us-ascii?q?b=3DLMZsy5cnWk+L4t1Fe5dDbtBjHp0PctG7VO1fEHbYfeuB22p+64=2FM2hV=2FKtm?=
+ =?us-ascii?q?yrlfGeL6v1PHGWQRN?=  
+ HQP2qr3mbYDa6gVWzMbh3oki3yppi6Ycr0F4di7y7S1MiOMyffBGUk6T0QxXskwOickqR/17RKNe  
+ ftVxrDw4BQITpAAqHi0=;
+Date: Sun, 23 Aug 2020 12:20:54 +0530
+To: manishadas1710@gmail.com
+From: Nykaa <noreply@nykaa.com>
+Reply-To: Nykaa <noreply@nykaa.com>
+Subject: Foolproof Your Routine With Derma-Cosmetics & Impress Your Doc
+ =?utf-8?b?8J+Srw==?=
+Message-ID: <392294563212790103@env.nykaa.com>
+X-Abuse-Reports-To: abuse@bosemail.com
+List-Unsubscribe: =?us-ascii?q?=3Cmailto=3Anykaasmart-85303-1493-12790103-4f958e5c1ae5a021015718?=
+ =?us-ascii?q?1ea001dedb=40usub=2Enykaa=2Ecom=3Fsubject=3DUnsubscribe=3E=2C?=
+ =?us-ascii?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Ful=3DAgAECgMJVQsYVURbVAoMEF0CVlRCA?=
+ =?us-ascii?q?VMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQ9XUwFK&sl=3DcU58cG?=
+ =?us-ascii?q?ZEMGsYN3ViSQgLCBsNS15QUUpQDA9IAQ=3D=3D&clientid=3D85303&c=3D000=3E?=
+X_DELIVERY: 85303_1493_1
+x-job: nykaasmart_1493_1
+Feedback-ID: 1493:85303:20200823122159:nczc
+MIME-Version: 1.0
+Uid: 13139
+Folder: INBOX
+PlainText: =?utf-8?q?=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQl?=
+ =?utf-8?q?cUQ5K&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQl?=
+ =?utf-8?q?cUQ5K&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQ9?=
+ =?utf-8?q?XUwtK&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=2Clatest-edition=2C6=2C20230=2Cwhat-makes=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQ9?=
+ =?utf-8?q?XUwBK&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=2Clatest-edition=2C1=2C60978=2Cdull-skin=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQ9?=
+ =?utf-8?q?XUw9K&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=2Clatest-edition=2C4=2C69380=2Chairgoals-courtesy=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQ9?=
+ =?utf-8?q?XUw5K&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=2Clatest-edition=2C3=2C63782=2Clisted-all=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQ9?=
+ =?utf-8?q?XUwxK&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=2Clatest-edition=2C2=2C69378=2Cseven-makeup=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQ9?=
+ =?utf-8?q?XUw1K&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=2Clatest-edition=2C5=2C60084=2Cnykaas-edit=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQl?=
+ =?utf-8?q?cUgtK&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQ9?=
+ =?utf-8?q?XUwlK&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQ9?=
+ =?utf-8?q?TUEQ=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQl?=
+ =?utf-8?q?SGA=3D=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQ9?=
+ =?utf-8?q?TUUQ=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQ9?=
+ =?utf-8?q?TUkQ=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQp?=
+ =?utf-8?q?cGA=3D=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQ9?=
+ =?utf-8?q?TU0Q=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQ9?=
+ =?utf-8?q?TXEQ=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQp?=
+ =?utf-8?q?UVEQ=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQ9?=
+ =?utf-8?q?TXUQ=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQl?=
+ =?utf-8?q?QGA=3D=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQl?=
+ =?utf-8?q?cUA9K&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQ1?=
+ =?utf-8?q?QU0Q=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQ9?=
+ =?utf-8?q?VXEQ=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQl?=
+ =?utf-8?q?VUg1K&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQl?=
+ =?utf-8?q?VXQtK&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQ1?=
+ =?utf-8?q?TGA=3D=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQt?=
+ =?utf-8?q?cVQ5K&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQp?=
+ =?utf-8?q?cGA=3D=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=3E?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQ1?=
+ =?utf-8?q?TGA=3D=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?b?cDI5MD4gTnlrYWHigJlz?= Beauty & Makeup Digital Magazine Manage your
+ mailing preferences
+ =?utf-8?q?=3Chttp=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQsYVU?=
+ =?utf-8?q?RbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8IGQ9?=
+ =?utf-8?q?XUwpK&sl=3DcU5mT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Dutm=5Fso?=
+ =?utf-8?q?urce%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823=5Fbb=5Fl?=
+ =?utf-8?q?p290=3E?=
+HtmlBody: <html><head> <title></title> <meta http-equiv="Content-Type"
+ content="text/html; charset=utf-8"></head><body bgcolor="#FFFFFF"
+ leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"> <center>
+ <table id="Table_01" width="600" height="0" border="0" cellpadding="0"
+ cellspacing="0" style="border: solid 8px #e5e5e5;"> <tr></tr> <tr> <td
+ colspan="12" valign="top"> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQlcUQ5K&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22?=  target="_blank"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/mailer_01.jpg"
+ width="600" height="210" style="float:left; padding:0; margin:0; border:0">
+ </a> </td></tr> <tr> <td colspan="12" valign="top"> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQlcUQ5K&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22?=  target="_blank"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/mailer_02.jpg"
+ width="600" height="106" style="float:left; padding:0; margin:0; border:0">
+ </a> </td> </tr> <tr> <td colspan="12" valign="top"> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQ9XUg1K&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22?=  target="_blank"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/mailer_03.jpg"
+ width="600" height="470" style="float:left; padding:0;margin:0; border:0">
+ </a> </td> </tr> <tr> <td colspan="12" valign="top"> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQ9XUg5K&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22?=  target="_blank"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/mailer_04.jpg"
+ width="600" height="459" style="float:left; padding:0; margin:0; border:0">
+ </a> </td> </tr> <tr> <td colspan="12" valign="top"> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQ9XUg9K&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22?= target="_blank"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/mailer_05.jpg"
+ width="600" height="481" style="float:left; padding:0; margin:0; border:0">
+ </a> </td> </tr> <tr> <td colspan="12" valign="top"> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQ9XUgBK&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22?=  target="_blank"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/mailer_06.jpg"
+ width="600" height="473" style="float:left; padding:0; margin:0; border:0">
+ </a> </td> </tr> <tr> <td colspan="12" valign="top"><a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQ9XUgFK&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22?=  target="_blank"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/mailer_07.jpg"
+ width="600" height="477" style="float:left; padding:0; margin:0; border:0">
+ </a> </td> </tr> <tr> <td colspan="12" valign="top"> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQ9XUwhK&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22__target=3D=22=5Fblank=22=3E?=
+ =?us-ascii?q?_=3Cimgsrc=3D=22http=3A=2F=2Fimg=2Enykaa=2Ecom=2Fimages=2Fnykaasmart=2Fnykaasmart=5F73?=
+ =?us-ascii?q?7=2Fmailer=5F08=2Ejpg=22?= width="600" height="465"
+ style="float:left; padding:0; margin:0; border:0"> </a> </td> </tr> <tr> <td
+ colspan="12" valign="top"> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQlcUgtK&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22?=  target="_blank"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/mailer_09.jpg"
+ width="600" height="445" style="float:left; padding:0; margin:0; border:0">
+ </a> </td> </tr> <tr> <td colspan="12" valign="top"> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQ9XUwlK&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22__target=3D=22=5Fblank=22=3E?=
+ =?us-ascii?q?_=3Cimgsrc=3D=22http=3A=2F=2Fimg=2Enykaa=2Ecom=2Fimages=2Fnykaasmart=2Fnykaasmart=5F73?=
+ =?us-ascii?q?7=2Fmailer=5F10=2Ejpg=22?= width="600" height="350"
+ style="float:left; padding:0; margin:0; border:0"> </a> </td> </tr> <tr> <td
+ colspan="12" valign="top"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/New_03.jpg"
+ width="600" height="66" style="float:left; padding:0; margin:0; border:0">
+ </td> </tr> <tr> <td colspan="12" valign="top" nowrap> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQ9TUEQ=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22?=  target="_blank"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/New_04.jpg"
+ width="120" height="118"style="float:left; padding:0; margin:0; border:0">
+ </a> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQlSGA=3D=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22?=  target="_blank"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/New_05.jpg"
+ width="123" height="118" style="float:left; padding:0; margin:0; border:0" />
+ </a> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQ9TUUQ=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22?=  target="_blank"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/New_06.jpg"
+ width="115" height="118" style="float:left; padding:0; margin:0; border:0">
+ </a> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQ9TUkQ=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22?= target="_blank"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/New_07.jpg"
+ width="113" height="118" style="float:left; padding:0; margin:0; border:0">
+ </a> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQpcGA=3D=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22?=  target="_blank"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/New_08.jpg"
+ width="129" height="118" style="float:left; padding:0; margin:0; border:0">
+ </a> </td> </tr> <tr> <td colspan="12" valign="top" nowrap> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQ9TU0Q=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22?=  target="_blank"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/New_09.jpg"
+ width="120"height="123" style="float:left; padding:0; margin:0; border:0">
+ </a> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQ9TXEQ=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22?=  target="_blank"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/New_10.jpg"
+ width="123" height="123" style="float:left; padding:0; margin:0; border:0"
+ border="0" /> </a> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQpUVEQ=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22?=  target="_blank"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/New_11.jpg"
+ width="115" height="123" style="float:left; padding:0; margin:0; border:0">
+ </a>
+ =?us-ascii?q?=3Cahref=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgM?=
+ =?us-ascii?q?JVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYK?=
+ =?us-ascii?q?AE8IGQ9TXUQ=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga?=
+ =?us-ascii?q?=3Dutm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De2008?=
+ =?us-ascii?q?23=5Fbb=5Flp290=22?=  target="_blank"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/New_12.jpg"
+ width="113" height="123" style="float:left; padding:0; margin:0; border:0">
+ </a> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQlQGA=3D=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22?=  target="_blank"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/New_13.jpg"
+ width="129" height="123" style="float:left; padding:0; margin:0; border:0">
+ </a> </td> </tr> <tr> <td colspan="12" valign="top"> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQlcUA9K&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22?=  target="_blank"><img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/offer_02.jpg"
+ width="300" height="362" style="float:left; padding:0; margin:0; border:0">
+ </a> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQ1QU0Q=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22?=  target="_blank"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/offer_03.jpg"
+ width="300" height="362" style="float:left; padding:0; margin:0; border:0">
+ </a> </td> </tr> <tr> <td colspan="12" valign="top"> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQ9VXEQ=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22?=  target="_blank"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/offer_04.jpg"
+ width="300"height="339" style="float:left; padding:0; margin:0; border:0">
+ </a> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQlVUg1K&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22?=  target="_blank"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/offer_05.jpg"
+ width="300" height="339" style="float:left; padding:0; margin:0; border:0">
+ </a> </td> </tr> <tr> <td colspan="12" valign="top"> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQlVXQtK&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22__target=3D=22=5Fblank=22=3E_=3Cimg?=
+ =?us-ascii?q?_src=3D=22http=3A=2F=2Fimg=2Enykaa=2Ecom=2Fimages=2Fnykaasmart=2Fnykaasmart=5F737=2Fsp?=
+ =?us-ascii?q?inthewheel=5Fhpstatic=5Fdesktop=2Egif=22?= width="600"
+ height="206" style="float:left; padding:0; margin:0; border:0"> </a></td>
+ </tr> <tr> <td colspan="12" valign="top"> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQ1TGA=3D=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22?=  target="_blank"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/offer_07.jpg"
+ width="600" height="266" style="float:left; padding:0; margin:0; border:0">
+ </a> </td> </tr> <tr> <td colspan="12" valign="top"> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQtcVQ5K&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22?=  target="_blank"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/offer_08.jpg"
+ width="600" height="158" style="float:left; padding:0; margin:0; border:0">
+ </a> </td> </tr> <tr> <td colspan="12" valign="top">
+ =?us-ascii?q?=3Cahref=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgM?=
+ =?us-ascii?q?JVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYK?=
+ =?us-ascii?q?AE8IGQpcGA=3D=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga?=
+ =?us-ascii?q?=3Dutm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De2008?=
+ =?us-ascii?q?23=5Fbb=5Flp290=22?=  target="_blank"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/nykaafas.jpg"
+ width="600" height="200" style="float:left; padding:0; margin:0; border:0">
+ </a> </td> </tr> <tr> <td colspan="12" valign="top"> <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQ1TGA=3D=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22?=  target="_blank"> <img
+ src="http://img.nykaa.com/images/nykaasmart/nykaasmart_737/logos_07.jpg"
+ width="600" height="144" style="float:left; padding:0; margin:0; border:0">
+ </a> </td> </tr> <tr> <td colspan="12"></td> </tr> </table> </table> <table
+ width="608" height="0" border="0" cellpadding="0"cellspacing="0"> <tbody>
+ <tr> <td style="font-family:Georgia, 'Times New Roman', Times, serif;
+ font-style:italic; font-size:9px; color:#ffffff;
+ text-align:center;">Nykaa&rsquo;s Beauty & Makeup Digital Magazine</td> </tr>
+ </tbody> </table> </center><br/><div></div><img border="0"
+ =?us-ascii?q?src=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJVQ?=
+ =?us-ascii?q?sYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE8?=
+ =?us-ascii?q?IGQgY&sl=3DcU58T2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&c=3D85303=22?=
+ ></body></html><center>Manage your mailing <a
+ =?us-ascii?q?href=3D=22http=3A=2F=2Flnk=2Enykaa=2Ecom=2Fgtrack=3Fclientid=3D85303&ul=3DAgAECgMJV?=
+ =?us-ascii?q?QsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAgYKAE?=
+ =?us-ascii?q?8IGQ9XUwpK&sl=3DcU5mT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3Du?=
+ =?us-ascii?q?tm=5Fsource%3DCRM%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3De200823?=
+ =?us-ascii?q?=5Fbb=5Flp290=22?= >preferences</a></center>
+Content-Type: multipart/alternative; boundary="=-oIoqfrXMA+2aE/wTMqgi3A=="
+
+--=-oIoqfrXMA+2aE/wTMqgi3A==
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Content-Id: <82c55b5f-4cb3-46e1-a737-33c4ec21a0c6>
+
+<http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQlcUQ5K&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290>
+
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQlcUQ5K&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290>
+
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQ9XUwtK&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290,latest-edition,6,20230,what-makes>
+
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQ9XUwBK&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290,latest-edition,1,60978,dull-skin>
+
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQ9XUw9K&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290,latest-edition,4,69380,hairgoals-courtesy>
+
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQ9XUw5K&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290,latest-edition,3,63782,listed-all>
+
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQ9XUwxK&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290,latest-edition,2,69378,seven-makeup>
+
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQ9XUw1K&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290,latest-edition,5,60084,nykaas-edit>
+
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQlcUgtK&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290>
+
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQ9XUwlK&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290>
+
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQ9TUEQ=&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290>
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQlSGA==&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290>
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQ9TUUQ=&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290>
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQ9TUkQ=&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290>
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQpcGA==&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290>
+
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQ9TU0Q=&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290>
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQ9TXEQ=&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290>
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQpUVEQ=&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290>
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQ9TXUQ=&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290>
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQlQGA==&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290>
+
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQlcUA9K&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290>
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQ1QU0Q=&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290>
+
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQ9VXEQ=&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290>
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQlVUg1K&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290>
+
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQlVXQtK&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290>
+
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQ1TGA==&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290>
+
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQtcVQ5K&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290>
+
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQpcGA==&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290>
+
+ <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQ1TGA==&sl=cU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290>
+
+ Nykaa’s Beauty & Makeup Digital Magazine 
+
+Manage your mailing preferences <http://lnk.nykaa.com/gtrack?clientid=85303&ul=
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=&ml=AgYKAE8IGQ9XUwpK&sl=cU5mT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=&pp=0&&ga=utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp290>
+
+
+--=-oIoqfrXMA+2aE/wTMqgi3A==
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Id: <8d42d377-7832-4648-b50d-e60f71b0afe1>
+
+<html><head> <title></title> <meta http-equiv=3D"Content-Type" content=
+=3D"text/html; charset=3Dutf-8"></head><body bgcolor=3D"#FFFFFF" leftm=
+argin=3D"0" topmargin=3D"0" marginwidth=3D"0" marginheight=3D"0"> <cen=
+ter> <table id=3D"Table_01" width=3D"600" height=3D"0" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" style=3D"border: solid 8px #e5e5e5;"=
+> <tr></tr> <tr> <td colspan=3D"12" valign=3D"top"> <a href=3D"http://=
+lnk.nykaa.com/gtrack?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQlcUQ5K&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3D=
+utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp29=
+0"  target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/nykaasm=
+art/nykaasmart_737/mailer_01.jpg" width=3D"600" height=3D"210" style=3D=
+"float:left; padding:0; margin:0; border:0"> </a> </td>
+</tr> <tr> <td colspan=3D"12" valign=3D"top"> <a href=3D"http://lnk.ny=
+kaa.com/gtrack?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQlcUQ5K&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3D=
+utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp29=
+0"  target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/nykaasm=
+art/nykaasmart_737/mailer_02.jpg" width=3D"600" height=3D"106" style=3D=
+"float:left; padding:0; margin:0; border:0"> </a> </td> </tr> <tr> <td=
+ colspan=3D"12" valign=3D"top"> <a href=3D"http://lnk.nykaa.com/gtrack=
+?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQ9XUg1K&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3D=
+utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp29=
+0"  target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/nykaasm=
+art/nykaasmart_737/mailer_03.jpg" width=3D"600" height=3D"470" style=3D=
+"float:left; padding:0;
+margin:0; border:0"> </a> </td> </tr> <tr> <td colspan=3D"12" valign=3D=
+"top"> <a href=3D"http://lnk.nykaa.com/gtrack?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQ9XUg5K&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3D=
+utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp29=
+0"  target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/nykaasm=
+art/nykaasmart_737/mailer_04.jpg" width=3D"600" height=3D"459" style=3D=
+"float:left; padding:0; margin:0; border:0"> </a> </td> </tr> <tr> <td=
+ colspan=3D"12" valign=3D"top"> <a href=3D"http://lnk.nykaa.com/gtrack=
+?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQ9XUg9K&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3D=
+utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp29=
+0"=20
+target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/nykaasmart/=
+nykaasmart_737/mailer_05.jpg" width=3D"600" height=3D"481" style=3D"fl=
+oat:left; padding:0; margin:0; border:0"> </a> </td> </tr> <tr> <td co=
+lspan=3D"12" valign=3D"top"> <a href=3D"http://lnk.nykaa.com/gtrack?cl=
+ientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQ9XUgBK&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3D=
+utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp29=
+0"  target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/nykaasm=
+art/nykaasmart_737/mailer_06.jpg" width=3D"600" height=3D"473" style=3D=
+"float:left; padding:0; margin:0; border:0"> </a> </td> </tr> <tr> <td=
+ colspan=3D"12" valign=3D"top">
+<a href=3D"http://lnk.nykaa.com/gtrack?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQ9XUgFK&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3D=
+utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp29=
+0"  target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/nykaasm=
+art/nykaasmart_737/mailer_07.jpg" width=3D"600" height=3D"477" style=3D=
+"float:left; padding:0; margin:0; border:0"> </a> </td> </tr> <tr> <td=
+ colspan=3D"12" valign=3D"top"> <a href=3D"http://lnk.nykaa.com/gtrack=
+?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQ9XUwhK&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3D=
+utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp29=
+0"  target=3D"_blank"> <img
+src=3D"http://img.nykaa.com/images/nykaasmart/nykaasmart_737/mailer_08=
+.jpg" width=3D"600" height=3D"465" style=3D"float:left; padding:0; mar=
+gin:0; border:0"> </a> </td> </tr> <tr> <td colspan=3D"12" valign=3D"t=
+op"> <a href=3D"http://lnk.nykaa.com/gtrack?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQlcUgtK&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3D=
+utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp29=
+0"  target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/nykaasm=
+art/nykaasmart_737/mailer_09.jpg" width=3D"600" height=3D"445" style=3D=
+"float:left; padding:0; margin:0; border:0"> </a> </td> </tr> <tr> <td=
+ colspan=3D"12" valign=3D"top"> <a href=3D"http://lnk.nykaa.com/gtrack=
+?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQ9XUwlK&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3D=
+utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp29=
+0"  target=3D"_blank"> <img
+src=3D"http://img.nykaa.com/images/nykaasmart/nykaasmart_737/mailer_10=
+.jpg" width=3D"600" height=3D"350" style=3D"float:left; padding:0; mar=
+gin:0; border:0"> </a> </td> </tr> <tr> <td colspan=3D"12" valign=3D"t=
+op"> <img src=3D"http://img.nykaa.com/images/nykaasmart/nykaasmart_737=
+/New_03.jpg" width=3D"600" height=3D"66" style=3D"float:left; padding:=
+0; margin:0; border:0"> </td> </tr> <tr> <td colspan=3D"12" valign=3D"=
+top" nowrap> <a href=3D"http://lnk.nykaa.com/gtrack?clientid=3D85303&u=
+l=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQ9TUEQ=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&g=
+a=3Dutm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_=
+lp290"  target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/nyk=
+aasmart/nykaasmart_737/New_04.jpg" width=3D"120" height=3D"118"
+style=3D"float:left; padding:0; margin:0; border:0"> </a> <a href=3D"h=
+ttp://lnk.nykaa.com/gtrack?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQlSGA=3D=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&=
+&ga=3Dutm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_b=
+b_lp290"  target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/n=
+ykaasmart/nykaasmart_737/New_05.jpg" width=3D"123" height=3D"118" styl=
+e=3D"float:left; padding:0; margin:0; border:0" /> </a> <a href=3D"htt=
+p://lnk.nykaa.com/gtrack?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQ9TUUQ=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&g=
+a=3Dutm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_=
+lp290"  target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/nyk=
+aasmart/nykaasmart_737/New_06.jpg" width=3D"115" height=3D"118" style=3D=
+"float:left; padding:0; margin:0; border:0"> </a> <a href=3D"http://ln=
+k.nykaa.com/gtrack?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQ9TUkQ=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&g=
+a=3Dutm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_=
+lp290"=20
+target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/nykaasmart/=
+nykaasmart_737/New_07.jpg" width=3D"113" height=3D"118" style=3D"float=
+:left; padding:0; margin:0; border:0"> </a> <a href=3D"http://lnk.nyka=
+a.com/gtrack?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQpcGA=3D=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&=
+&ga=3Dutm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_b=
+b_lp290"  target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/n=
+ykaasmart/nykaasmart_737/New_08.jpg" width=3D"129" height=3D"118" styl=
+e=3D"float:left; padding:0; margin:0; border:0"> </a> </td> </tr> <tr>=
+ <td colspan=3D"12" valign=3D"top" nowrap> <a href=3D"http://lnk.nykaa=
+.com/gtrack?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQ9TU0Q=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&g=
+a=3Dutm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_=
+lp290"  target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/nyk=
+aasmart/nykaasmart_737/New_09.jpg" width=3D"120"
+height=3D"123" style=3D"float:left; padding:0; margin:0; border:0"> </=
+a> <a href=3D"http://lnk.nykaa.com/gtrack?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQ9TXEQ=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&g=
+a=3Dutm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_=
+lp290"  target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/nyk=
+aasmart/nykaasmart_737/New_10.jpg" width=3D"123" height=3D"123" style=3D=
+"float:left; padding:0; margin:0; border:0" border=3D"0" /> </a> <a hr=
+ef=3D"http://lnk.nykaa.com/gtrack?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQpUVEQ=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&g=
+a=3Dutm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_=
+lp290"  target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/nyk=
+aasmart/nykaasmart_737/New_11.jpg" width=3D"115" height=3D"123" style=3D=
+"float:left; padding:0; margin:0; border:0"> </a> <a
+href=3D"http://lnk.nykaa.com/gtrack?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQ9TXUQ=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&g=
+a=3Dutm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_=
+lp290"  target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/nyk=
+aasmart/nykaasmart_737/New_12.jpg" width=3D"113" height=3D"123" style=3D=
+"float:left; padding:0; margin:0; border:0"> </a> <a href=3D"http://ln=
+k.nykaa.com/gtrack?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQlQGA=3D=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&=
+&ga=3Dutm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_b=
+b_lp290"  target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/n=
+ykaasmart/nykaasmart_737/New_13.jpg" width=3D"129" height=3D"123" styl=
+e=3D"float:left; padding:0; margin:0; border:0"> </a> </td> </tr> <tr>=
+ <td colspan=3D"12" valign=3D"top"> <a href=3D"http://lnk.nykaa.com/gt=
+rack?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQlcUA9K&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3D=
+utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp29=
+0"  target=3D"_blank">
+<img src=3D"http://img.nykaa.com/images/nykaasmart/nykaasmart_737/offe=
+r_02.jpg" width=3D"300" height=3D"362" style=3D"float:left; padding:0;=
+ margin:0; border:0"> </a> <a href=3D"http://lnk.nykaa.com/gtrack?clie=
+ntid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQ1QU0Q=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&g=
+a=3Dutm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_=
+lp290"  target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/nyk=
+aasmart/nykaasmart_737/offer_03.jpg" width=3D"300" height=3D"362" styl=
+e=3D"float:left; padding:0; margin:0; border:0"> </a> </td> </tr> <tr>=
+ <td colspan=3D"12" valign=3D"top"> <a href=3D"http://lnk.nykaa.com/gt=
+rack?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQ9VXEQ=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&g=
+a=3Dutm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_=
+lp290"  target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/nyk=
+aasmart/nykaasmart_737/offer_04.jpg" width=3D"300"
+height=3D"339" style=3D"float:left; padding:0; margin:0; border:0"> </=
+a> <a href=3D"http://lnk.nykaa.com/gtrack?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQlVUg1K&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3D=
+utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp29=
+0"  target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/nykaasm=
+art/nykaasmart_737/offer_05.jpg" width=3D"300" height=3D"339" style=3D=
+"float:left; padding:0; margin:0; border:0"> </a> </td> </tr> <tr> <td=
+ colspan=3D"12" valign=3D"top"> <a href=3D"http://lnk.nykaa.com/gtrack=
+?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQlVXQtK&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3D=
+utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp29=
+0"  target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/nykaasm=
+art/nykaasmart_737/spinthewheel_hpstatic_desktop.gif" width=3D"600" he=
+ight=3D"206" style=3D"float:left; padding:0; margin:0; border:0"> </a>
+</td> </tr> <tr> <td colspan=3D"12" valign=3D"top"> <a href=3D"http://=
+lnk.nykaa.com/gtrack?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQ1TGA=3D=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&=
+&ga=3Dutm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_b=
+b_lp290"  target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/n=
+ykaasmart/nykaasmart_737/offer_07.jpg" width=3D"600" height=3D"266" st=
+yle=3D"float:left; padding:0; margin:0; border:0"> </a> </td> </tr> <t=
+r> <td colspan=3D"12" valign=3D"top"> <a href=3D"http://lnk.nykaa.com/=
+gtrack?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQtcVQ5K&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3D=
+utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp29=
+0"  target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/nykaasm=
+art/nykaasmart_737/offer_08.jpg" width=3D"600" height=3D"158" style=3D=
+"float:left; padding:0; margin:0; border:0"> </a> </td> </tr> <tr> <td=
+ colspan=3D"12" valign=3D"top"> <a
+href=3D"http://lnk.nykaa.com/gtrack?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQpcGA=3D=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&=
+&ga=3Dutm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_b=
+b_lp290"  target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/n=
+ykaasmart/nykaasmart_737/nykaafas.jpg" width=3D"600" height=3D"200" st=
+yle=3D"float:left; padding:0; margin:0; border:0"> </a> </td> </tr> <t=
+r> <td colspan=3D"12" valign=3D"top"> <a href=3D"http://lnk.nykaa.com/=
+gtrack?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQ1TGA=3D=3D&sl=3DcU5wT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&=
+&ga=3Dutm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_b=
+b_lp290"  target=3D"_blank"> <img src=3D"http://img.nykaa.com/images/n=
+ykaasmart/nykaasmart_737/logos_07.jpg" width=3D"600" height=3D"144" st=
+yle=3D"float:left; padding:0; margin:0; border:0"> </a> </td> </tr> <t=
+r> <td colspan=3D"12"></td> </tr> </table> </table> <table width=3D"60=
+8" height=3D"0" border=3D"0" cellpadding=3D"0"
+cellspacing=3D"0"> <tbody> <tr> <td style=3D"font-family:Georgia, 'Tim=
+es New Roman', Times, serif; font-style:italic; font-size:9px; color:#=
+ffffff; text-align:center;">Nykaa&rsquo;s Beauty & Makeup Digital Maga=
+zine</td> </tr> </tbody> </table> </center><br/><div></div><img border=
+=3D"0" src=3D"http://lnk.nykaa.com/gtrack?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQgY&sl=3DcU58T2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&c=3D85303" ></b=
+ody></html><center>Manage your mailing <a href=3D"http://lnk.nykaa.com=
+/gtrack?clientid=3D85303&ul=3D
+AgAECgMJVQsYVURbVAoMEF0CVlRCAVMCUyJTXAJfWUtbDF0aVFQGAlNcAR0=3D&ml=3DAg=
+YKAE8IGQ9XUwpK&sl=3DcU5mT2ZrGWspMERaWw9LDUwIU1QfUwteH1I=3D&pp=3D0&&ga=3D=
+utm_source%3DCRM%26utm_medium%3Demail%26utm_campaign%3De200823_bb_lp29=
+0" >preferences</a></center>
+
+
+
+--=-oIoqfrXMA+2aE/wTMqgi3A==--

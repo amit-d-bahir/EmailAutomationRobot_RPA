@@ -1,0 +1,88 @@
+Delivered-To: manishadas1710@gmail.com
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+	by mx.google.com with SMTPS id a2sor653027uak
+	.52.2020.09.09.08.41.39        for
+	<manishadas1710@gmail.com>        (Google Transport Security); Wed, 09
+	Sep 2020 08:41:39 -0700 (PDT)
+X-Received: by 2002:ab0:6307:: with SMTP id a7mr1090962uap.139.1599666099384;
+ Wed, 09 Sep 2020 08:41:39 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1599666099; cv=none; d=google.com;
+	s=arc-20160816;
+	b=Vh9dA1nZZ59NBvn3M5I+MK5fvYJ8+jFcDETqw/wKXRQeCqc4rZQAF7plvLJvIlfko/j+q0Yhp2X
+	POiL+BKHli9sZhAIP/eqj4kh2Xa5wIosMvmKFmYUP7/gbFHyUEK8YpJo2OyuMwSC3cXUuO9rOb271
+	7dQiM8qtvv6VuuQQ9STh5ojmmUtB4eIv5TKDGupAH/SXLl2p5oPbE4u7rrHAogeM57qe63havdzvq
+	UINWHxgItXjRkT3BS512SuCRp/Vx5ZDRt+zDinshANU9tsnpBUWxcjtcW4U4hBmX/iyIdQraSc9ON
+	Gv86f6Mz7Dcl9zB22nZeTa04BD5//6rajDYg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+	s=arc-20160816;
+	h=to:subject:message-id:date:from:mime-version:dkim-signature;
+	bh=qboc8Xf5em6r9YmiUD1fgu2k2OsNiabLZaFXBz1ETH8=;
+	b=BWkR0nT/zXL0mq+LP0oK0IxuP0Dj4bhUrfYLfWlpFMkjEKGPYh1p/WbCeN8Y3xmIrrheP9iPexj
+	kT0ld7j0sa2Wmhi1QVynDUuDTMFAch7RMJ/dhqjxPexyIU0CeGQlCAiFv6A/HNNJi5ZuSfj3/0d77
+	l1qzETqrYBeqXkmhlG72pdm4L2fYdWkdRaS8eB6MNqC5BAvkQwwTPeS3lDbGEjgnnCNVHNwBJtt+C
+	GV5UiJX7rvGT7gwnj8iUe1nDz+7PVay6btYhsnyF9zE4MF3Gp8x9gRuwb9U7tkT7tUocC91SgVr2e
+	yGZca7yEcOXLN1ooyh3umTPETLmF6mafNa5w==
+ARC-Authentication-Results: i=1; mx.google.com; dkim=pass
+	header.i=@nitjsr-ac-in.20150623.gappssmtp.com header.s=20150623
+	header.b=RJLseewN; spf=neutral
+	(google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of 2017ugcs010@nitjsr.ac.in)
+	smtp.mailfrom=2017ugcs010@nitjsr.ac.in
+Return-Path: <2017ugcs010@nitjsr.ac.in>
+Received-SPF: neutral (google.com: 209.85.220.41 is neither permitted nor
+ denied by best guess record for domain of 2017ugcs010@nitjsr.ac.in)
+ client-ip=209.85.220.41;
+Authentication-Results: mx.google.com; dkim=pass
+	header.i=@nitjsr-ac-in.20150623.gappssmtp.com header.s=20150623
+	header.b=RJLseewN; spf=neutral
+	(google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of 2017ugcs010@nitjsr.ac.in)
+	smtp.mailfrom=2017ugcs010@nitjsr.ac.in
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=nitjsr-ac-in.20150623.gappssmtp.com; s=20150623;
+	h=mime-version:from:date:message-id:subject:to;
+	bh=qboc8Xf5em6r9YmiUD1fgu2k2OsNiabLZaFXBz1ETH8=;
+	b=RJLseewN4TL6IYQalbT8MSlFYzkMRxjFb7/XXjwZYbLqLq6e3vfFymQOmoYknH7vMH4cJUueSgX
+	YFDMCx1sKwTenUphTYzQmD/6ky0m+Pd4YCuvcr8h90K9XVpdnCu67IimFemLUC/gfD6g4vWdhHUgy
+	8U4nOqG8oP+HTuuU/lzbdGMQCJVgHXEu35XhfY71OH1Zb3FZT5y/3AGUvWvqzAq6AdQsXB9tWXkbU
+	dNJKxXEqqhaTNqglTZ7QaROavhNJu3Bth3BnfPVWJP6Bguy2gYnJuZD9H74RHPPlDpSUfFUvpjaCV
+	8c75w4UwPsMa2OpxW2BZduWzanYkWJTUhDdA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;       
+ d=1e100.net; s=20161025;       
+ h=x-gm-message-state:mime-version:from:date:message-id:subject:to;       
+ bh=qboc8Xf5em6r9YmiUD1fgu2k2OsNiabLZaFXBz1ETH8=;       
+ b=MN6ewRI6PX5WW3u1OhgirxerUjtWQVU//g5X2rSq4/vrtFGC8q83+GKvdKwfac0Q38        
+ Cg7alNgWrbQ2VIJKn53+iRnIs/oBhArFLYxkQOkeVu5nEaOeobRFmmSoOwuwnA/E+9xI        
+ IsbHVg/cXgONI9eo3fE0BptcrCOkxSEMMnadLBY2aOgmSqlL2Cmwgikw+5Y15TXiM+tf        
+ yqv2MsFjLuF9AmIMtgE/wZcOSScXCa+MYYvX4wn9S4XiCqKiMHgwKtgYP+o4tP5X60Z8        
+ I6Iv8+7z9jHJOSyDYxix+ycfUtvga9mt5vsGzJYTBTAKFzkvKeWeW5LvSTp1nLp78v/D        
+ B6xA==
+X-Gm-Message-State: AOAM531sBBxkGluQJyYdWVtDQ7KUdPO0nSN/2TkzfircQNyAufYschta
+	2UADvrRBMH/qXMXZib7R4FQBG70Z6P1WNVfz3URhDTAuONM=
+X-Google-Smtp-Source: =?us-ascii?q?ABdhPJycw6iqfFCAgJbJx=2FzTimXbkoasTKq5WDMlWAv8Q8BQolRN91+WWDztj?=
+ =?us-ascii?q?mC51wIBewY5TEWHSfmSVmrOfaI7eZs=3D?=
+MIME-Version: 1.0
+From: Manisha Das <2017ugcs010@nitjsr.ac.in>
+Date: Wed, 9 Sep 2020 21:11:28 +0530
+Message-ID: <CAN=5i_31x_xKEXdE7aORS-b0be2Ri4ZagGuW_EPF9P_qzOsKQg@mail.gmail.com>
+Subject: Trying out : Email Automation Robot
+To: manishadas1710@gmail.com
+Uid: 13457
+Folder: INBOX
+PlainText: Is my bot working???
+HtmlBody: <div dir="ltr">Is my bot working???</div>
+Content-Type: multipart/alternative; boundary="=-uznAINxxw8TuYt0nnIFeLg=="
+
+--=-uznAINxxw8TuYt0nnIFeLg==
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: base64
+Content-Id: <edc83a02-78f4-4c28-ab9c-7b2af78a5567>
+
+SXMgbXkgYm90IHdvcmtpbmc/Pz8NCg==
+
+--=-uznAINxxw8TuYt0nnIFeLg==
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: base64
+Content-Id: <55c6a41c-c479-449e-b72a-c334439d73ff>
+
+PGRpdiBkaXI9Imx0ciI+SXMgbXkgYm90IHdvcmtpbmc/Pz88L2Rpdj4NCg==
+
+--=-uznAINxxw8TuYt0nnIFeLg==--

@@ -1,0 +1,2801 @@
+Delivered-To: amitbahir2323@gmail.com
+Received: from c176-144.smtp-out.ap-south-1.amazonses.com (c176-144.smtp-out.ap-south-1.amazonses.com. [76.223.176.144])
+	by mx.google.com with ESMTPS id n17si725442pfo
+	.121.2020.10.07.08.36.10        for
+	<amitbahir2323@gmail.com>        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-SHA bits=128/128);
+	Wed, 07 Oct 2020 08:36:11 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJw+r+tUSlkjnBpX9UGbM600QS11POdkSZg3MrggXOumgnbwXAMcwFgNYUHVanJ7GBK1Lb3U
+X-Received: by 2002:a63:cd48:: with SMTP id a8mr3330830pgj.83.1602084971303;       
+ Wed, 07 Oct 2020 08:36:11 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1602084971; cv=none; d=google.com;
+	s=arc-20160816;
+	b=s8TlofdsHOu7V3p+uBcFolx2k2getLNfUWbJslLSeNLNv4w+ccOWzWooZjwwUfTA0jGY4Nan1v2
+	pR1w1OKDeUhhfmNylP+U5mZXBKuqjJ00D465AVujd76r0+/T+i7eqZVrFhHJw9+Yyk/PI83fMtMDr
+	8n9CnirZI5qP5Qhmr6ttmlo9r9huS1l6MZJbYEQTnm1jV9MuPoBnRb1YTmDsgQ6tQi+76RZyAQ4kh
+	0POCDfKUy0sEiiJNamG2cSmD3Z8tJHxKWj2Gw2ezYTHymxjjvA20nXv57KpAr7C/z7l0cV3Y8KBuk
+	138X0XABp4V/IjB2DU2fi+qLePj0KmVKa+sQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+	s=arc-20160816;
+	h=feedback-id:mime-version:to:from:subject:date:message-id:dkim-signature:
+	dkim-signature;
+	bh=nEYuSN5JCcdDJLGzmXNQ6kOCBwejyFOA2YE/oqWTLaE=;
+	b=oojmlyT7dyTLA6Lkj+YVaHKoW/gHBrYf0veYaq02kI91GIRL5VCeS7vh424eA7eQM0iNwVJu5i2
+	ULr22EbD+yt64yBHMTcSZDldnhssYoVm4EkYNY95DDrfY5BKFoZ2CvCtxcO+WQ4DywmL3kXX9ODAL
+	I4S0FoHw/KLv/1G8e5BHqZogzmVt8ozMbhsP4xlTMH48QvuPqG1P8qbMlYxdk/r6mqvebUfK0O+yK
+	fcbSQlh824n6btgEYkPa4yfJ10qnb/qvsIX8pSYjQkYqVHNGCVWqu0RrTRbUaFMVCfbXREQrbT5ao
+	undkHgDZix3mBmcMPvL0u8S0mFJ4P6BNIiRQ==
+ARC-Authentication-Results: i=1; mx.google.com; dkim=pass
+	header.i=@dare2compete.com header.s=tklynbm6egryvpcjkqj2wytwzyaoxd4i
+	header.b=Dpyh7Y3s; dkim=pass header.i=@amazonses.com
+	header.s=rlntogby6xsxlfnvyxwnvvhttakdsqto header.b=Fe18juRK; spf=pass
+	(google.com: domain of 0109017503b49c36-2d1486a5-a414-41f0-b61e-87db9093e04c-000000@ap-south-1.amazonses.com designates 76.223.176.144 as permitted sender)
+	smtp.mailfrom=
+	0109017503b49c36-2d1486a5-a414-41f0-b61e-87db9093e04c-000000@ap-south-1.amazonses.com
+Return-Path: =?us-ascii?q?=3C0109017503b49c36-2d1486a5-a414-41f0-b61e-87db9093e04c-000000?=
+ =?us-ascii?q?=40ap-south-1=2Eamazonses=2Ecom=3E?=
+Received-SPF: pass (google.com: domain of
+ =?us-ascii?q?0109017503b49c36-2d1486a5-a414-41f0-b61e-87db9093e04c-000000=40?=
+ =?us-ascii?q?ap-south-1=2Eamazonses=2Ecom?= designates 76.223.176.144 as
+ permitted sender) client-ip=76.223.176.144;
+Authentication-Results: mx.google.com; dkim=pass header.i=@dare2compete.com
+	header.s=tklynbm6egryvpcjkqj2wytwzyaoxd4i header.b=Dpyh7Y3s; dkim=pass
+	header.i=@amazonses.com header.s=rlntogby6xsxlfnvyxwnvvhttakdsqto
+	header.b=Fe18juRK; spf=pass
+	(google.com: domain of 0109017503b49c36-2d1486a5-a414-41f0-b61e-87db9093e04c-000000@ap-south-1.amazonses.com designates 76.223.176.144 as permitted sender)
+	smtp.mailfrom=
+	0109017503b49c36-2d1486a5-a414-41f0-b61e-87db9093e04c-000000@ap-south-1.amazonses.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=rlntogby6xsxlfnvyxwnvvhttakdsqto; d=amazonses.com; t=1602084969;
+	h=Message-ID:Date:Subject:From:To:MIME-Version:Content-Type:Feedback-ID;
+	bh=orhCzPJhVIh5R0zY8dp0iVJlRQDm8LpknCBmszgNZLo=;
+	b=Fe18juRKi885GUGiyByMc0Kvm80UUNP0A961WYhTgi7306rwF8lu+fAD6IsPhU3dPKgavkxa605
+	cmUEUnVxfjza1WrN3ianbLn3bqcnTPWbwiIOXzViMu2DM56NHap7I6kq8noAxapSS9xKZIPwOU+IZ
+	6OfOsZbZeUAYStolsaY=
+Message-ID: <0109017503b49c36-2d1486a5-a414-41f0-b61e-87db9093e04c-000000@ap-south-1.amazonses.com>
+Date: Wed, 7 Oct 2020 15:36:09 +0000
+Subject: Submission Deleted for Myntra HackerRamp: Campus Edition
+From: Dare2Compete <noreply@dare2compete.com>
+To: amitbahir2323@gmail.com
+MIME-Version: 1.0
+X-SES-Outgoing: 2020.10.07-76.223.176.144
+Feedback-ID: 1.ap-south-1.vLaUspdbZtz+0zahNQSbWc0bbDg5bpfORXW9fnjVqUQ=:AmazonSES
+Uid: 13620
+Folder: INBOX
+PlainText: <!DOCTYPE html><html lang="en">  <head>    <meta
+ http-equiv="Content-Type" content="text/html; charset=utf-8" />    <meta
+ http-equiv="X-UA-Compatible" content="IE=edge" />   
+ <title>Dare2Compete</title>    <meta name="author" content="" content="" />   
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />   
+ <style type="text/css">      @import 
+ =?iso-8859-1?q?url=28=22https=3A=2F=2Ffonts=2Egoogleapis=2Ecom=2Fcss=3Ffamily=3DRoboto=3A400=2C500=2C7?=
+ =?iso-8859-1?q?00&display=3Dswap=22=29=3B?=      body {        width: auto;       
+ background-color: #ffffff;        margin: 0 auto;        padding: 0;       
+ font-size: 14px;        -webkit-text-size-adjust: 100% !important;       
+ -ms-text-size-adjust: 100% !important;        -webkit-font-smoothing:
+ antialiased;        font-family: "Roboto", sans-serif;      }      img {       
+ border: 0 !important;        outline: none !important;        display: block;     
+ }      a {        text-decoration: none;        color: #1077d6;      }     
+ table {        border-collapse: collapse;        mso-table-lspace: 0px;       
+ mso-table-rspace: 0px;      }      @media (max-width: 600px) {        .banner
+ {          margin-top: 0 !important;          background-size: cover;       
+ }        .logo {          padding: 20px 0 !important;        }       
+ .pdng_l_r {          padding: 0 10px !important;        }        .full {         
+ width: 100% !important;        }        .btn {          margin-top: 20px
+ !important;        }        .btn a {          font-size: 12px !important;         
+ padding: 10px 12px !important;          margin: 0 !important;        }       
+ .font15 {          font-size: 15px !important;          line-height: 23px
+ !important;        }        .sub_title {          font-size: 20px !important;       
+ }        .list {          font-size: 14px !important;        }        .list
+ span {          font-size: 17px !important;          line-height: 27px
+ !important;        }        .padding_box {          padding: 15px !important;       
+ }        .pdng_top {          margin-bottom: 10px !important;         
+ padding-top: 0 !important;        }        .main_hdng {          padding:
+ 15px !important;          font-size: 23px !important;          line-height:
+ 28px !important;        }        .dtls {          margin-top: 15px
+ !important;        }        .box_height {          line-height: 10px
+ !important;          font-size: 10px !important;          height: 10px
+ !important;        }        .option {          padding: 20px 0 0 !important;       
+ }        .option table {          width: calc(100% - 20px);        }       
+ .app {          padding: 10px !important;          margin-bottom: 10px
+ !important;        }        .app h2 {          font-size: 17px !important;         
+ line-height: 22px !important;          text-transform: none !important;       
+ }        .appbtm {          border-right: 0 !important;          display:
+ block;        }        .appmr {          margin-bottom: 10px;        }      }   
+ </style>  </head>  <body>    <table      cellpadding="0"      cellspacing="0"     
+ align="center"      bgcolor="#ffffff"      border="0"      width="600"     
+ class="full banner"      style="margin-top:20px; background-image:
+ =?iso-8859-1?q?url=28https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femail?=
+ =?iso-8859-1?q?er=2Fd2c-emailer-bg=2Ejpg=29=3B=22?=    >      <tbody>       
+ <tr>                    <td class="logo" align="center" style="padding: 40px
+ 0;">            <a              href="https://dare2compete.com/"             
+ target="_blank"              style="display: block;"            >             
+ <img               
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Fd2clogo=2Epng=22?=                width="120"               
+ style="display:block;margin:0 auto; width: 120px;"              />           
+ </a>          </td>                                      </tr>        <tr>         
+ <td class="pdng_l_r" align="center" style="padding: 0 40px;">            <div             
+ class="main_hdng"              style="background: #fff; padding: 30px;
+ color:#000000; font-size:28px;font-weight:400;line-height:36px;
+ font-family:Roboto,sans-serif,Helvetica,Arial;"            >           
+ Submission Deleted            </div>          </td>        </tr>     
+ </tbody>    </table>    <table      cellpadding="0"      cellspacing="0"     
+ align="center"      bgcolor="#EDF8FC"      border="0"      width="600"     
+ class="full"    >      <tbody>        <tr>          <td class="pdng_l_r"
+ align="center" style="padding:0 40px;">            <div             
+ class="padding_box pdng_top"              style="background: #fff; padding: 0
+ 30px 30px 30px; margin-bottom: 20px;"            >              <div               
+ class="font15"                style="color:#5a5b5f;
+ font-size:16px;line-height:24px;font-weight:400;text-align:center;
+ font-family:Roboto,sans-serif,Helvetica,Arial;"              >               
+ Your submission for round <strong>Phase 1: Ideation </strong> of
+ <strong>Myntra HackerRamp: Campus Edition</strong> has been deleted.             
+ </div>                            <div class="btn" style="margin-top: 30px;">               
+ <a                 
+ =?iso-8859-1?q?href=3D=22https=3A=2F=2Fdare2compete=2Ecom=2Fo=2Fmyntra-hackerramp-campus-edi?=
+ =?iso-8859-1?q?tion-myntra-127164=22?=
+ =?iso-8859-1?q?__________________style=3D=22font-family=3ARoboto=2Csans-serif=2CHelvetica=2CArial=3Bfont-siz?=
+ =?iso-8859-1?q?e=3A15px=3Bfont-weight=3A700=3Bcolor=3A#ffffff=3Btext-decoration=3Anone=3Bdis?=
+ =?iso-8859-1?q?play=3Ainline-block=3Bpadding=3A12px?=
+ 30px;background-color:#1077d6;border-radius:45px; margin: 0 2px;"                 
+ target="_blank"                >                View Competition               
+ </a>              </div>              <div                class="font15"               
+ style="color:#5a5b5f; margin-top: 20px;
+ font-size:16px;line-height:24px;font-weight:400;text-align:center;
+ font-family:Roboto,sans-serif,Helvetica,Arial;"              >               
+ We look forward to your earnest participation. Enjoy and ignite the spirit of
+ competitiveness.              </div>                          </div>         
+ </td>        </tr>      </tbody>    </table>    <table      cellpadding="0"     
+ cellspacing="0"      align="center"      bgcolor="#EDF8FC"      border="0"     
+ width="600"      class="full"    >      <tbody>        <tr>          <td
+ class="pdng_l_r" align="center" style="padding:0 40px;">            <a
+ target="_blank"
+ href="https://play.google.com/store/apps/details?id=com.dare2compete.app"
+ style="display: block;">              <div class="app" style="background:
+ #207fc3; padding:12px; margin-bottom: 20px;">                <table
+ cellpadding="0" cellspacing="0" border="0">                  <tbody>                   
+ <tr>                      <td align="left" valign="center">                       
+ <h2                          class="sub_title"                         
+ style="margin: 0; padding-right: 15px; color:#fff;
+ font-size:19px;line-height:23px;font-weight:600; text-transform: uppercase;
+ font-family:Roboto,sans-serif,Helvetica,Arial;"                        >                        
+ Stay Updated | Download Our App                        </h2>                     
+ </td>                      <td>                        <img
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Fd2c-play-store=2Epng=22?= border="0"
+ style="display:block" width="135" height="40" alt="D2C App">                     
+ </td>                    </tr>                  </tbody>               
+ </table>              </div>            </a>          </td>        </tr>     
+ </tbody>    </table>    <table      cellpadding="0"      cellspacing="0"     
+ align="center"      bgcolor="#EDF8FC"      border="0"      width="600"     
+ class="full"    >      <tbody>        <tr>          <td class="pdng_l_r"
+ align="center" style="padding:0 40px;">            <div class="padding_box"
+ style="background: #fff; padding:30px;">              <table cellpadding="0"
+ cellspacing="0" border="0">                <tbody>                  <tr>                   
+ <td align="left" valign="center">                      <h2                       
+ class="sub_title"                        style="margin: 0; color:#1c1e29;
+ font-size:24px;line-height:28px;font-weight:500;
+ font-family:Roboto,sans-serif,Helvetica,Arial;"                      >                       
+ Read Articles to Stay Informed                      </h2>                     
+ <p                        class="font15"                       
+ style="margin: 15px 0 20px 0; color:#3b3e4d;
+ font-size:16px;line-height:25px;font-weight:normal;
+ font-family:Roboto,sans-serif,Helvetica,Arial;"                      >                       
+ Dare2Compete brings to you the latest articles on facts                       
+ and experiences from other students, and other curated                       
+ articles, which will inspire you and guide you to                       
+ realize your full potential. Here are a few categories                       
+ that we think might be useful for you.                      </p>                   
+ </td>                  </tr>                  <tr>                    <td
+ align="left" valign="top">                      <table                       
+ cellpadding="0"                        cellspacing="0"                       
+ border="0"                        width="100%"                      >                       
+ <tbody>                          <tr>                            <td
+ align="right" valign="middle" width="45">                              <img                               
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Fcompetitions=2Epng=22?=                               
+ border="0"                                style="display:block"                               
+ width="42"                                height="43"                               
+ alt="Competition Stories"                              />                           
+ </td>                            <td align="left" valign="top"
+ width="20"></td>                            <td                             
+ class="list"                              align="left"                             
+ valign="top"                             
+ =?iso-8859-1?q?style=3D=22color=3A#3b3e4d=3Bfont-family=3ARoboto=2Csans-serif=2CHelvetica=2C?=
+ =?iso-8859-1?q?Arial=3Bfont-size=3A15px=3Bline-height=3A20px=3Bfont-weight=3Anormal=22?=                           
+ >                              <span                               
+ style="font-size:18px;font-weight:500;line-height:35px"                             
+ >                                <a                                 
+ href="https://dare2compete.com/competition-stories"                                 
+ target="_blank"                                  style="text-decoration:
+ none; color:#3b3e4d;"                                >                                 
+ Competition Stories                                </a>                             
+ </span>                              <br />                              <a                               
+ href="https://dare2compete.com/competition-stories"                               
+ target="_blank"                                style="text-decoration: none;
+ color:#3b3e4d;"                              >                               
+ For stories and tricks from winners of Corporate                               
+ competitions                              </a>                           
+ </td>                          </tr>                          <tr>                           
+ <td                              colspan="2"                             
+ bgcolor="#ffffff"                              height="15"                             
+ style="line-height:15px;font-size:15px"                            >                             
+ =?iso-8859-1?b?oA==?=                            </td>                         
+ </tr>                          <tr>                            <td
+ align="right" valign="middle" width="45">                              <img                               
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Fcampus-life=2Epng=22?=                               
+ border="0"                                style="display:block"                               
+ width="42"                                height="43"                               
+ alt="Campus Life"                              />                           
+ </td>                            <td align="left" valign="top"
+ width="20"></td>                            <td                             
+ class="list"                              align="left"                             
+ valign="top"                             
+ =?iso-8859-1?q?style=3D=22color=3A#3b3e4d=3Bfont-family=3ARoboto=2Csans-serif=2CHelvetica=2C?=
+ =?iso-8859-1?q?Arial=3Bfont-size=3A15px=3Bline-height=3A20px=3Bfont-weight=3Anormal=22?=                           
+ >                              <span                               
+ style="font-size:18px;font-weight:500;line-height:35px"                             
+ >                                <a                                 
+ href="https://dare2compete.com/campus-life"                                 
+ target="_blank"                                  style="text-decoration:
+ none; color:#3b3e4d;"                                >                                 
+ Campus Life                                </a>                             
+ </span>                              <br />                              <a                               
+ href="https://dare2compete.com/competition-stories"                               
+ target="_blank"                                style="text-decoration: none;
+ color:#3b3e4d;"                              >                               
+ For the latest news from campuses from across                               
+ the country                              </a>                           
+ </td>                          </tr>                          <tr>                           
+ <td                              colspan="2"                             
+ bgcolor="#ffffff"                              height="15"                             
+ style="line-height:15px;font-size:15px"                            >                             
+ =?iso-8859-1?b?oA==?=                            </td>                         
+ </tr>                          <tr>                            <td
+ align="right" valign="middle" width="45">                              <img                               
+ src="https://d8it4huxumps7.cloudfront.net/uploads/images/emailer/trophy.png"                               
+ border="0"                                style="display:block"                               
+ width="42"                                height="43"                               
+ alt="Internship Stories"                              />                           
+ </td>                            <td align="left" valign="top"
+ width="20"></td>                            <td                             
+ class="list"                              align="left"                             
+ valign="top"                             
+ =?iso-8859-1?q?style=3D=22color=3A#3b3e4d=3Bfont-family=3ARoboto=2Csans-serif=2CHelvetica=2C?=
+ =?iso-8859-1?q?Arial=3Bfont-size=3A15px=3Bline-height=3A20px=3Bfont-weight=3Anormal=22?=                           
+ >                              <span                               
+ style="font-size:18px;font-weight:500;line-height:35px"                             
+ >                                <a                                 
+ href="https://dare2compete.com/internship-stories"                                 
+ target="_blank"                                  style="text-decoration:
+ none; color:#3b3e4d;"                                >                                 
+ Internship Stories                                </a>                             
+ </span>                              <br />                              <a                               
+ href="https://dare2compete.com/competition-stories"                               
+ target="_blank"                                style="text-decoration: none;
+ color:#3b3e4d;"                              >                               
+ For learnings and experiences from Internship                               
+ with various industry leaders                              </a>                           
+ </td>                          </tr>                          <tr>                           
+ <td                              colspan="2"                             
+ bgcolor="#ffffff"                              height="15"                             
+ style="line-height:15px;font-size:15px"                            >                             
+ =?iso-8859-1?b?oA==?=                            </td>                         
+ </tr>                          <tr>                            <td
+ align="right" valign="middle" width="45">                              <img                               
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Fplacement-experience=2Epng=22?=                               
+ border="0"                                style="display:block"                               
+ width="42"                                height="43"                               
+ alt="Placement Experiences"                              />                           
+ </td>                            <td align="left" valign="top"
+ width="20"></td>                            <td                             
+ class="list"                              align="left"                             
+ valign="top"                             
+ =?iso-8859-1?q?style=3D=22color=3A#3b3e4d=3Bfont-family=3ARoboto=2Csans-serif=2CHelvetica=2C?=
+ =?iso-8859-1?q?Arial=3Bfont-size=3A15px=3Bline-height=3A20px=3Bfont-weight=3Anormal=22?=                           
+ >                              <span                               
+ style="font-size:18px;font-weight:500;line-height:35px"                             
+ >                                <a                                 
+ href="https://dare2compete.com/placement-experiences"                                 
+ target="_blank"                                  style="text-decoration:
+ none; color:#3b3e4d;"                                >                                 
+ Placement Experiences                                </a>                             
+ </span>                              <br />                              <a                               
+ href="https://dare2compete.com/competition-stories"                               
+ target="_blank"                                style="text-decoration: none;
+ color:#3b3e4d;"                              >                               
+ For selection processes and tips to get your                               
+ Dream Job                              </a>                            </td>                         
+ </tr>                          <tr>                            <td                             
+ colspan="2"                              bgcolor="#ffffff"                             
+ height="15"                             
+ style="line-height:15px;font-size:15px"                            >                             
+ =?iso-8859-1?b?oA==?=                            </td>                         
+ </tr>                          <tr>                            <td
+ align="right" valign="middle" width="45">                              <img                               
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Fknowledge-bites=2Epng=22?=                               
+ border="0"                                style="display:block"                               
+ width="42"                                height="43"                               
+ alt="Knowledge Bites"                              />                           
+ </td>                            <td align="left" valign="top"
+ width="20"></td>                            <td                             
+ class="list"                              align="left"                             
+ valign="top"                             
+ =?iso-8859-1?q?style=3D=22color=3A#3b3e4d=3Bfont-family=3ARoboto=2Csans-serif=2CHelvetica=2C?=
+ =?iso-8859-1?q?Arial=3Bfont-size=3A15px=3Bline-height=3A20px=3Bfont-weight=3Anormal=22?=                           
+ >                              <span                               
+ style="font-size:18px;font-weight:500;line-height:35px"                             
+ >                                <a                                 
+ href="https://dare2compete.com/knowledge-bites"                                 
+ target="_blank"                                  style="text-decoration:
+ none; color:#3b3e4d;"                                >                                 
+ Knowledge Bites                                </a>                             
+ </span>                              <br />                              <a                               
+ href="https://dare2compete.com/competition-stories"                               
+ target="_blank"                                style="text-decoration: none;
+ color:#3b3e4d;"                              >                               
+ For guidance, tips, and tricks from the                               
+ corporate world                              </a>                           
+ </td>                          </tr>                          <tr>                           
+ <td                              colspan="2"                             
+ bgcolor="#ffffff"                              height="15"                             
+ style="line-height:15px;font-size:15px"                            >                             
+ =?iso-8859-1?b?oA==?=                            </td>                         
+ </tr>                          <tr>                            <td
+ align="right" valign="middle" width="45">                              <img                               
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Frecruiter-diaries=2Epng=22?=                               
+ border="0"                                style="display:block"                               
+ width="42"                                height="43"                               
+ alt="Recruiter Diaries"                              />                           
+ </td>                            <td align="left" valign="top"
+ width="20"></td>                            <td                             
+ class="list"                              align="left"                             
+ valign="top"                             
+ =?iso-8859-1?q?style=3D=22color=3A#3b3e4d=3Bfont-family=3ARoboto=2Csans-serif=2CHelvetica=2C?=
+ =?iso-8859-1?q?Arial=3Bfont-size=3A15px=3Bline-height=3A20px=3Bfont-weight=3Anormal=22?=                           
+ >                              <span                               
+ style="font-size:18px;font-weight:500;line-height:35px"                             
+ >                                <a                                 
+ href="https://dare2compete.com/recruiter-diaries"                                 
+ target="_blank"                                  style="text-decoration:
+ none; color:#3b3e4d;"                                >                                 
+ Recruiter Diaries                                </a>                             
+ </span>                              <br />                              <a                               
+ href="https://dare2compete.com/competition-stories"                               
+ target="_blank"                                style="text-decoration: none;
+ color:#3b3e4d;"                              >                               
+ For information on the most coveted recruiters                             
+ </a>                            </td>                          </tr>                       
+ </tbody>                      </table>                    </td>                 
+ </tr>                </tbody>              </table>            </div>         
+ </td>        </tr>      </tbody>    </table>    <table      cellpadding="0"     
+ cellspacing="0"      align="center"      bgcolor="#EDF8FC"      border="0"     
+ width="600"      class="full"    >      <tbody>        <tr>          <td           
+ style="padding: 12px; text-align: center;
+ =?iso-8859-1?q?color=3A#3b3e4d=3Bfont-family=3ARoboto=2Csans-serif=2CHelvetica=2CArial=3Bf?=
+ =?iso-8859-1?q?ont-size=3A15px=3Bline-height=3A21px=3Bfont-weight=3Anormal=22?=         
+ >            Dare2Compete is            <a             
+ href="https://dare2compete.com/partners-help"              target="_blank"             
+ style="text-decoration: underline; color: #1077d6;"            >             
+ partnering with colleges            </a>          </td>        </tr>     
+ </tbody>    </table>        <table      cellpadding="0"      cellspacing="0"     
+ align="center"      bgcolor="#ffffff"      border="0"      width="600"     
+ class="full"      style="margin: 20px auto;"    >      <tbody>      <tr>         
+ <td style="text-align: center; padding-bottom: 15px;">            <table
+ style="width: 100%;">              <tr>                <td class="appbtm
+ appmr" style="border-right: 1px dashed #d2d2d2;">                  <p                   
+ =?iso-8859-1?q?style=3D=22font-family=3AAvenir=2CHelvetica=2Csans-serif=3Bbox-sizing=3Abor?=
+ =?iso-8859-1?q?der-box=3Bpadding=3A0=3Bdisplay=3Ablock=3Bfont-style=3Anormal=3Bletter-spac?=
+ =?iso-8859-1?q?ing=3Anormal=3Bcolor=3A#777777=3Bfont-size=3A14px=3Bfont-weight=3A400=3Bline-?=
+ =?iso-8859-1?q?height=3A20px=3Btext-align=3Acenter=3Bmargin=3A0?= 0 10px 0;"                 
+ >                    Stay Updated! Follow us on:                  </p>                 
+ <div                   
+ style="font-family:Avenir,Helvetica,sans-serif;box-sizing:border-box;"                   
+ >                    <a                     
+ href="https://www.instagram.com/dare2compete/"                     
+ =?iso-8859-1?q?style=3D=22font-family=3AAvenir=2CHelvetica=2Csans-serif=3Bbox-sizing=3Abor?=
+ =?iso-8859-1?q?der-box=3Bcolor=3A#3869d4=3Bmargin=3A0?=
+ 2px;border:0;text-decoration:none;display:inline-block"                     
+ target="_blank"                    >                      <img                       
+ height="40"                       
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Fd2c-instagram-icon=2Epng=22?=
+ =?iso-8859-1?q?________________________style=3D=22font-family=3AAvenir=2CHelvetica=2Csans-serif=3Bbox-sizing=3Abor?=
+ =?iso-8859-1?q?der-box=3Boutline=3Anone!important=3Bdisplay=3Ablock=3Bheight=3Aauto=3Bmarg?=
+ =?iso-8859-1?q?in=3A0px=3Bpadding=3A0px=3Bfloat=3Anone=3Bmax-width=3A100%=3Bvertical-align=3Am?=
+ =?iso-8859-1?q?iddle=3Bborder=3Anone=3Bcolor=3A#fff=3Bwidth=3A40px=22?=                       
+ width="40"                      />                    </a>                   
+ <a                      href="https://www.facebook.com/Dare2compete?fref=ts"                     
+ =?iso-8859-1?q?style=3D=22font-family=3AAvenir=2CHelvetica=2Csans-serif=3Bbox-sizing=3Abor?=
+ =?iso-8859-1?q?der-box=3Bcolor=3A#3869d4=3Bmargin=3A0?=
+ 2px;border:0;text-decoration:none;display:inline-block"                     
+ target="_blank"                      ><img                        height="40"                       
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Fd2c-facebook=2Epng=22?=
+ =?iso-8859-1?q?________________________style=3D=22font-family=3AAvenir=2CHelvetica=2Csans-serif=3Bbox-sizing=3Abor?=
+ =?iso-8859-1?q?der-box=3Boutline=3Anone!important=3Bdisplay=3Ablock=3Bheight=3Aauto=3Bmarg?=
+ =?iso-8859-1?q?in=3A0px=3Bpadding=3A0px=3Bfloat=3Anone=3Bmax-width=3A100%=3Bvertical-align=3Am?=
+ =?iso-8859-1?q?iddle=3Bborder=3Anone=3Bcolor=3A#fff=3Bwidth=3A40px=22?=                       
+ width="40"                      />                    </a>                   
+ <a                      href="https://www.linkedin.com/company/13605500/"                     
+ =?iso-8859-1?q?style=3D=22font-family=3AAvenir=2CHelvetica=2Csans-serif=3Bbox-sizing=3Abor?=
+ =?iso-8859-1?q?der-box=3Bcolor=3A#3869d4=3Bmargin=3A0?=
+ 2px;border:0;text-decoration:none;display:inline-block"                     
+ target="_blank"                    >                      <img                       
+ height="40"                       
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Fd2c-linkedin=2Epng=22?=
+ =?iso-8859-1?q?________________________style=3D=22font-family=3AAvenir=2CHelvetica=2Csans-serif=3Bbox-sizing=3Abor?=
+ =?iso-8859-1?q?der-box=3Boutline=3Anone!important=3Bdisplay=3Ablock=3Bheight=3Aauto=3Bmarg?=
+ =?iso-8859-1?q?in=3A0px=3Bpadding=3A0px=3Bfloat=3Anone=3Bmax-width=3A100%=3Bvertical-align=3Am?=
+ =?iso-8859-1?q?iddle=3Bborder=3Anone=3Bcolor=3A#fff=3Bwidth=3A40px=22?=                       
+ width="40"                      />                    </a>                   
+ <a                      href="https://twitter.com/Dare2Compete"                     
+ =?iso-8859-1?q?style=3D=22font-family=3AAvenir=2CHelvetica=2Csans-serif=3Bbox-sizing=3Abor?=
+ =?iso-8859-1?q?der-box=3Bcolor=3A#3869d4=3Bmargin=3A0?=
+ 2px;border:0;text-decoration:none;display:inline-block"                     
+ target="_blank"                    >                      <img                       
+ height="40"                       
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Fd2c-twitter=2Epng=22?=
+ =?iso-8859-1?q?________________________style=3D=22font-family=3AAvenir=2CHelvetica=2Csans-serif=3Bbox-sizing=3Abor?=
+ =?iso-8859-1?q?der-box=3Boutline=3Anone!important=3Bdisplay=3Ablock=3Bheight=3Aauto=3Bmarg?=
+ =?iso-8859-1?q?in=3A0px=3Bpadding=3A0px=3Bfloat=3Anone=3Bmax-width=3A100%=3Bvertical-align=3Am?=
+ =?iso-8859-1?q?iddle=3Bborder=3Anone=3Bcolor=3A#fff=3Bwidth=3A40px=22?=                       
+ width="40"                      />                    </a>                   
+ <a                     
+ href="https://www.youtube.com/channel/UC8g9cWvHj0_qkxBJlhACeHQ"                     
+ =?iso-8859-1?q?style=3D=22font-family=3AAvenir=2CHelvetica=2Csans-serif=3Bbox-sizing=3Abor?=
+ =?iso-8859-1?q?der-box=3Bcolor=3A#3869d4=3Bmargin=3A0?=
+ 2px;border:0;text-decoration:none;display:inline-block"                     
+ target="_blank"                    >                      <img                       
+ height="40"                       
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Fd2c-youtube=2Epng=22?=
+ =?iso-8859-1?q?________________________style=3D=22font-family=3AAvenir=2CHelvetica=2Csans-serif=3Bbox-sizing=3Abor?=
+ =?iso-8859-1?q?der-box=3Boutline=3Anone!important=3Bdisplay=3Ablock=3Bheight=3Aauto=3Bmarg?=
+ =?iso-8859-1?q?in=3A0px=3Bpadding=3A0px=3Bfloat=3Anone=3Bmax-width=3A100%=3Bvertical-align=3Am?=
+ =?iso-8859-1?q?iddle=3Bborder=3Anone=3Bcolor=3A#fff=3Bwidth=3A40px=22?=                       
+ width="40"                      />                    </a>                 
+ </div>                </td>                <td class="appbtm">                 
+ <p                   
+ =?iso-8859-1?q?style=3D=22font-family=3AAvenir=2CHelvetica=2Csans-serif=3Bbox-sizing=3Abor?=
+ =?iso-8859-1?q?der-box=3Bpadding=3A0=3Bdisplay=3Ablock=3Bfont-style=3Anormal=3Bletter-spac?=
+ =?iso-8859-1?q?ing=3Anormal=3Bcolor=3A#777777=3Bfont-size=3A14px=3Bfont-weight=3A400=3Bline-?=
+ =?iso-8859-1?q?height=3A20px=3Btext-align=3Acenter=3Bmargin=3A0?= 0 10px 0;"                 
+ >                    Download Our App                  </p>                 
+ <div                   
+ style="font-family:Avenir,Helvetica,sans-serif;box-sizing:border-box;"                   
+ >                    <a                     
+ href="https://play.google.com/store/apps/details?id=com.dare2compete.app"                     
+ =?iso-8859-1?q?style=3D=22font-family=3AAvenir=2CHelvetica=2Csans-serif=3Bbox-sizing=3Abor?=
+ =?iso-8859-1?q?der-box=3Bcolor=3A#3869d4=3Bmargin=3A0?=
+ 2px;border:0;text-decoration:none;display:inline-block"                     
+ target="_blank"                    >                      <img                       
+ height="40"                       
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Fd2c-play-store=2Epng=22?=
+ =?iso-8859-1?q?________________________style=3D=22font-family=3AAvenir=2CHelvetica=2Csans-serif=3Bbox-sizing=3Abor?=
+ =?iso-8859-1?q?der-box=3Boutline=3Anone!important=3Bdisplay=3Ablock=3Bheight=3Aauto=3Bmarg?=
+ =?iso-8859-1?q?in=3A0px=3Bpadding=3A0px=3Bfloat=3Anone=3Bmax-width=3A100%=3Bvertical-align=3Am?=
+ =?iso-8859-1?q?iddle=3Bborder=3Anone=3Bcolor=3A#fff=3B=22?=                       
+ width="135"                      />                    </a>                 
+ </div>                </td>              </tr>            </table>         
+ </td>        </tr>        <tr>          <td           
+ =?iso-8859-1?q?style=3D=22font-family=3AAvenir=2CHelvetica=2Csans-serif=3Bbox-sizing=3Abor?=
+ =?iso-8859-1?q?der-box=3Bpadding=3A0=22____________valign=3D=22top=22__________=3E?=           
+ <p             
+ =?iso-8859-1?q?style=3D=22font-family=3AAvenir=2CHelvetica=2Csans-serif=3Bbox-sizing=3Abor?=
+ =?iso-8859-1?q?der-box=3Bpadding=3A0=3Bdisplay=3Ablock=3Bfont-style=3Anormal=3Bletter-spac?=
+ =?iso-8859-1?q?ing=3Anormal=3Bmargin-top=3A0=3Bcolor=3A#777777=3Bfont-size=3A12px=3Bfont-wei?=
+ =?iso-8859-1?q?ght=3A400=3Bline-height=3A20px=3Btext-align=3Acenter=3Bmargin=3A0=22?=           
+ >            In case you have any queries, please reach out to us at              
+ <a                href="mailTo:help@dare2compete.com"               
+ =?iso-8859-1?q?style=3D=22font-family=3AAvenir=2CHelvetica=2Csans-serif=3Bbox-sizing=3Abor?=
+ =?iso-8859-1?q?der-box=3Bcolor=3A#777777=3Btext-decoration=3Aunderline=22?=               
+ target="_blank"                >help@dare2compete.com</a              >           
+ </p>            <p             
+ =?iso-8859-1?q?style=3D=22font-family=3AAvenir=2CHelvetica=2Csans-serif=3Bbox-sizing=3Abor?=
+ =?iso-8859-1?q?der-box=3Bpadding=3A0=3Bdisplay=3Ablock=3Bfont-style=3Anormal=3Bletter-spac?=
+ =?iso-8859-1?q?ing=3Anormal=3Bmargin-top=3A0=3Bcolor=3A#777777=3Bfont-size=3A12px=3Bfont-wei?=
+ =?iso-8859-1?q?ght=3A400=3Bline-height=3A20px=3Btext-align=3Acenter=3Bmargin=3A0=22?=           
+ >              =?iso-8859-1?b?qQ==?= 2020 Dare2Compete. All rights reserved           
+ </p>          </td>        </tr>      </tbody>    </table>     
+ </body></html>
+HtmlBody: <!doctype html><html lang="en"><head><meta http-equiv="Content-Type"
+ content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible"
+ content="IE=edge"><title>Dare2Compete</title><meta name="author"
+ content=""><meta name="viewport" content="width=device-width,
+ initial-scale=1.0"><style type="text/css">      @import 
+ =?iso-8859-1?q?url=28=22https=3A=2F=2Ffonts=2Egoogleapis=2Ecom=2Fcss=3Ffamily=3DRoboto=3A400=2C500=2C7?=
+ =?iso-8859-1?q?00&display=3Dswap=22=29=3B?=      body {        width: auto;       
+ background-color: #ffffff;        margin: 0 auto;        padding: 0;       
+ font-size: 14px;        -webkit-text-size-adjust: 100% !important;       
+ -ms-text-size-adjust: 100% !important;        -webkit-font-smoothing:
+ antialiased;        font-family: "Roboto", sans-serif;      }      img {       
+ border: 0 !important;        outline: none !important;        display: block;     
+ }      a {        text-decoration: none;        color: #1077d6;      }     
+ table {        border-collapse: collapse;        mso-table-lspace: 0px;       
+ mso-table-rspace: 0px;      }      @media (max-width: 600px) {        .banner
+ {          margin-top: 0 !important;          background-size: cover;       
+ }        .logo {          padding: 20px 0 !important;        }       
+ .pdng_l_r {          padding: 0 10px !important;        }        .full {         
+ width: 100% !important;        }        .btn {          margin-top: 20px
+ !important;        }        .btn a {          font-size: 12px !important;         
+ padding: 10px 12px !important;          margin: 0 !important;        }       
+ .font15 {          font-size: 15px !important;          line-height: 23px
+ !important;        }        .sub_title {          font-size: 20px !important;       
+ }        .list {          font-size: 14px !important;        }        .list
+ span {          font-size: 17px !important;          line-height: 27px
+ !important;        }        .padding_box {          padding: 15px !important;       
+ }        .pdng_top {          margin-bottom: 10px !important;         
+ padding-top: 0 !important;        }        .main_hdng {          padding:
+ 15px !important;          font-size: 23px !important;          line-height:
+ 28px !important;        }        .dtls {          margin-top: 15px
+ !important;        }        .box_height {          line-height: 10px
+ !important;          font-size: 10px !important;          height: 10px
+ !important;        }        .option {          padding: 20px 0 0 !important;       
+ }        .option table {          width: calc(100% - 20px);        }       
+ .app {          padding: 10px !important;          margin-bottom: 10px
+ !important;        }        .app h2 {          font-size: 17px !important;         
+ line-height: 22px !important;          text-transform: none !important;       
+ }        .appbtm {          border-right: 0 !important;          display:
+ block;        }        .appmr {          margin-bottom: 10px;        }      }   
+ </style></head><body style="font-family: Avenir, Helvetica, sans-serif;
+ box-sizing: border-box; color: #74787E; height: 100%; line-height: 1.4;
+ margin: 0; width: 100% !important; -webkit-text-size-adjust: none;">   
+ <table cellpadding="0" cellspacing="0" align="center" bgcolor="#ffffff"
+ border="0" width="600" class="full banner" style="font-family: Avenir,
+ Helvetica, sans-serif; box-sizing: border-box; border-collapse: collapse;
+ mso-table-lspace: 0px; mso-table-rspace: 0px; margin-top: 20px;
+ background-image:
+ =?iso-8859-1?q?url=28https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femail?=
+ =?iso-8859-1?q?er=2Fd2c-emailer-bg=2Ejpg=29=3B=22=3E=3Ctbody?=
+ style="font-family: Avenir, Helvetica, sans-serif; box-sizing:
+ border-box;"><tr><td class="logo" align="center" style="font-family: Avenir,
+ Helvetica, sans-serif; box-sizing: border-box; padding: 40px 0;">           
+ <a
+ =?iso-8859-1?q?href=3D=22https=3A=2F=2Fv2l62cdp=2Er=2Eap-south-1=2Eawstrack=2Eme=2FL0=2Fhttps=3A%2F%?=
+ =?iso-8859-1?q?2Fdare2compete=2Ecom%2F%3Futm=5Fcampaign=3Dsite-emails%26utm=5Fmedium?=
+ =?iso-8859-1?q?=3Dsite-emails%26utm=5Fsource=3Dsubmission-deleted-for-myntra-hacke?=
+ =?iso-8859-1?q?rramp-campus-edition=2F1=2F0109017503b49c36-2d1486a5-a414-41f0-b6?=
+ =?iso-8859-1?q?1e-87db9093e04c-000000=2FM6tN2vm8Y6e-kP4LTsPgkOPzD7w=3D1=22?=
+ target="_blank" style="font-family: Avenir, Helvetica, sans-serif;
+ box-sizing: border-box; text-decoration: none; color: #3869D4; display:
+ block;">              <img
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Fd2clogo=2Epng=22?= width="120" style="font-family:
+ Avenir, Helvetica, sans-serif; box-sizing: border-box; border: 0 !important;
+ outline: none !important; max-width: 100%; display: block; margin: 0 auto;
+ width: 120px;"></a>          </td>                                     
+ </tr><tr><td class="pdng_l_r" align="center" style="font-family: Avenir,
+ Helvetica, sans-serif; box-sizing: border-box; padding: 0 40px;">           
+ <div class="main_hdng" style="box-sizing: border-box; background: #fff;
+ padding: 30px; color: #000000; font-size: 28px; font-weight: 400;
+ line-height: 36px; font-family: Roboto,sans-serif,Helvetica,Arial;">           
+ Submission Deleted            </div>          </td>       
+ </tr></tbody></table><table cellpadding="0" cellspacing="0" align="center"
+ bgcolor="#EDF8FC" border="0" width="600" class="full" style="font-family:
+ Avenir, Helvetica, sans-serif; box-sizing: border-box; border-collapse:
+ collapse; mso-table-lspace: 0px; mso-table-rspace: 0px;"><tbody
+ style="font-family: Avenir, Helvetica, sans-serif; box-sizing:
+ border-box;"><tr><td class="pdng_l_r" align="center" style="font-family:
+ Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 0 40px;">           
+ <div class="padding_box pdng_top" style="font-family: Avenir, Helvetica,
+ sans-serif; box-sizing: border-box; background: #fff; padding: 0 30px 30px
+ 30px; margin-bottom: 20px;">              <div class="font15"
+ style="box-sizing: border-box; color: #5a5b5f; font-size: 16px; line-height:
+ 24px; font-weight: 400; text-align: center; font-family:
+ Roboto,sans-serif,Helvetica,Arial;">                Your submission for round
+ <strong style="font-family: Avenir, Helvetica, sans-serif; box-sizing:
+ border-box;">Phase 1: Ideation </strong> of <strong style="font-family:
+ Avenir, Helvetica, sans-serif; box-sizing: border-box;">Myntra HackerRamp:
+ Campus Edition</strong> has been deleted.              </div>                           
+ <div class="btn" style="font-family: Avenir, Helvetica, sans-serif;
+ box-sizing: border-box; margin-top: 30px;">                <a
+ =?iso-8859-1?q?href=3D=22https=3A=2F=2Fv2l62cdp=2Er=2Eap-south-1=2Eawstrack=2Eme=2FL0=2Fhttps=3A%2F%?=
+ =?iso-8859-1?q?2Fdare2compete=2Ecom%2Fo%2Fmyntra-hackerramp-campus-edition-myn?=
+ =?iso-8859-1?q?tra-127164%3Futm=5Fcampaign=3Dsite-emails%26utm=5Fmedium=3Dsite-email?=
+ =?iso-8859-1?q?s%26utm=5Fsource=3Dsubmission-deleted-for-myntra-hackerramp-campu?=
+ =?iso-8859-1?q?s-edition=2F1=2F0109017503b49c36-2d1486a5-a414-41f0-b61e-87db9093?=
+ =?iso-8859-1?q?e04c-000000=2FBt2bTMV4pgtYsN75uHq2QOaC8Y0=3D1=22?=
+ style="box-sizing: border-box; font-family:
+ Roboto,sans-serif,Helvetica,Arial; font-size: 15px; font-weight: 700; color:
+ #ffffff; text-decoration: none; display: inline-block; padding: 12px 30px;
+ background-color: #1077d6; border-radius: 45px; margin: 0 2px;"
+ target="_blank">                View Competition                </a>             
+ </div>              <div class="font15" style="box-sizing: border-box; color:
+ #5a5b5f; margin-top: 20px; font-size: 16px; line-height: 24px; font-weight:
+ 400; text-align: center; font-family: Roboto,sans-serif,Helvetica,Arial;">               
+ We look forward to your earnest participation. Enjoy and ignite the spirit of
+ competitiveness.              </div>                          </div>         
+ </td>        </tr></tbody></table><table cellpadding="0" cellspacing="0"
+ align="center" bgcolor="#EDF8FC" border="0" width="600" class="full"
+ style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;
+ border-collapse: collapse; mso-table-lspace: 0px; mso-table-rspace:
+ 0px;"><tbody style="font-family: Avenir, Helvetica, sans-serif; box-sizing:
+ border-box;"><tr><td class="pdng_l_r" align="center" style="font-family:
+ Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 0 40px;">           
+ <a target="_blank"
+ =?iso-8859-1?q?href=3D=22https=3A=2F=2Fv2l62cdp=2Er=2Eap-south-1=2Eawstrack=2Eme=2FL0=2Fhttps=3A%2F%?=
+ =?iso-8859-1?q?2Fplay=2Egoogle=2Ecom%2Fstore%2Fapps%2Fdetails%3Fid=3Dcom=2Edare2comp?=
+ =?iso-8859-1?q?ete=2Eapp=2F1=2F0109017503b49c36-2d1486a5-a414-41f0-b61e-87db9093e0?=
+ =?iso-8859-1?q?4c-000000=2FlqUHpT9txDt-rTd32hHqDDFRdjE=3D1=22?=
+ style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;
+ text-decoration: none; color: #3869D4; display: block;">              <div
+ class="app" style="font-family: Avenir, Helvetica, sans-serif; box-sizing:
+ border-box; background: #207fc3; padding: 12px; margin-bottom: 20px;">               
+ <table cellpadding="0" cellspacing="0" border="0" style="font-family: Avenir,
+ Helvetica, sans-serif; box-sizing: border-box; border-collapse: collapse;
+ mso-table-lspace: 0px; mso-table-rspace: 0px;"><tbody style="font-family:
+ Avenir, Helvetica, sans-serif; box-sizing: border-box;"><tr><td align="left"
+ valign="center" style="font-family: Avenir, Helvetica, sans-serif;
+ box-sizing: border-box;">                        <h2 class="sub_title"
+ style="box-sizing: border-box; margin-top: 0; text-align: left; margin: 0;
+ padding-right: 15px; color: #fff; font-size: 19px; line-height: 23px;
+ font-weight: 600; text-transform: uppercase; font-family:
+ Roboto,sans-serif,Helvetica,Arial;">                         Stay Updated |
+ Download Our App                        </h2>                      </td>                     
+ <td style="font-family: Avenir, Helvetica, sans-serif; box-sizing:
+ border-box;">                        <img
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Fd2c-play-store=2Epng=22?= border="0" style="font-family:
+ Avenir, Helvetica, sans-serif; box-sizing: border-box; border: 0 !important;
+ outline: none !important; max-width: 100%; display: block;" width="135"
+ height="40" alt="D2C App"></td>                   
+ </tr></tbody></table></div>            </a>          </td>       
+ </tr></tbody></table><table cellpadding="0" cellspacing="0" align="center"
+ bgcolor="#EDF8FC" border="0" width="600" class="full" style="font-family:
+ Avenir, Helvetica, sans-serif; box-sizing: border-box; border-collapse:
+ collapse; mso-table-lspace: 0px; mso-table-rspace: 0px;"><tbody
+ style="font-family: Avenir, Helvetica, sans-serif; box-sizing:
+ border-box;"><tr><td class="pdng_l_r" align="center" style="font-family:
+ Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 0 40px;">           
+ <div class="padding_box" style="font-family: Avenir, Helvetica, sans-serif;
+ box-sizing: border-box; background: #fff; padding: 30px;">             
+ <table cellpadding="0" cellspacing="0" border="0" style="font-family: Avenir,
+ Helvetica, sans-serif; box-sizing: border-box; border-collapse: collapse;
+ mso-table-lspace: 0px; mso-table-rspace: 0px;"><tbody style="font-family:
+ Avenir, Helvetica, sans-serif; box-sizing: border-box;"><tr><td align="left"
+ valign="center" style="font-family: Avenir, Helvetica, sans-serif;
+ box-sizing: border-box;">                      <h2 class="sub_title"
+ style="box-sizing: border-box; margin-top: 0; text-align: left; margin: 0;
+ color: #1c1e29; font-size: 24px; line-height: 28px; font-weight: 500;
+ font-family: Roboto,sans-serif,Helvetica,Arial;">                        Read
+ Articles to Stay Informed                      </h2>                      <p
+ class="font15" style="box-sizing: border-box; margin-top: 0; text-align:
+ left; margin: 15px 0 20px 0; color: #3b3e4d; font-size: 16px; line-height:
+ 25px; font-weight: normal; font-family: Roboto,sans-serif,Helvetica,Arial;">                       
+ Dare2Compete brings to you the latest articles on facts                       
+ and experiences from other students, and other curated                       
+ articles, which will inspire you and guide you to                       
+ realize your full potential. Here are a few categories                       
+ that we think might be useful for you.                      </p>                   
+ </td>                  </tr><tr><td align="left" valign="top"
+ style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">                     
+ <table cellpadding="0" cellspacing="0" border="0" width="100%"
+ style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;
+ border-collapse: collapse; mso-table-lspace: 0px; mso-table-rspace:
+ 0px;"><tbody style="font-family: Avenir, Helvetica, sans-serif; box-sizing:
+ border-box;"><tr><td align="right" valign="middle" width="45"
+ style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">                             
+ <img
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Fcompetitions=2Epng=22?= border="0" style="font-family:
+ Avenir, Helvetica, sans-serif; box-sizing: border-box; border: 0 !important;
+ outline: none !important; max-width: 100%; display: block;" width="42"
+ height="43" alt="Competition Stories"></td>                            <td
+ align="left" valign="top" width="20" style="font-family: Avenir, Helvetica,
+ sans-serif; box-sizing: border-box;"></td>                            <td
+ class="list" align="left" valign="top" style="box-sizing: border-box; color:
+ #3b3e4d; font-family: Roboto,sans-serif,Helvetica,Arial; font-size: 15px;
+ line-height: 20px; font-weight: normal;">                              <span
+ style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;
+ font-size: 18px; font-weight: 500; line-height: 35px;">                               
+ <a
+ =?iso-8859-1?q?href=3D=22https=3A=2F=2Fv2l62cdp=2Er=2Eap-south-1=2Eawstrack=2Eme=2FL0=2Fhttps=3A%2F%?=
+ =?iso-8859-1?q?2Fdare2compete=2Ecom%2Fcompetition-stories%3Futm=5Fcampaign=3Dsite-?=
+ =?iso-8859-1?q?emails%26utm=5Fmedium=3Dsite-emails%26utm=5Fsource=3Dsubmission-delet?=
+ =?iso-8859-1?q?ed-for-myntra-hackerramp-campus-edition=2F1=2F0109017503b49c36-2d?=
+ =?iso-8859-1?q?1486a5-a414-41f0-b61e-87db9093e04c-000000=2FijmyJN5WBzEi90hVosD?=
+ =?iso-8859-1?q?v2e-muMA=3D1=22?= target="_blank" style="font-family: Avenir,
+ Helvetica, sans-serif; box-sizing: border-box; text-decoration: none; color:
+ #3b3e4d;">                                  Competition Stories                               
+ </a>                              </span>                              <br><a
+ =?iso-8859-1?q?href=3D=22https=3A=2F=2Fv2l62cdp=2Er=2Eap-south-1=2Eawstrack=2Eme=2FL0=2Fhttps=3A%2F%?=
+ =?iso-8859-1?q?2Fdare2compete=2Ecom%2Fcompetition-stories%3Futm=5Fcampaign=3Dsite-?=
+ =?iso-8859-1?q?emails%26utm=5Fmedium=3Dsite-emails%26utm=5Fsource=3Dsubmission-delet?=
+ =?iso-8859-1?q?ed-for-myntra-hackerramp-campus-edition=2F2=2F0109017503b49c36-2d?=
+ =?iso-8859-1?q?1486a5-a414-41f0-b61e-87db9093e04c-000000=2FqLUWX4P5F6aV1A5sGg=5F?=
+ =?iso-8859-1?q?Ga1n=5FZj0=3D1=22?= target="_blank" style="font-family:
+ Avenir, Helvetica, sans-serif; box-sizing: border-box; text-decoration: none;
+ color: #3b3e4d;">                                For stories and tricks from
+ winners of Corporate                                competitions                             
+ </a>                            </td>                          </tr><tr><td
+ colspan="2" bgcolor="#ffffff" height="15" style="font-family: Avenir,
+ Helvetica, sans-serif; box-sizing: border-box; line-height: 15px; font-size:
+ 15px;">                              =?iso-8859-1?b?oA==?=                           
+ </td>                          </tr><tr><td align="right" valign="middle"
+ width="45" style="font-family: Avenir, Helvetica, sans-serif; box-sizing:
+ border-box;">                              <img
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Fcampus-life=2Epng=22?= border="0" style="font-family:
+ Avenir, Helvetica, sans-serif; box-sizing: border-box; border: 0 !important;
+ outline: none !important; max-width: 100%; display: block;" width="42"
+ height="43" alt="Campus Life"></td>                            <td
+ align="left" valign="top" width="20" style="font-family: Avenir, Helvetica,
+ sans-serif; box-sizing: border-box;"></td>                            <td
+ class="list" align="left" valign="top" style="box-sizing: border-box; color:
+ #3b3e4d; font-family: Roboto,sans-serif,Helvetica,Arial; font-size: 15px;
+ line-height: 20px; font-weight: normal;">                              <span
+ style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;
+ font-size: 18px; font-weight: 500; line-height: 35px;">                               
+ <a
+ =?iso-8859-1?q?href=3D=22https=3A=2F=2Fv2l62cdp=2Er=2Eap-south-1=2Eawstrack=2Eme=2FL0=2Fhttps=3A%2F%?=
+ =?iso-8859-1?q?2Fdare2compete=2Ecom%2Fcampus-life%3Futm=5Fcampaign=3Dsite-emails%2?=
+ =?iso-8859-1?q?6utm=5Fmedium=3Dsite-emails%26utm=5Fsource=3Dsubmission-deleted-for-m?=
+ =?iso-8859-1?q?yntra-hackerramp-campus-edition=2F1=2F0109017503b49c36-2d1486a5-a?=
+ =?iso-8859-1?q?414-41f0-b61e-87db9093e04c-000000=2FjVrPC8FB94jZby9vUI-ofnwK=5FgQ?=
+ =?iso-8859-1?q?=3D1=22?= target="_blank" style="font-family: Avenir,
+ Helvetica, sans-serif; box-sizing: border-box; text-decoration: none; color:
+ #3b3e4d;">                                  Campus Life                               
+ </a>                              </span>                              <br><a
+ =?iso-8859-1?q?href=3D=22https=3A=2F=2Fv2l62cdp=2Er=2Eap-south-1=2Eawstrack=2Eme=2FL0=2Fhttps=3A%2F%?=
+ =?iso-8859-1?q?2Fdare2compete=2Ecom%2Fcompetition-stories%3Futm=5Fcampaign=3Dsite-?=
+ =?iso-8859-1?q?emails%26utm=5Fmedium=3Dsite-emails%26utm=5Fsource=3Dsubmission-delet?=
+ =?iso-8859-1?q?ed-for-myntra-hackerramp-campus-edition=2F3=2F0109017503b49c36-2d?=
+ =?iso-8859-1?q?1486a5-a414-41f0-b61e-87db9093e04c-000000=2FvY-eqZaOt5f1=5FtfiInR?=
+ =?iso-8859-1?q?Ds2Qw0wQ=3D1=22?= target="_blank" style="font-family: Avenir,
+ Helvetica, sans-serif; box-sizing: border-box; text-decoration: none; color:
+ #3b3e4d;">                                For the latest news from campuses
+ from across                                the country                             
+ </a>                            </td>                          </tr><tr><td
+ colspan="2" bgcolor="#ffffff" height="15" style="font-family: Avenir,
+ Helvetica, sans-serif; box-sizing: border-box; line-height: 15px; font-size:
+ 15px;">                              =?iso-8859-1?b?oA==?=                           
+ </td>                          </tr><tr><td align="right" valign="middle"
+ width="45" style="font-family: Avenir, Helvetica, sans-serif; box-sizing:
+ border-box;">                              <img
+ src="https://d8it4huxumps7.cloudfront.net/uploads/images/emailer/trophy.png"
+ border="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing:
+ border-box; border: 0 !important; outline: none !important; max-width: 100%;
+ display: block;" width="42" height="43" alt="Internship Stories"></td>                           
+ <td align="left" valign="top" width="20" style="font-family: Avenir,
+ Helvetica, sans-serif; box-sizing: border-box;"></td>                           
+ <td class="list" align="left" valign="top" style="box-sizing: border-box;
+ color: #3b3e4d; font-family: Roboto,sans-serif,Helvetica,Arial; font-size:
+ 15px; line-height: 20px; font-weight: normal;">                             
+ <span style="font-family: Avenir, Helvetica, sans-serif; box-sizing:
+ border-box; font-size: 18px; font-weight: 500; line-height: 35px;">                               
+ <a
+ =?iso-8859-1?q?href=3D=22https=3A=2F=2Fv2l62cdp=2Er=2Eap-south-1=2Eawstrack=2Eme=2FL0=2Fhttps=3A%2F%?=
+ =?iso-8859-1?q?2Fdare2compete=2Ecom%2Finternship-stories%3Futm=5Fcampaign=3Dsite-e?=
+ =?iso-8859-1?q?mails%26utm=5Fmedium=3Dsite-emails%26utm=5Fsource=3Dsubmission-delete?=
+ =?iso-8859-1?q?d-for-myntra-hackerramp-campus-edition=2F1=2F0109017503b49c36-2d1?=
+ =?iso-8859-1?q?486a5-a414-41f0-b61e-87db9093e04c-000000=2FEFrwMHVhTCT6Y=5F3FJsz6?=
+ =?iso-8859-1?q?3NYUJWQ=3D1=22?= target="_blank" style="font-family: Avenir,
+ Helvetica, sans-serif; box-sizing: border-box; text-decoration: none; color:
+ #3b3e4d;">                                  Internship Stories                               
+ </a>                              </span>                              <br><a
+ =?iso-8859-1?q?href=3D=22https=3A=2F=2Fv2l62cdp=2Er=2Eap-south-1=2Eawstrack=2Eme=2FL0=2Fhttps=3A%2F%?=
+ =?iso-8859-1?q?2Fdare2compete=2Ecom%2Fcompetition-stories%3Futm=5Fcampaign=3Dsite-?=
+ =?iso-8859-1?q?emails%26utm=5Fmedium=3Dsite-emails%26utm=5Fsource=3Dsubmission-delet?=
+ =?iso-8859-1?q?ed-for-myntra-hackerramp-campus-edition=2F4=2F0109017503b49c36-2d?=
+ =?iso-8859-1?q?1486a5-a414-41f0-b61e-87db9093e04c-000000=2FLpDO7Z4a5RlUZF14J2=5F?=
+ =?iso-8859-1?q?7D9R9KjE=3D1=22?= target="_blank" style="font-family: Avenir,
+ Helvetica, sans-serif; box-sizing: border-box; text-decoration: none; color:
+ #3b3e4d;">                                For learnings and experiences from
+ Internship                                with various industry leaders                             
+ </a>                            </td>                          </tr><tr><td
+ colspan="2" bgcolor="#ffffff" height="15" style="font-family: Avenir,
+ Helvetica, sans-serif; box-sizing: border-box; line-height: 15px; font-size:
+ 15px;">                              =?iso-8859-1?b?oA==?=                           
+ </td>                          </tr><tr><td align="right" valign="middle"
+ width="45" style="font-family: Avenir, Helvetica, sans-serif; box-sizing:
+ border-box;">                              <img
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Fplacement-experience=2Epng=22?= border="0"
+ style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;
+ border: 0 !important; outline: none !important; max-width: 100%; display:
+ block;" width="42" height="43" alt="Placement Experiences"></td>                           
+ <td align="left" valign="top" width="20" style="font-family: Avenir,
+ Helvetica, sans-serif; box-sizing: border-box;"></td>                           
+ <td class="list" align="left" valign="top" style="box-sizing: border-box;
+ color: #3b3e4d; font-family: Roboto,sans-serif,Helvetica,Arial; font-size:
+ 15px; line-height: 20px; font-weight: normal;">                             
+ <span style="font-family: Avenir, Helvetica, sans-serif; box-sizing:
+ border-box; font-size: 18px; font-weight: 500; line-height: 35px;">                               
+ <a
+ =?iso-8859-1?q?href=3D=22https=3A=2F=2Fv2l62cdp=2Er=2Eap-south-1=2Eawstrack=2Eme=2FL0=2Fhttps=3A%2F%?=
+ =?iso-8859-1?q?2Fdare2compete=2Ecom%2Fplacement-experiences%3Futm=5Fcampaign=3Dsit?=
+ =?iso-8859-1?q?e-emails%26utm=5Fmedium=3Dsite-emails%26utm=5Fsource=3Dsubmission-del?=
+ =?iso-8859-1?q?eted-for-myntra-hackerramp-campus-edition=2F1=2F0109017503b49c36-?=
+ =?iso-8859-1?q?2d1486a5-a414-41f0-b61e-87db9093e04c-000000=2FbwopFxJQZT6ckj63X?=
+ =?iso-8859-1?q?HtvklvPLho=3D1=22?= target="_blank" style="font-family:
+ Avenir, Helvetica, sans-serif; box-sizing: border-box; text-decoration: none;
+ color: #3b3e4d;">                                  Placement Experiences                               
+ </a>                              </span>                              <br><a
+ =?iso-8859-1?q?href=3D=22https=3A=2F=2Fv2l62cdp=2Er=2Eap-south-1=2Eawstrack=2Eme=2FL0=2Fhttps=3A%2F%?=
+ =?iso-8859-1?q?2Fdare2compete=2Ecom%2Fcompetition-stories%3Futm=5Fcampaign=3Dsite-?=
+ =?iso-8859-1?q?emails%26utm=5Fmedium=3Dsite-emails%26utm=5Fsource=3Dsubmission-delet?=
+ =?iso-8859-1?q?ed-for-myntra-hackerramp-campus-edition=2F5=2F0109017503b49c36-2d?=
+ =?iso-8859-1?q?1486a5-a414-41f0-b61e-87db9093e04c-000000=2F0DVtxcck10=5FsmYDXJ1=5F?=
+ =?iso-8859-1?q?hUbtuWVs=3D1=22?= target="_blank" style="font-family: Avenir,
+ Helvetica, sans-serif; box-sizing: border-box; text-decoration: none; color:
+ #3b3e4d;">                                For selection processes and tips to
+ get your                                Dream Job                             
+ </a>                            </td>                          </tr><tr><td
+ colspan="2" bgcolor="#ffffff" height="15" style="font-family: Avenir,
+ Helvetica, sans-serif; box-sizing: border-box; line-height: 15px; font-size:
+ 15px;">                              =?iso-8859-1?b?oA==?=                           
+ </td>                          </tr><tr><td align="right" valign="middle"
+ width="45" style="font-family: Avenir, Helvetica, sans-serif; box-sizing:
+ border-box;">                              <img
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Fknowledge-bites=2Epng=22?= border="0"
+ style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;
+ border: 0 !important; outline: none !important; max-width: 100%; display:
+ block;" width="42" height="43" alt="Knowledge Bites"></td>                           
+ <td align="left" valign="top" width="20" style="font-family: Avenir,
+ Helvetica, sans-serif; box-sizing: border-box;"></td>                           
+ <td class="list" align="left" valign="top" style="box-sizing: border-box;
+ color: #3b3e4d; font-family: Roboto,sans-serif,Helvetica,Arial; font-size:
+ 15px; line-height: 20px; font-weight: normal;">                             
+ <span style="font-family: Avenir, Helvetica, sans-serif; box-sizing:
+ border-box; font-size: 18px; font-weight: 500; line-height: 35px;">                               
+ <a
+ =?iso-8859-1?q?href=3D=22https=3A=2F=2Fv2l62cdp=2Er=2Eap-south-1=2Eawstrack=2Eme=2FL0=2Fhttps=3A%2F%?=
+ =?iso-8859-1?q?2Fdare2compete=2Ecom%2Fknowledge-bites%3Futm=5Fcampaign=3Dsite-emai?=
+ =?iso-8859-1?q?ls%26utm=5Fmedium=3Dsite-emails%26utm=5Fsource=3Dsubmission-deleted-f?=
+ =?iso-8859-1?q?or-myntra-hackerramp-campus-edition=2F1=2F0109017503b49c36-2d1486?=
+ =?iso-8859-1?q?a5-a414-41f0-b61e-87db9093e04c-000000=2F8C2J-WodruJ0xVTQK8SV2N3?=
+ =?iso-8859-1?q?RFfw=3D1=22?= target="_blank" style="font-family: Avenir,
+ Helvetica, sans-serif; box-sizing: border-box; text-decoration: none; color:
+ #3b3e4d;">                                  Knowledge Bites                               
+ </a>                              </span>                              <br><a
+ =?iso-8859-1?q?href=3D=22https=3A=2F=2Fv2l62cdp=2Er=2Eap-south-1=2Eawstrack=2Eme=2FL0=2Fhttps=3A%2F%?=
+ =?iso-8859-1?q?2Fdare2compete=2Ecom%2Fcompetition-stories%3Futm=5Fcampaign=3Dsite-?=
+ =?iso-8859-1?q?emails%26utm=5Fmedium=3Dsite-emails%26utm=5Fsource=3Dsubmission-delet?=
+ =?iso-8859-1?q?ed-for-myntra-hackerramp-campus-edition=2F6=2F0109017503b49c36-2d?=
+ =?iso-8859-1?q?1486a5-a414-41f0-b61e-87db9093e04c-000000=2Fd82tR4wDM5HSvyizqMZ?=
+ =?iso-8859-1?q?DQ4QGaJI=3D1=22?= target="_blank" style="font-family: Avenir,
+ Helvetica, sans-serif; box-sizing: border-box; text-decoration: none; color:
+ #3b3e4d;">                                For guidance, tips, and tricks from
+ the                                corporate world                             
+ </a>                            </td>                          </tr><tr><td
+ colspan="2" bgcolor="#ffffff" height="15" style="font-family: Avenir,
+ Helvetica, sans-serif; box-sizing: border-box; line-height: 15px; font-size:
+ 15px;">                              =?iso-8859-1?b?oA==?=                           
+ </td>                          </tr><tr><td align="right" valign="middle"
+ width="45" style="font-family: Avenir, Helvetica, sans-serif; box-sizing:
+ border-box;">                              <img
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Frecruiter-diaries=2Epng=22?= border="0"
+ style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;
+ border: 0 !important; outline: none !important; max-width: 100%; display:
+ block;" width="42" height="43" alt="Recruiter Diaries"></td>                           
+ <td align="left" valign="top" width="20" style="font-family: Avenir,
+ Helvetica, sans-serif; box-sizing: border-box;"></td>                           
+ <td class="list" align="left" valign="top" style="box-sizing: border-box;
+ color: #3b3e4d; font-family: Roboto,sans-serif,Helvetica,Arial; font-size:
+ 15px; line-height: 20px; font-weight: normal;">                             
+ <span style="font-family: Avenir, Helvetica, sans-serif; box-sizing:
+ border-box; font-size: 18px; font-weight: 500; line-height: 35px;">                               
+ <a
+ =?iso-8859-1?q?href=3D=22https=3A=2F=2Fv2l62cdp=2Er=2Eap-south-1=2Eawstrack=2Eme=2FL0=2Fhttps=3A%2F%?=
+ =?iso-8859-1?q?2Fdare2compete=2Ecom%2Frecruiter-diaries%3Futm=5Fcampaign=3Dsite-em?=
+ =?iso-8859-1?q?ails%26utm=5Fmedium=3Dsite-emails%26utm=5Fsource=3Dsubmission-deleted?=
+ =?iso-8859-1?q?-for-myntra-hackerramp-campus-edition=2F1=2F0109017503b49c36-2d14?=
+ =?iso-8859-1?q?86a5-a414-41f0-b61e-87db9093e04c-000000=2FIgCg5yF9VYgnfh56kW7Vr?=
+ =?iso-8859-1?q?Fv0JMA=3D1=22?= target="_blank" style="font-family: Avenir,
+ Helvetica, sans-serif; box-sizing: border-box; text-decoration: none; color:
+ #3b3e4d;">                                  Recruiter Diaries                               
+ </a>                              </span>                              <br><a
+ =?iso-8859-1?q?href=3D=22https=3A=2F=2Fv2l62cdp=2Er=2Eap-south-1=2Eawstrack=2Eme=2FL0=2Fhttps=3A%2F%?=
+ =?iso-8859-1?q?2Fdare2compete=2Ecom%2Fcompetition-stories%3Futm=5Fcampaign=3Dsite-?=
+ =?iso-8859-1?q?emails%26utm=5Fmedium=3Dsite-emails%26utm=5Fsource=3Dsubmission-delet?=
+ =?iso-8859-1?q?ed-for-myntra-hackerramp-campus-edition=2F7=2F0109017503b49c36-2d?=
+ =?iso-8859-1?q?1486a5-a414-41f0-b61e-87db9093e04c-000000=2FhBfV71Rg71wroKeMT8i?=
+ =?iso-8859-1?q?g68l4MmM=3D1=22?= target="_blank" style="font-family: Avenir,
+ Helvetica, sans-serif; box-sizing: border-box; text-decoration: none; color:
+ #3b3e4d;">                                For information on the most coveted
+ recruiters                              </a>                            </td>                         
+ </tr></tbody></table></td>                  </tr></tbody></table></div>         
+ </td>        </tr></tbody></table><table cellpadding="0" cellspacing="0"
+ align="center" bgcolor="#EDF8FC" border="0" width="600" class="full"
+ style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;
+ border-collapse: collapse; mso-table-lspace: 0px; mso-table-rspace:
+ 0px;"><tbody style="font-family: Avenir, Helvetica, sans-serif; box-sizing:
+ border-box;"><tr><td style="box-sizing: border-box; padding: 12px;
+ text-align: center; color: #3b3e4d; font-family:
+ Roboto,sans-serif,Helvetica,Arial; font-size: 15px; line-height: 21px;
+ font-weight: normal;">            Dare2Compete is            <a
+ =?iso-8859-1?q?href=3D=22https=3A=2F=2Fv2l62cdp=2Er=2Eap-south-1=2Eawstrack=2Eme=2FL0=2Fhttps=3A%2F%?=
+ =?iso-8859-1?q?2Fdare2compete=2Ecom%2Fpartners-help%3Futm=5Fcampaign=3Dsite-emails?=
+ =?iso-8859-1?q?%26utm=5Fmedium=3Dsite-emails%26utm=5Fsource=3Dsubmission-deleted-for?=
+ =?iso-8859-1?q?-myntra-hackerramp-campus-edition=2F1=2F0109017503b49c36-2d1486a5?=
+ =?iso-8859-1?q?-a414-41f0-b61e-87db9093e04c-000000=2FYTrOsQeE14rNNFXeWSUBVo2G=5F?=
+ =?iso-8859-1?q?N0=3D1=22?= target="_blank" style="font-family: Avenir,
+ Helvetica, sans-serif; box-sizing: border-box; text-decoration: underline;
+ color: #1077d6;">              partnering with colleges            </a>         
+ </td>        </tr></tbody></table><table cellpadding="0" cellspacing="0"
+ align="center" bgcolor="#ffffff" border="0" width="600" class="full"
+ style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;
+ border-collapse: collapse; mso-table-lspace: 0px; mso-table-rspace: 0px;
+ margin: 20px auto;"><tbody style="font-family: Avenir, Helvetica, sans-serif;
+ box-sizing: border-box;"><tr><td style="font-family: Avenir, Helvetica,
+ sans-serif; box-sizing: border-box; text-align: center; padding-bottom:
+ 15px;">            <table style="font-family: Avenir, Helvetica, sans-serif;
+ box-sizing: border-box; border-collapse: collapse; mso-table-lspace: 0px;
+ mso-table-rspace: 0px; width: 100%;"><tr><td class="appbtm appmr"
+ style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;
+ border-right: 1px dashed #d2d2d2;">                  <p style="margin-top: 0;
+ font-family: Avenir,Helvetica,sans-serif; box-sizing: border-box; padding: 0;
+ display: block; font-style: normal; letter-spacing: normal; color: #777777;
+ font-size: 14px; font-weight: 400; line-height: 20px; text-align: center;
+ margin: 0 0 10px 0;">                    Stay Updated! Follow us on:                 
+ </p>                  <div style="font-family: Avenir,Helvetica,sans-serif;
+ box-sizing: border-box;">                    <a
+ =?iso-8859-1?q?href=3D=22https=3A=2F=2Fv2l62cdp=2Er=2Eap-south-1=2Eawstrack=2Eme=2FL0=2Fhttps=3A%2F%?=
+ =?iso-8859-1?q?2Fwww=2Einstagram=2Ecom%2Fdare2compete%2F=2F1=2F0109017503b49c36-2d14?=
+ =?iso-8859-1?q?86a5-a414-41f0-b61e-87db9093e04c-000000=2FreHnDVCYrQS2VUYPZu9gx?=
+ =?iso-8859-1?q?v8ROXI=3D1=22?= style="font-family:
+ Avenir,Helvetica,sans-serif; box-sizing: border-box; color: #3869d4; margin:
+ 0 2px; border: 0; text-decoration: none; display: inline-block;"
+ target="_blank">                      <img height="40"
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Fd2c-instagram-icon=2Epng=22?= style="font-family:
+ Avenir,Helvetica,sans-serif; box-sizing: border-box; outline: none!important;
+ display: block; height: auto; margin: 0px; padding: 0px; float: none;
+ max-width: 100%; vertical-align: middle; border: none; color: #fff; width:
+ 40px;" width="40"></a>                    <a
+ =?iso-8859-1?q?href=3D=22https=3A=2F=2Fv2l62cdp=2Er=2Eap-south-1=2Eawstrack=2Eme=2FL0=2Fhttps=3A%2F%?=
+ =?iso-8859-1?q?2Fwww=2Efacebook=2Ecom%2FDare2compete%3Ffref=3Dts=2F1=2F0109017503b49c3?=
+ =?iso-8859-1?q?6-2d1486a5-a414-41f0-b61e-87db9093e04c-000000=2F9a=5FzKrILLs5=5Fg53?=
+ =?iso-8859-1?q?CtSTr4jE4uKo=3D1=22?= style="font-family:
+ Avenir,Helvetica,sans-serif; box-sizing: border-box; color: #3869d4; margin:
+ 0 2px; border: 0; text-decoration: none; display: inline-block;"
+ target="_blank"><img height="40"
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Fd2c-facebook=2Epng=22?= style="font-family:
+ Avenir,Helvetica,sans-serif; box-sizing: border-box; outline: none!important;
+ display: block; height: auto; margin: 0px; padding: 0px; float: none;
+ max-width: 100%; vertical-align: middle; border: none; color: #fff; width:
+ 40px;" width="40"></a>                    <a
+ =?iso-8859-1?q?href=3D=22https=3A=2F=2Fv2l62cdp=2Er=2Eap-south-1=2Eawstrack=2Eme=2FL0=2Fhttps=3A%2F%?=
+ =?iso-8859-1?q?2Fwww=2Elinkedin=2Ecom%2Fcompany%2F13605500%2F=2F1=2F0109017503b49c36?=
+ =?iso-8859-1?q?-2d1486a5-a414-41f0-b61e-87db9093e04c-000000=2FNKslZ7wpTQp2l5jz?=
+ =?iso-8859-1?q?IwbhDVjZmUs=3D1=22?= style="font-family:
+ Avenir,Helvetica,sans-serif; box-sizing: border-box; color: #3869d4; margin:
+ 0 2px; border: 0; text-decoration: none; display: inline-block;"
+ target="_blank">                      <img height="40"
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Fd2c-linkedin=2Epng=22?= style="font-family:
+ Avenir,Helvetica,sans-serif; box-sizing: border-box; outline: none!important;
+ display: block; height: auto; margin: 0px; padding: 0px; float: none;
+ max-width: 100%; vertical-align: middle; border: none; color: #fff; width:
+ 40px;" width="40"></a>                    <a
+ =?iso-8859-1?q?href=3D=22https=3A=2F=2Fv2l62cdp=2Er=2Eap-south-1=2Eawstrack=2Eme=2FL0=2Fhttps=3A%2F%?=
+ =?iso-8859-1?q?2Ftwitter=2Ecom%2FDare2Compete=2F1=2F0109017503b49c36-2d1486a5-a414?=
+ =?iso-8859-1?q?-41f0-b61e-87db9093e04c-000000=2F6JqyDcYNAKqpTBfltosbpFljktk=3D1=22?=
+ style="font-family: Avenir,Helvetica,sans-serif; box-sizing: border-box;
+ color: #3869d4; margin: 0 2px; border: 0; text-decoration: none; display:
+ inline-block;" target="_blank">                      <img height="40"
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Fd2c-twitter=2Epng=22?= style="font-family:
+ Avenir,Helvetica,sans-serif; box-sizing: border-box; outline: none!important;
+ display: block; height: auto; margin: 0px; padding: 0px; float: none;
+ max-width: 100%; vertical-align: middle; border: none; color: #fff; width:
+ 40px;" width="40"></a>                    <a
+ =?iso-8859-1?q?href=3D=22https=3A=2F=2Fv2l62cdp=2Er=2Eap-south-1=2Eawstrack=2Eme=2FL0=2Fhttps=3A%2F%?=
+ =?iso-8859-1?q?2Fwww=2Eyoutube=2Ecom%2Fchannel%2FUC8g9cWvHj0=5FqkxBJlhACeHQ=2F1=2F0109?=
+ =?iso-8859-1?q?017503b49c36-2d1486a5-a414-41f0-b61e-87db9093e04c-000000=2FfQWb?=
+ =?iso-8859-1?q?6i6AwLQax27P=5Fp8Iwsb3rIg=3D1=22?= style="font-family:
+ Avenir,Helvetica,sans-serif; box-sizing: border-box; color: #3869d4; margin:
+ 0 2px; border: 0; text-decoration: none; display: inline-block;"
+ target="_blank">                      <img height="40"
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Fd2c-youtube=2Epng=22?= style="font-family:
+ Avenir,Helvetica,sans-serif; box-sizing: border-box; outline: none!important;
+ display: block; height: auto; margin: 0px; padding: 0px; float: none;
+ max-width: 100%; vertical-align: middle; border: none; color: #fff; width:
+ 40px;" width="40"></a>                  </div>                </td>               
+ <td class="appbtm" style="font-family: Avenir, Helvetica, sans-serif;
+ box-sizing: border-box;">                  <p style="margin-top: 0;
+ font-family: Avenir,Helvetica,sans-serif; box-sizing: border-box; padding: 0;
+ display: block; font-style: normal; letter-spacing: normal; color: #777777;
+ font-size: 14px; font-weight: 400; line-height: 20px; text-align: center;
+ margin: 0 0 10px 0;">                    Download Our App                 
+ </p>                  <div style="font-family: Avenir,Helvetica,sans-serif;
+ box-sizing: border-box;">                    <a
+ =?iso-8859-1?q?href=3D=22https=3A=2F=2Fv2l62cdp=2Er=2Eap-south-1=2Eawstrack=2Eme=2FL0=2Fhttps=3A%2F%?=
+ =?iso-8859-1?q?2Fplay=2Egoogle=2Ecom%2Fstore%2Fapps%2Fdetails%3Fid=3Dcom=2Edare2comp?=
+ =?iso-8859-1?q?ete=2Eapp=2F2=2F0109017503b49c36-2d1486a5-a414-41f0-b61e-87db9093e0?=
+ =?iso-8859-1?q?4c-000000=2FjkYMhlH5cJVH0=5FKhEVhFA4gV6ok=3D1=22?=
+ style="font-family: Avenir,Helvetica,sans-serif; box-sizing: border-box;
+ color: #3869d4; margin: 0 2px; border: 0; text-decoration: none; display:
+ inline-block;" target="_blank">                      <img height="40"
+ =?iso-8859-1?q?src=3D=22https=3A=2F=2Fd8it4huxumps7=2Ecloudfront=2Enet=2Fuploads=2Fimages=2Femai?=
+ =?iso-8859-1?q?ler=2Fd2c-play-store=2Epng=22?= style="font-family:
+ Avenir,Helvetica,sans-serif; box-sizing: border-box; outline: none!important;
+ display: block; height: auto; margin: 0px; padding: 0px; float: none;
+ max-width: 100%; vertical-align: middle; border: none; color: #fff;"
+ width="135"></a>                  </div>                </td>             
+ </tr></table></td>        </tr><tr><td style="font-family:
+ Avenir,Helvetica,sans-serif; box-sizing: border-box; padding: 0;"
+ valign="top">            <p style="font-family: Avenir,Helvetica,sans-serif;
+ box-sizing: border-box; padding: 0; display: block; font-style: normal;
+ letter-spacing: normal; margin-top: 0; color: #777777; font-size: 12px;
+ font-weight: 400; line-height: 20px; text-align: center; margin: 0;">           
+ In case you have any queries, please reach out to us at               <a
+ =?iso-8859-1?q?href=3D=22http=3A=2F=2Fv2l62cdp=2Er=2Eap-south-1=2Eawstrack=2Eme=2FL0=2FmailTo=3Ahelp?=
+ =?iso-8859-1?q?=40dare2compete=2Ecom=2F1=2F0109017503b49c36-2d1486a5-a414-41f0-b61e-?=
+ =?iso-8859-1?q?87db9093e04c-000000=2Fr3L5N10AIJ6H=5FbwR0CIn7qn7D4M=3D1=22?=
+ style="font-family: Avenir,Helvetica,sans-serif; box-sizing: border-box;
+ color: #777777; text-decoration: underline;"
+ target="_blank">help@dare2compete.com</a>            </p>            <p
+ style="font-family: Avenir,Helvetica,sans-serif; box-sizing: border-box;
+ padding: 0; display: block; font-style: normal; letter-spacing: normal;
+ margin-top: 0; color: #777777; font-size: 12px; font-weight: 400;
+ line-height: 20px; text-align: center; margin: 0;">             
+ =?iso-8859-1?b?qQ==?= 2020 Dare2Compete. All rights reserved            </p>         
+ </td>        </tr></tbody></table><img alt=""
+ =?iso-8859-1?q?src=3D=22http=3A=2F=2Fv2l62cdp=2Er=2Eap-south-1=2Eawstrack=2Eme=2FI0=2F0109017503b4?=
+ =?iso-8859-1?q?9c36-2d1486a5-a414-41f0-b61e-87db9093e04c-000000=2FzccHY8kBvrvN?=
+ =?iso-8859-1?q?YQAtLrje6B5-dD4=3D1=22?= style="display: none; width: 1px;
+ height: 1px;"></body></html>
+Content-Type: multipart/alternative; boundary="=-9fJgBR4U3/qhio9HYWYP5g=="
+
+--=-9fJgBR4U3/qhio9HYWYP5g==
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Content-Id: <3f6b25b0-5d5f-474f-940c-c6f4b302aee4>
+
+<!DOCTYPE html>
+<html lang=3D"en">
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3D=
+utf-8" />
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge" />
+    <title>Dare2Compete</title>
+    <meta name=3D"author" content=3D"" content=3D"" />
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-s=
+cale=3D1.0" />
+    <style type=3D"text/css">
+      @import  url("https://fonts.googleapis.com/css?family=3DRoboto:4=
+00,500,700&display=3Dswap");
+      body {
+        width: auto;
+        background-color: #ffffff;
+        margin: 0 auto;
+        padding: 0;
+        font-size: 14px;
+        -webkit-text-size-adjust: 100% !important;
+        -ms-text-size-adjust: 100% !important;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Roboto", sans-serif;
+      }
+
+      img {
+        border: 0 !important;
+        outline: none !important;
+        display: block;
+      }
+
+      a {
+        text-decoration: none;
+        color: #1077d6;
+      }
+
+      table {
+        border-collapse: collapse;
+        mso-table-lspace: 0px;
+        mso-table-rspace: 0px;
+      }
+
+      @media (max-width: 600px) {
+        .banner {
+          margin-top: 0 !important;
+          background-size: cover;
+        }
+        .logo {
+          padding: 20px 0 !important;
+        }
+        .pdng_l_r {
+          padding: 0 10px !important;
+        }
+        .full {
+          width: 100% !important;
+        }
+        .btn {
+          margin-top: 20px !important;
+        }
+        .btn a {
+          font-size: 12px !important;
+          padding: 10px 12px !important;
+          margin: 0 !important;
+        }
+        .font15 {
+          font-size: 15px !important;
+          line-height: 23px !important;
+        }
+        .sub_title {
+          font-size: 20px !important;
+        }
+        .list {
+          font-size: 14px !important;
+        }
+        .list span {
+          font-size: 17px !important;
+          line-height: 27px !important;
+        }
+        .padding_box {
+          padding: 15px !important;
+        }
+        .pdng_top {
+          margin-bottom: 10px !important;
+          padding-top: 0 !important;
+        }
+        .main_hdng {
+          padding: 15px !important;
+          font-size: 23px !important;
+          line-height: 28px !important;
+        }
+        .dtls {
+          margin-top: 15px !important;
+        }
+        .box_height {
+          line-height: 10px !important;
+          font-size: 10px !important;
+          height: 10px !important;
+        }
+        .option {
+          padding: 20px 0 0 !important;
+        }
+        .option table {
+          width: calc(100% - 20px);
+        }
+        .app {
+          padding: 10px !important;
+          margin-bottom: 10px !important;
+        }
+        .app h2 {
+          font-size: 17px !important;
+          line-height: 22px !important;
+          text-transform: none !important;
+        }
+        .appbtm {
+          border-right: 0 !important;
+          display: block;
+        }
+        .appmr {
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table
+      cellpadding=3D"0"
+      cellspacing=3D"0"
+      align=3D"center"
+      bgcolor=3D"#ffffff"
+      border=3D"0"
+      width=3D"600"
+      class=3D"full banner"
+      style=3D"margin-top:20px; background-image: url(https://d8it4hux=
+umps7.cloudfront.net/uploads/images/emailer/d2c-emailer-bg.jpg);"
+    >
+      <tbody>
+        <tr>
+                    <td class=3D"logo" align=3D"center" style=3D"paddi=
+ng: 40px 0;">
+            <a
+              href=3D"https://dare2compete.com/"
+              target=3D"_blank"
+              style=3D"display: block;"
+            >
+              <img
+                src=3D"https://d8it4huxumps7.cloudfront.net/uploads/im=
+ages/emailer/d2clogo.png"
+                width=3D"120"
+                style=3D"display:block;margin:0 auto; width: 120px;"
+              />
+            </a>
+          </td>
+         =20
+         =20
+                  </tr>
+
+        <tr>
+          <td class=3D"pdng_l_r" align=3D"center" style=3D"padding: 0 =
+40px;">
+            <div
+              class=3D"main_hdng"
+              style=3D"background: #fff; padding: 30px; color:#000000;=
+ font-size:28px;font-weight:400;line-height:36px; font-family:Roboto,s=
+ans-serif,Helvetica,Arial;"
+            >
+            Submission Deleted
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table
+      cellpadding=3D"0"
+      cellspacing=3D"0"
+      align=3D"center"
+      bgcolor=3D"#EDF8FC"
+      border=3D"0"
+      width=3D"600"
+      class=3D"full"
+    >
+      <tbody>
+        <tr>
+          <td class=3D"pdng_l_r" align=3D"center" style=3D"padding:0 4=
+0px;">
+            <div
+              class=3D"padding_box pdng_top"
+              style=3D"background: #fff; padding: 0 30px 30px 30px; ma=
+rgin-bottom: 20px;"
+            >
+              <div
+                class=3D"font15"
+                style=3D"color:#5a5b5f; font-size:16px;line-height:24p=
+x;font-weight:400;text-align:center; font-family:Roboto,sans-serif,Hel=
+vetica,Arial;"
+              >
+                Your submission for round <strong>Phase 1: Ideation </=
+strong> of <strong>Myntra HackerRamp: Campus Edition</strong> has been=
+ deleted.
+              </div>
+
+             =20
+
+              <div class=3D"btn" style=3D"margin-top: 30px;">
+                <a
+                  href=3D"https://dare2compete.com/o/myntra-hackerramp=
+-campus-edition-myntra-127164"
+                  style=3D"font-family:Roboto,sans-serif,Helvetica,Ari=
+al;font-size:15px;font-weight:700;color:#ffffff;text-decoration:none;d=
+isplay:inline-block;padding:12px 30px;background-color:#1077d6;border-=
+radius:45px; margin: 0 2px;"
+                  target=3D"_blank"
+                >
+                View Competition
+                </a>
+              </div>
+
+              <div
+                class=3D"font15"
+                style=3D"color:#5a5b5f; margin-top: 20px; font-size:16=
+px;line-height:24px;font-weight:400;text-align:center; font-family:Rob=
+oto,sans-serif,Helvetica,Arial;"
+              >
+                We look forward to your earnest participation. Enjoy a=
+nd ignite the spirit of competitiveness.
+              </div>
+             =20
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table
+      cellpadding=3D"0"
+      cellspacing=3D"0"
+      align=3D"center"
+      bgcolor=3D"#EDF8FC"
+      border=3D"0"
+      width=3D"600"
+      class=3D"full"
+    >
+      <tbody>
+        <tr>
+          <td class=3D"pdng_l_r" align=3D"center" style=3D"padding:0 4=
+0px;">
+            <a target=3D"_blank" href=3D"https://play.google.com/store=
+/apps/details?id=3Dcom.dare2compete.app" style=3D"display: block;">
+              <div class=3D"app" style=3D"background: #207fc3; padding=
+:12px; margin-bottom: 20px;">
+                <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0=
+">
+                  <tbody>
+                    <tr>
+                      <td align=3D"left" valign=3D"center">
+                        <h2
+                          class=3D"sub_title"
+                          style=3D"margin: 0; padding-right: 15px; col=
+or:#fff; font-size:19px;line-height:23px;font-weight:600; text-transfo=
+rm: uppercase; font-family:Roboto,sans-serif,Helvetica,Arial;"
+                        >
+                         Stay Updated | Download Our App
+                        </h2>
+                      </td>
+                      <td>
+                        <img src=3D"https://d8it4huxumps7.cloudfront.n=
+et/uploads/images/emailer/d2c-play-store.png" border=3D"0" style=3D"di=
+splay:block" width=3D"135" height=3D"40" alt=3D"D2C App">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table
+      cellpadding=3D"0"
+      cellspacing=3D"0"
+      align=3D"center"
+      bgcolor=3D"#EDF8FC"
+      border=3D"0"
+      width=3D"600"
+      class=3D"full"
+    >
+      <tbody>
+        <tr>
+          <td class=3D"pdng_l_r" align=3D"center" style=3D"padding:0 4=
+0px;">
+            <div class=3D"padding_box" style=3D"background: #fff; padd=
+ing:30px;">
+              <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                <tbody>
+                  <tr>
+                    <td align=3D"left" valign=3D"center">
+                      <h2
+                        class=3D"sub_title"
+                        style=3D"margin: 0; color:#1c1e29; font-size:2=
+4px;line-height:28px;font-weight:500; font-family:Roboto,sans-serif,He=
+lvetica,Arial;"
+                      >
+                        Read Articles to Stay Informed
+                      </h2>
+                      <p
+                        class=3D"font15"
+                        style=3D"margin: 15px 0 20px 0; color:#3b3e4d;=
+ font-size:16px;line-height:25px;font-weight:normal; font-family:Robot=
+o,sans-serif,Helvetica,Arial;"
+                      >
+                        Dare2Compete brings to you the latest articles=
+ on facts
+                        and experiences from other students, and other=
+ curated
+                        articles, which will inspire you and guide you=
+ to
+                        realize your full potential. Here are a few ca=
+tegories
+                        that we think might be useful for you.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align=3D"left" valign=3D"top">
+                      <table
+                        cellpadding=3D"0"
+                        cellspacing=3D"0"
+                        border=3D"0"
+                        width=3D"100%"
+                      >
+                        <tbody>
+                          <tr>
+                            <td align=3D"right" valign=3D"middle" widt=
+h=3D"45">
+                              <img
+                                src=3D"https://d8it4huxumps7.cloudfron=
+t.net/uploads/images/emailer/competitions.png"
+                                border=3D"0"
+                                style=3D"display:block"
+                                width=3D"42"
+                                height=3D"43"
+                                alt=3D"Competition Stories"
+                              />
+                            </td>
+                            <td align=3D"left" valign=3D"top" width=3D=
+"20"></td>
+
+                            <td
+                              class=3D"list"
+                              align=3D"left"
+                              valign=3D"top"
+                              style=3D"color:#3b3e4d;font-family:Robot=
+o,sans-serif,Helvetica,Arial;font-size:15px;line-height:20px;font-weig=
+ht:normal"
+                            >
+                              <span
+                                style=3D"font-size:18px;font-weight:50=
+0;line-height:35px"
+                              >
+                                <a
+                                  href=3D"https://dare2compete.com/com=
+petition-stories"
+                                  target=3D"_blank"
+                                  style=3D"text-decoration: none; colo=
+r:#3b3e4d;"
+                                >
+                                  Competition Stories
+                                </a>
+                              </span>
+                              <br />
+                              <a
+                                href=3D"https://dare2compete.com/compe=
+tition-stories"
+                                target=3D"_blank"
+                                style=3D"text-decoration: none; color:=
+#3b3e4d;"
+                              >
+                                For stories and tricks from winners of=
+ Corporate
+                                competitions
+                              </a>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td
+                              colspan=3D"2"
+                              bgcolor=3D"#ffffff"
+                              height=3D"15"
+                              style=3D"line-height:15px;font-size:15px=
+"
+                            >
+                              =C2=A0
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td align=3D"right" valign=3D"middle" widt=
+h=3D"45">
+                              <img
+                                src=3D"https://d8it4huxumps7.cloudfron=
+t.net/uploads/images/emailer/campus-life.png"
+                                border=3D"0"
+                                style=3D"display:block"
+                                width=3D"42"
+                                height=3D"43"
+                                alt=3D"Campus Life"
+                              />
+                            </td>
+                            <td align=3D"left" valign=3D"top" width=3D=
+"20"></td>
+
+                            <td
+                              class=3D"list"
+                              align=3D"left"
+                              valign=3D"top"
+                              style=3D"color:#3b3e4d;font-family:Robot=
+o,sans-serif,Helvetica,Arial;font-size:15px;line-height:20px;font-weig=
+ht:normal"
+                            >
+                              <span
+                                style=3D"font-size:18px;font-weight:50=
+0;line-height:35px"
+                              >
+                                <a
+                                  href=3D"https://dare2compete.com/cam=
+pus-life"
+                                  target=3D"_blank"
+                                  style=3D"text-decoration: none; colo=
+r:#3b3e4d;"
+                                >
+                                  Campus Life
+                                </a>
+                              </span>
+                              <br />
+
+                              <a
+                                href=3D"https://dare2compete.com/compe=
+tition-stories"
+                                target=3D"_blank"
+                                style=3D"text-decoration: none; color:=
+#3b3e4d;"
+                              >
+                                For the latest news from campuses from=
+ across
+                                the country
+                              </a>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td
+                              colspan=3D"2"
+                              bgcolor=3D"#ffffff"
+                              height=3D"15"
+                              style=3D"line-height:15px;font-size:15px=
+"
+                            >
+                              =C2=A0
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td align=3D"right" valign=3D"middle" widt=
+h=3D"45">
+                              <img
+                                src=3D"https://d8it4huxumps7.cloudfron=
+t.net/uploads/images/emailer/trophy.png"
+                                border=3D"0"
+                                style=3D"display:block"
+                                width=3D"42"
+                                height=3D"43"
+                                alt=3D"Internship Stories"
+                              />
+                            </td>
+                            <td align=3D"left" valign=3D"top" width=3D=
+"20"></td>
+
+                            <td
+                              class=3D"list"
+                              align=3D"left"
+                              valign=3D"top"
+                              style=3D"color:#3b3e4d;font-family:Robot=
+o,sans-serif,Helvetica,Arial;font-size:15px;line-height:20px;font-weig=
+ht:normal"
+                            >
+                              <span
+                                style=3D"font-size:18px;font-weight:50=
+0;line-height:35px"
+                              >
+                                <a
+                                  href=3D"https://dare2compete.com/int=
+ernship-stories"
+                                  target=3D"_blank"
+                                  style=3D"text-decoration: none; colo=
+r:#3b3e4d;"
+                                >
+                                  Internship Stories
+                                </a>
+                              </span>
+                              <br />
+
+                              <a
+                                href=3D"https://dare2compete.com/compe=
+tition-stories"
+                                target=3D"_blank"
+                                style=3D"text-decoration: none; color:=
+#3b3e4d;"
+                              >
+                                For learnings and experiences from Int=
+ernship
+                                with various industry leaders
+                              </a>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td
+                              colspan=3D"2"
+                              bgcolor=3D"#ffffff"
+                              height=3D"15"
+                              style=3D"line-height:15px;font-size:15px=
+"
+                            >
+                              =C2=A0
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td align=3D"right" valign=3D"middle" widt=
+h=3D"45">
+                              <img
+                                src=3D"https://d8it4huxumps7.cloudfron=
+t.net/uploads/images/emailer/placement-experience.png"
+                                border=3D"0"
+                                style=3D"display:block"
+                                width=3D"42"
+                                height=3D"43"
+                                alt=3D"Placement Experiences"
+                              />
+                            </td>
+                            <td align=3D"left" valign=3D"top" width=3D=
+"20"></td>
+
+                            <td
+                              class=3D"list"
+                              align=3D"left"
+                              valign=3D"top"
+                              style=3D"color:#3b3e4d;font-family:Robot=
+o,sans-serif,Helvetica,Arial;font-size:15px;line-height:20px;font-weig=
+ht:normal"
+                            >
+                              <span
+                                style=3D"font-size:18px;font-weight:50=
+0;line-height:35px"
+                              >
+                                <a
+                                  href=3D"https://dare2compete.com/pla=
+cement-experiences"
+                                  target=3D"_blank"
+                                  style=3D"text-decoration: none; colo=
+r:#3b3e4d;"
+                                >
+                                  Placement Experiences
+                                </a>
+                              </span>
+                              <br />
+
+                              <a
+                                href=3D"https://dare2compete.com/compe=
+tition-stories"
+                                target=3D"_blank"
+                                style=3D"text-decoration: none; color:=
+#3b3e4d;"
+                              >
+                                For selection processes and tips to ge=
+t your
+                                Dream Job
+                              </a>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td
+                              colspan=3D"2"
+                              bgcolor=3D"#ffffff"
+                              height=3D"15"
+                              style=3D"line-height:15px;font-size:15px=
+"
+                            >
+                              =C2=A0
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td align=3D"right" valign=3D"middle" widt=
+h=3D"45">
+                              <img
+                                src=3D"https://d8it4huxumps7.cloudfron=
+t.net/uploads/images/emailer/knowledge-bites.png"
+                                border=3D"0"
+                                style=3D"display:block"
+                                width=3D"42"
+                                height=3D"43"
+                                alt=3D"Knowledge Bites"
+                              />
+                            </td>
+                            <td align=3D"left" valign=3D"top" width=3D=
+"20"></td>
+
+                            <td
+                              class=3D"list"
+                              align=3D"left"
+                              valign=3D"top"
+                              style=3D"color:#3b3e4d;font-family:Robot=
+o,sans-serif,Helvetica,Arial;font-size:15px;line-height:20px;font-weig=
+ht:normal"
+                            >
+                              <span
+                                style=3D"font-size:18px;font-weight:50=
+0;line-height:35px"
+                              >
+                                <a
+                                  href=3D"https://dare2compete.com/kno=
+wledge-bites"
+                                  target=3D"_blank"
+                                  style=3D"text-decoration: none; colo=
+r:#3b3e4d;"
+                                >
+                                  Knowledge Bites
+                                </a>
+                              </span>
+                              <br />
+
+                              <a
+                                href=3D"https://dare2compete.com/compe=
+tition-stories"
+                                target=3D"_blank"
+                                style=3D"text-decoration: none; color:=
+#3b3e4d;"
+                              >
+                                For guidance, tips, and tricks from th=
+e
+                                corporate world
+                              </a>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td
+                              colspan=3D"2"
+                              bgcolor=3D"#ffffff"
+                              height=3D"15"
+                              style=3D"line-height:15px;font-size:15px=
+"
+                            >
+                              =C2=A0
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td align=3D"right" valign=3D"middle" widt=
+h=3D"45">
+                              <img
+                                src=3D"https://d8it4huxumps7.cloudfron=
+t.net/uploads/images/emailer/recruiter-diaries.png"
+                                border=3D"0"
+                                style=3D"display:block"
+                                width=3D"42"
+                                height=3D"43"
+                                alt=3D"Recruiter Diaries"
+                              />
+                            </td>
+                            <td align=3D"left" valign=3D"top" width=3D=
+"20"></td>
+
+                            <td
+                              class=3D"list"
+                              align=3D"left"
+                              valign=3D"top"
+                              style=3D"color:#3b3e4d;font-family:Robot=
+o,sans-serif,Helvetica,Arial;font-size:15px;line-height:20px;font-weig=
+ht:normal"
+                            >
+                              <span
+                                style=3D"font-size:18px;font-weight:50=
+0;line-height:35px"
+                              >
+                                <a
+                                  href=3D"https://dare2compete.com/rec=
+ruiter-diaries"
+                                  target=3D"_blank"
+                                  style=3D"text-decoration: none; colo=
+r:#3b3e4d;"
+                                >
+                                  Recruiter Diaries
+                                </a>
+                              </span>
+                              <br />
+
+                              <a
+                                href=3D"https://dare2compete.com/compe=
+tition-stories"
+                                target=3D"_blank"
+                                style=3D"text-decoration: none; color:=
+#3b3e4d;"
+                              >
+                                For information on the most coveted re=
+cruiters
+                              </a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table
+      cellpadding=3D"0"
+      cellspacing=3D"0"
+      align=3D"center"
+      bgcolor=3D"#EDF8FC"
+      border=3D"0"
+      width=3D"600"
+      class=3D"full"
+    >
+      <tbody>
+        <tr>
+          <td
+            style=3D"padding: 12px; text-align: center; color:#3b3e4d;=
+font-family:Roboto,sans-serif,Helvetica,Arial;font-size:15px;line-heig=
+ht:21px;font-weight:normal"
+          >
+            Dare2Compete is
+            <a
+              href=3D"https://dare2compete.com/partners-help"
+              target=3D"_blank"
+              style=3D"text-decoration: underline; color: #1077d6;"
+            >
+              partnering with colleges
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+   =20
+    <table
+      cellpadding=3D"0"
+      cellspacing=3D"0"
+      align=3D"center"
+      bgcolor=3D"#ffffff"
+      border=3D"0"
+      width=3D"600"
+      class=3D"full"
+      style=3D"margin: 20px auto;"
+    >
+      <tbody>
+      <tr>
+          <td style=3D"text-align: center; padding-bottom: 15px;">
+            <table style=3D"width: 100%;">
+              <tr>
+                <td class=3D"appbtm appmr" style=3D"border-right: 1px =
+dashed #d2d2d2;">
+                  <p
+                    style=3D"font-family:Avenir,Helvetica,sans-serif;b=
+ox-sizing:border-box;padding:0;display:block;font-style:normal;letter-=
+spacing:normal;color:#777777;font-size:14px;font-weight:400;line-heigh=
+t:20px;text-align:center;margin:0 0 10px 0;"
+                  >
+                    Stay Updated! Follow us on:
+                  </p>
+                  <div
+                    style=3D"font-family:Avenir,Helvetica,sans-serif;b=
+ox-sizing:border-box;"
+                    >
+                    <a
+                      href=3D"https://www.instagram.com/dare2compete/"
+                      style=3D"font-family:Avenir,Helvetica,sans-serif=
+;box-sizing:border-box;color:#3869d4;margin:0 2px;border:0;text-decora=
+tion:none;display:inline-block"
+                      target=3D"_blank"
+                    >
+                      <img
+                        height=3D"40"
+                        src=3D"https://d8it4huxumps7.cloudfront.net/up=
+loads/images/emailer/d2c-instagram-icon.png"
+                        style=3D"font-family:Avenir,Helvetica,sans-ser=
+if;box-sizing:border-box;outline:none!important;display:block;height:a=
+uto;margin:0px;padding:0px;float:none;max-width:100%;vertical-align:mi=
+ddle;border:none;color:#fff;width:40px"
+                        width=3D"40"
+                      />
+                    </a>
+                    <a
+                      href=3D"https://www.facebook.com/Dare2compete?fr=
+ef=3Dts"
+                      style=3D"font-family:Avenir,Helvetica,sans-serif=
+;box-sizing:border-box;color:#3869d4;margin:0 2px;border:0;text-decora=
+tion:none;display:inline-block"
+                      target=3D"_blank"
+                      ><img
+                        height=3D"40"
+                        src=3D"https://d8it4huxumps7.cloudfront.net/up=
+loads/images/emailer/d2c-facebook.png"
+                        style=3D"font-family:Avenir,Helvetica,sans-ser=
+if;box-sizing:border-box;outline:none!important;display:block;height:a=
+uto;margin:0px;padding:0px;float:none;max-width:100%;vertical-align:mi=
+ddle;border:none;color:#fff;width:40px"
+                        width=3D"40"
+                      />
+                    </a>
+                    <a
+                      href=3D"https://www.linkedin.com/company/1360550=
+0/"
+                      style=3D"font-family:Avenir,Helvetica,sans-serif=
+;box-sizing:border-box;color:#3869d4;margin:0 2px;border:0;text-decora=
+tion:none;display:inline-block"
+                      target=3D"_blank"
+                    >
+                      <img
+                        height=3D"40"
+                        src=3D"https://d8it4huxumps7.cloudfront.net/up=
+loads/images/emailer/d2c-linkedin.png"
+                        style=3D"font-family:Avenir,Helvetica,sans-ser=
+if;box-sizing:border-box;outline:none!important;display:block;height:a=
+uto;margin:0px;padding:0px;float:none;max-width:100%;vertical-align:mi=
+ddle;border:none;color:#fff;width:40px"
+                        width=3D"40"
+                      />
+                    </a>
+                    <a
+                      href=3D"https://twitter.com/Dare2Compete"
+                      style=3D"font-family:Avenir,Helvetica,sans-serif=
+;box-sizing:border-box;color:#3869d4;margin:0 2px;border:0;text-decora=
+tion:none;display:inline-block"
+                      target=3D"_blank"
+                    >
+                      <img
+                        height=3D"40"
+                        src=3D"https://d8it4huxumps7.cloudfront.net/up=
+loads/images/emailer/d2c-twitter.png"
+                        style=3D"font-family:Avenir,Helvetica,sans-ser=
+if;box-sizing:border-box;outline:none!important;display:block;height:a=
+uto;margin:0px;padding:0px;float:none;max-width:100%;vertical-align:mi=
+ddle;border:none;color:#fff;width:40px"
+                        width=3D"40"
+                      />
+                    </a>
+                    <a
+                      href=3D"https://www.youtube.com/channel/UC8g9cWv=
+Hj0_qkxBJlhACeHQ"
+                      style=3D"font-family:Avenir,Helvetica,sans-serif=
+;box-sizing:border-box;color:#3869d4;margin:0 2px;border:0;text-decora=
+tion:none;display:inline-block"
+                      target=3D"_blank"
+                    >
+                      <img
+                        height=3D"40"
+                        src=3D"https://d8it4huxumps7.cloudfront.net/up=
+loads/images/emailer/d2c-youtube.png"
+                        style=3D"font-family:Avenir,Helvetica,sans-ser=
+if;box-sizing:border-box;outline:none!important;display:block;height:a=
+uto;margin:0px;padding:0px;float:none;max-width:100%;vertical-align:mi=
+ddle;border:none;color:#fff;width:40px"
+                        width=3D"40"
+                      />
+                    </a>
+                  </div>
+                </td>
+                <td class=3D"appbtm">
+                  <p
+                    style=3D"font-family:Avenir,Helvetica,sans-serif;b=
+ox-sizing:border-box;padding:0;display:block;font-style:normal;letter-=
+spacing:normal;color:#777777;font-size:14px;font-weight:400;line-heigh=
+t:20px;text-align:center;margin:0 0 10px 0;"
+                  >
+                    Download Our App
+                  </p>
+                  <div
+                    style=3D"font-family:Avenir,Helvetica,sans-serif;b=
+ox-sizing:border-box;"
+                    >
+                    <a
+                      href=3D"https://play.google.com/store/apps/detai=
+ls?id=3Dcom.dare2compete.app"
+                      style=3D"font-family:Avenir,Helvetica,sans-serif=
+;box-sizing:border-box;color:#3869d4;margin:0 2px;border:0;text-decora=
+tion:none;display:inline-block"
+                      target=3D"_blank"
+                    >
+                      <img
+                        height=3D"40"
+                        src=3D"https://d8it4huxumps7.cloudfront.net/up=
+loads/images/emailer/d2c-play-store.png"
+                        style=3D"font-family:Avenir,Helvetica,sans-ser=
+if;box-sizing:border-box;outline:none!important;display:block;height:a=
+uto;margin:0px;padding:0px;float:none;max-width:100%;vertical-align:mi=
+ddle;border:none;color:#fff;"
+                        width=3D"135"
+                      />
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td
+            style=3D"font-family:Avenir,Helvetica,sans-serif;box-sizin=
+g:border-box;padding:0"
+            valign=3D"top"
+          >
+            <p
+              style=3D"font-family:Avenir,Helvetica,sans-serif;box-siz=
+ing:border-box;padding:0;display:block;font-style:normal;letter-spacin=
+g:normal;margin-top:0;color:#777777;font-size:12px;font-weight:400;lin=
+e-height:20px;text-align:center;margin:0"
+            >
+            In case you have any queries, please reach out to us at=20
+              <a
+                href=3D"mailTo:help@dare2compete.com"
+                style=3D"font-family:Avenir,Helvetica,sans-serif;box-s=
+izing:border-box;color:#777777;text-decoration:underline"
+                target=3D"_blank"
+                >help@dare2compete.com</a
+              >
+            </p>
+            <p
+              style=3D"font-family:Avenir,Helvetica,sans-serif;box-siz=
+ing:border-box;padding:0;display:block;font-style:normal;letter-spacin=
+g:normal;margin-top:0;color:#777777;font-size:12px;font-weight:400;lin=
+e-height:20px;text-align:center;margin:0"
+            >
+              =C2=A9 2020 Dare2Compete. All rights reserved
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+   =20
+  </body>
+</html>
+
+--=-9fJgBR4U3/qhio9HYWYP5g==
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Content-Id: <49eb4d71-09b6-4f1f-a63e-b77ab6f60a27>
+
+<!doctype html>
+<html lang=3D"en">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-=
+8">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<title>Dare2Compete</title>
+<meta name=3D"author" content=3D"">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1.0">
+<style type=3D"text/css">
+      @import  url("https://fonts.googleapis.com/css?family=3DRoboto:4=
+00,500,700&display=3Dswap");
+      body {
+        width: auto;
+        background-color: #ffffff;
+        margin: 0 auto;
+        padding: 0;
+        font-size: 14px;
+        -webkit-text-size-adjust: 100% !important;
+        -ms-text-size-adjust: 100% !important;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Roboto", sans-serif;
+      }
+
+      img {
+        border: 0 !important;
+        outline: none !important;
+        display: block;
+      }
+
+      a {
+        text-decoration: none;
+        color: #1077d6;
+      }
+
+      table {
+        border-collapse: collapse;
+        mso-table-lspace: 0px;
+        mso-table-rspace: 0px;
+      }
+
+      @media (max-width: 600px) {
+        .banner {
+          margin-top: 0 !important;
+          background-size: cover;
+        }
+        .logo {
+          padding: 20px 0 !important;
+        }
+        .pdng_l_r {
+          padding: 0 10px !important;
+        }
+        .full {
+          width: 100% !important;
+        }
+        .btn {
+          margin-top: 20px !important;
+        }
+        .btn a {
+          font-size: 12px !important;
+          padding: 10px 12px !important;
+          margin: 0 !important;
+        }
+        .font15 {
+          font-size: 15px !important;
+          line-height: 23px !important;
+        }
+        .sub_title {
+          font-size: 20px !important;
+        }
+        .list {
+          font-size: 14px !important;
+        }
+        .list span {
+          font-size: 17px !important;
+          line-height: 27px !important;
+        }
+        .padding_box {
+          padding: 15px !important;
+        }
+        .pdng_top {
+          margin-bottom: 10px !important;
+          padding-top: 0 !important;
+        }
+        .main_hdng {
+          padding: 15px !important;
+          font-size: 23px !important;
+          line-height: 28px !important;
+        }
+        .dtls {
+          margin-top: 15px !important;
+        }
+        .box_height {
+          line-height: 10px !important;
+          font-size: 10px !important;
+          height: 10px !important;
+        }
+        .option {
+          padding: 20px 0 0 !important;
+        }
+        .option table {
+          width: calc(100% - 20px);
+        }
+        .app {
+          padding: 10px !important;
+          margin-bottom: 10px !important;
+        }
+        .app h2 {
+          font-size: 17px !important;
+          line-height: 22px !important;
+          text-transform: none !important;
+        }
+        .appbtm {
+          border-right: 0 !important;
+          display: block;
+        }
+        .appmr {
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+</head>
+<body style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing:=
+ border-box; color: #74787E; height: 100%; line-height: 1.4; margin: 0=
+; width: 100% !important; -webkit-text-size-adjust: none;">
+    <table cellpadding=3D"0" cellspacing=3D"0" align=3D"center" bgcolo=
+r=3D"#ffffff" border=3D"0" width=3D"600" class=3D"full banner" style=3D=
+"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; b=
+order-collapse: collapse; mso-table-lspace: 0px; mso-table-rspace: 0px=
+; margin-top: 20px; background-image: url(https://d8it4huxumps7.cloudf=
+ront.net/uploads/images/emailer/d2c-emailer-bg.jpg);"><tbody style=3D"=
+font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+<tr>
+<td class=3D"logo" align=3D"center" style=3D"font-family: Avenir, Helv=
+etica, sans-serif; box-sizing: border-box; padding: 40px 0;">
+            <a href=3D"https://v2l62cdp.r.ap-south-1.awstrack.me/L0/ht=
+tps:%2F%2Fdare2compete.com%2F%3Futm_campaign=3Dsite-emails%26utm_mediu=
+m=3Dsite-emails%26utm_source=3Dsubmission-deleted-for-myntra-hackerram=
+p-campus-edition/1/0109017503b49c36-2d1486a5-a414-41f0-b61e-87db9093e0=
+4c-000000/M6tN2vm8Y6e-kP4LTsPgkOPzD7w=3D1" target=3D"_blank" style=3D"=
+font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; te=
+xt-decoration: none; color: #3869D4; display: block;">
+              <img src=3D"https://d8it4huxumps7.cloudfront.net/uploads=
+/images/emailer/d2clogo.png" width=3D"120" style=3D"font-family: Aveni=
+r, Helvetica, sans-serif; box-sizing: border-box; border: 0 !important=
+; outline: none !important; max-width: 100%; display: block; margin: 0=
+ auto; width: 120px;"></a>
+          </td>
+         =20
+         =20
+                  </tr>
+<tr>
+<td class=3D"pdng_l_r" align=3D"center" style=3D"font-family: Avenir, =
+Helvetica, sans-serif; box-sizing: border-box; padding: 0 40px;">
+            <div class=3D"main_hdng" style=3D"box-sizing: border-box; =
+background: #fff; padding: 30px; color: #000000; font-size: 28px; font=
+-weight: 400; line-height: 36px; font-family: Roboto,sans-serif,Helvet=
+ica,Arial;">
+            Submission Deleted
+            </div>
+          </td>
+        </tr>
+</tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" align=3D"center" bgcolor=3D=
+"#EDF8FC" border=3D"0" width=3D"600" class=3D"full" style=3D"font-fami=
+ly: Avenir, Helvetica, sans-serif; box-sizing: border-box; border-coll=
+apse: collapse; mso-table-lspace: 0px; mso-table-rspace: 0px;"><tbody =
+style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: borde=
+r-box;"><tr>
+<td class=3D"pdng_l_r" align=3D"center" style=3D"font-family: Avenir, =
+Helvetica, sans-serif; box-sizing: border-box; padding: 0 40px;">
+            <div class=3D"padding_box pdng_top" style=3D"font-family: =
+Avenir, Helvetica, sans-serif; box-sizing: border-box; background: #ff=
+f; padding: 0 30px 30px 30px; margin-bottom: 20px;">
+              <div class=3D"font15" style=3D"box-sizing: border-box; c=
+olor: #5a5b5f; font-size: 16px; line-height: 24px; font-weight: 400; t=
+ext-align: center; font-family: Roboto,sans-serif,Helvetica,Arial;">
+                Your submission for round <strong style=3D"font-family=
+: Avenir, Helvetica, sans-serif; box-sizing: border-box;">Phase 1: Ide=
+ation </strong> of <strong style=3D"font-family: Avenir, Helvetica, sa=
+ns-serif; box-sizing: border-box;">Myntra HackerRamp: Campus Edition</=
+strong> has been deleted.
+              </div>
+
+             =20
+
+              <div class=3D"btn" style=3D"font-family: Avenir, Helveti=
+ca, sans-serif; box-sizing: border-box; margin-top: 30px;">
+                <a href=3D"https://v2l62cdp.r.ap-south-1.awstrack.me/L=
+0/https:%2F%2Fdare2compete.com%2Fo%2Fmyntra-hackerramp-campus-edition-=
+myntra-127164%3Futm_campaign=3Dsite-emails%26utm_medium=3Dsite-emails%=
+26utm_source=3Dsubmission-deleted-for-myntra-hackerramp-campus-edition=
+/1/0109017503b49c36-2d1486a5-a414-41f0-b61e-87db9093e04c-000000/Bt2bTM=
+V4pgtYsN75uHq2QOaC8Y0=3D1" style=3D"box-sizing: border-box; font-famil=
+y: Roboto,sans-serif,Helvetica,Arial; font-size: 15px; font-weight: 70=
+0; color: #ffffff; text-decoration: none; display: inline-block; paddi=
+ng: 12px 30px; background-color: #1077d6; border-radius: 45px; margin:=
+ 0 2px;" target=3D"_blank">
+                View Competition
+                </a>
+              </div>
+
+              <div class=3D"font15" style=3D"box-sizing: border-box; c=
+olor: #5a5b5f; margin-top: 20px; font-size: 16px; line-height: 24px; f=
+ont-weight: 400; text-align: center; font-family: Roboto,sans-serif,He=
+lvetica,Arial;">
+                We look forward to your earnest participation. Enjoy a=
+nd ignite the spirit of competitiveness.
+              </div>
+             =20
+            </div>
+          </td>
+        </tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" align=3D"center" bgcolor=3D=
+"#EDF8FC" border=3D"0" width=3D"600" class=3D"full" style=3D"font-fami=
+ly: Avenir, Helvetica, sans-serif; box-sizing: border-box; border-coll=
+apse: collapse; mso-table-lspace: 0px; mso-table-rspace: 0px;"><tbody =
+style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: borde=
+r-box;"><tr>
+<td class=3D"pdng_l_r" align=3D"center" style=3D"font-family: Avenir, =
+Helvetica, sans-serif; box-sizing: border-box; padding: 0 40px;">
+            <a target=3D"_blank" href=3D"https://v2l62cdp.r.ap-south-1=
+.awstrack.me/L0/https:%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3=
+Fid=3Dcom.dare2compete.app/1/0109017503b49c36-2d1486a5-a414-41f0-b61e-=
+87db9093e04c-000000/lqUHpT9txDt-rTd32hHqDDFRdjE=3D1" style=3D"font-fam=
+ily: Avenir, Helvetica, sans-serif; box-sizing: border-box; text-decor=
+ation: none; color: #3869D4; display: block;">
+              <div class=3D"app" style=3D"font-family: Avenir, Helveti=
+ca, sans-serif; box-sizing: border-box; background: #207fc3; padding: =
+12px; margin-bottom: 20px;">
+                <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0=
+" style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: bor=
+der-box; border-collapse: collapse; mso-table-lspace: 0px; mso-table-r=
+space: 0px;"><tbody style=3D"font-family: Avenir, Helvetica, sans-seri=
+f; box-sizing: border-box;"><tr>
+<td align=3D"left" valign=3D"center" style=3D"font-family: Avenir, Hel=
+vetica, sans-serif; box-sizing: border-box;">
+                        <h2 class=3D"sub_title" style=3D"box-sizing: b=
+order-box; margin-top: 0; text-align: left; margin: 0; padding-right: =
+15px; color: #fff; font-size: 19px; line-height: 23px; font-weight: 60=
+0; text-transform: uppercase; font-family: Roboto,sans-serif,Helvetica=
+,Arial;">
+                         Stay Updated | Download Our App
+                        </h2>
+                      </td>
+                      <td style=3D"font-family: Avenir, Helvetica, san=
+s-serif; box-sizing: border-box;">
+                        <img src=3D"https://d8it4huxumps7.cloudfront.n=
+et/uploads/images/emailer/d2c-play-store.png" border=3D"0" style=3D"fo=
+nt-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; bord=
+er: 0 !important; outline: none !important; max-width: 100%; display: =
+block;" width=3D"135" height=3D"40" alt=3D"D2C App">
+</td>
+                    </tr></tbody></table>
+</div>
+            </a>
+          </td>
+        </tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" align=3D"center" bgcolor=3D=
+"#EDF8FC" border=3D"0" width=3D"600" class=3D"full" style=3D"font-fami=
+ly: Avenir, Helvetica, sans-serif; box-sizing: border-box; border-coll=
+apse: collapse; mso-table-lspace: 0px; mso-table-rspace: 0px;"><tbody =
+style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: borde=
+r-box;"><tr>
+<td class=3D"pdng_l_r" align=3D"center" style=3D"font-family: Avenir, =
+Helvetica, sans-serif; box-sizing: border-box; padding: 0 40px;">
+            <div class=3D"padding_box" style=3D"font-family: Avenir, H=
+elvetica, sans-serif; box-sizing: border-box; background: #fff; paddin=
+g: 30px;">
+              <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: borde=
+r-box; border-collapse: collapse; mso-table-lspace: 0px; mso-table-rsp=
+ace: 0px;"><tbody style=3D"font-family: Avenir, Helvetica, sans-serif;=
+ box-sizing: border-box;">
+<tr>
+<td align=3D"left" valign=3D"center" style=3D"font-family: Avenir, Hel=
+vetica, sans-serif; box-sizing: border-box;">
+                      <h2 class=3D"sub_title" style=3D"box-sizing: bor=
+der-box; margin-top: 0; text-align: left; margin: 0; color: #1c1e29; f=
+ont-size: 24px; line-height: 28px; font-weight: 500; font-family: Robo=
+to,sans-serif,Helvetica,Arial;">
+                        Read Articles to Stay Informed
+                      </h2>
+                      <p class=3D"font15" style=3D"box-sizing: border-=
+box; margin-top: 0; text-align: left; margin: 15px 0 20px 0; color: #3=
+b3e4d; font-size: 16px; line-height: 25px; font-weight: normal; font-f=
+amily: Roboto,sans-serif,Helvetica,Arial;">
+                        Dare2Compete brings to you the latest articles=
+ on facts
+                        and experiences from other students, and other=
+ curated
+                        articles, which will inspire you and guide you=
+ to
+                        realize your full potential. Here are a few ca=
+tegories
+                        that we think might be useful for you.
+                      </p>
+                    </td>
+                  </tr>
+<tr>
+<td align=3D"left" valign=3D"top" style=3D"font-family: Avenir, Helvet=
+ica, sans-serif; box-sizing: border-box;">
+                      <table cellpadding=3D"0" cellspacing=3D"0" borde=
+r=3D"0" width=3D"100%" style=3D"font-family: Avenir, Helvetica, sans-s=
+erif; box-sizing: border-box; border-collapse: collapse; mso-table-lsp=
+ace: 0px; mso-table-rspace: 0px;"><tbody style=3D"font-family: Avenir,=
+ Helvetica, sans-serif; box-sizing: border-box;">
+<tr>
+<td align=3D"right" valign=3D"middle" width=3D"45" style=3D"font-famil=
+y: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+                              <img src=3D"https://d8it4huxumps7.cloudf=
+ront.net/uploads/images/emailer/competitions.png" border=3D"0" style=3D=
+"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; b=
+order: 0 !important; outline: none !important; max-width: 100%; displa=
+y: block;" width=3D"42" height=3D"43" alt=3D"Competition Stories">
+</td>
+                            <td align=3D"left" valign=3D"top" width=3D=
+"20" style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: =
+border-box;"></td>
+
+                            <td class=3D"list" align=3D"left" valign=3D=
+"top" style=3D"box-sizing: border-box; color: #3b3e4d; font-family: Ro=
+boto,sans-serif,Helvetica,Arial; font-size: 15px; line-height: 20px; f=
+ont-weight: normal;">
+                              <span style=3D"font-family: Avenir, Helv=
+etica, sans-serif; box-sizing: border-box; font-size: 18px; font-weigh=
+t: 500; line-height: 35px;">
+                                <a href=3D"https://v2l62cdp.r.ap-south=
+-1.awstrack.me/L0/https:%2F%2Fdare2compete.com%2Fcompetition-stories%3=
+Futm_campaign=3Dsite-emails%26utm_medium=3Dsite-emails%26utm_source=3D=
+submission-deleted-for-myntra-hackerramp-campus-edition/1/0109017503b4=
+9c36-2d1486a5-a414-41f0-b61e-87db9093e04c-000000/ijmyJN5WBzEi90hVosDv2=
+e-muMA=3D1" target=3D"_blank" style=3D"font-family: Avenir, Helvetica,=
+ sans-serif; box-sizing: border-box; text-decoration: none; color: #3b=
+3e4d;">
+                                  Competition Stories
+                                </a>
+                              </span>
+                              <br><a href=3D"https://v2l62cdp.r.ap-sou=
+th-1.awstrack.me/L0/https:%2F%2Fdare2compete.com%2Fcompetition-stories=
+%3Futm_campaign=3Dsite-emails%26utm_medium=3Dsite-emails%26utm_source=3D=
+submission-deleted-for-myntra-hackerramp-campus-edition/2/0109017503b4=
+9c36-2d1486a5-a414-41f0-b61e-87db9093e04c-000000/qLUWX4P5F6aV1A5sGg_Ga=
+1n_Zj0=3D1" target=3D"_blank" style=3D"font-family: Avenir, Helvetica,=
+ sans-serif; box-sizing: border-box; text-decoration: none; color: #3b=
+3e4d;">
+                                For stories and tricks from winners of=
+ Corporate
+                                competitions
+                              </a>
+                            </td>
+                          </tr>
+<tr>
+<td colspan=3D"2" bgcolor=3D"#ffffff" height=3D"15" style=3D"font-fami=
+ly: Avenir, Helvetica, sans-serif; box-sizing: border-box; line-height=
+: 15px; font-size: 15px;">
+                              =C2=A0
+                            </td>
+                          </tr>
+<tr>
+<td align=3D"right" valign=3D"middle" width=3D"45" style=3D"font-famil=
+y: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+                              <img src=3D"https://d8it4huxumps7.cloudf=
+ront.net/uploads/images/emailer/campus-life.png" border=3D"0" style=3D=
+"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; b=
+order: 0 !important; outline: none !important; max-width: 100%; displa=
+y: block;" width=3D"42" height=3D"43" alt=3D"Campus Life">
+</td>
+                            <td align=3D"left" valign=3D"top" width=3D=
+"20" style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: =
+border-box;"></td>
+
+                            <td class=3D"list" align=3D"left" valign=3D=
+"top" style=3D"box-sizing: border-box; color: #3b3e4d; font-family: Ro=
+boto,sans-serif,Helvetica,Arial; font-size: 15px; line-height: 20px; f=
+ont-weight: normal;">
+                              <span style=3D"font-family: Avenir, Helv=
+etica, sans-serif; box-sizing: border-box; font-size: 18px; font-weigh=
+t: 500; line-height: 35px;">
+                                <a href=3D"https://v2l62cdp.r.ap-south=
+-1.awstrack.me/L0/https:%2F%2Fdare2compete.com%2Fcampus-life%3Futm_cam=
+paign=3Dsite-emails%26utm_medium=3Dsite-emails%26utm_source=3Dsubmissi=
+on-deleted-for-myntra-hackerramp-campus-edition/1/0109017503b49c36-2d1=
+486a5-a414-41f0-b61e-87db9093e04c-000000/jVrPC8FB94jZby9vUI-ofnwK_gQ=3D=
+1" target=3D"_blank" style=3D"font-family: Avenir, Helvetica, sans-ser=
+if; box-sizing: border-box; text-decoration: none; color: #3b3e4d;">
+                                  Campus Life
+                                </a>
+                              </span>
+                              <br><a href=3D"https://v2l62cdp.r.ap-sou=
+th-1.awstrack.me/L0/https:%2F%2Fdare2compete.com%2Fcompetition-stories=
+%3Futm_campaign=3Dsite-emails%26utm_medium=3Dsite-emails%26utm_source=3D=
+submission-deleted-for-myntra-hackerramp-campus-edition/3/0109017503b4=
+9c36-2d1486a5-a414-41f0-b61e-87db9093e04c-000000/vY-eqZaOt5f1_tfiInRDs=
+2Qw0wQ=3D1" target=3D"_blank" style=3D"font-family: Avenir, Helvetica,=
+ sans-serif; box-sizing: border-box; text-decoration: none; color: #3b=
+3e4d;">
+                                For the latest news from campuses from=
+ across
+                                the country
+                              </a>
+                            </td>
+                          </tr>
+<tr>
+<td colspan=3D"2" bgcolor=3D"#ffffff" height=3D"15" style=3D"font-fami=
+ly: Avenir, Helvetica, sans-serif; box-sizing: border-box; line-height=
+: 15px; font-size: 15px;">
+                              =C2=A0
+                            </td>
+                          </tr>
+<tr>
+<td align=3D"right" valign=3D"middle" width=3D"45" style=3D"font-famil=
+y: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+                              <img src=3D"https://d8it4huxumps7.cloudf=
+ront.net/uploads/images/emailer/trophy.png" border=3D"0" style=3D"font=
+-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; border=
+: 0 !important; outline: none !important; max-width: 100%; display: bl=
+ock;" width=3D"42" height=3D"43" alt=3D"Internship Stories">
+</td>
+                            <td align=3D"left" valign=3D"top" width=3D=
+"20" style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: =
+border-box;"></td>
+
+                            <td class=3D"list" align=3D"left" valign=3D=
+"top" style=3D"box-sizing: border-box; color: #3b3e4d; font-family: Ro=
+boto,sans-serif,Helvetica,Arial; font-size: 15px; line-height: 20px; f=
+ont-weight: normal;">
+                              <span style=3D"font-family: Avenir, Helv=
+etica, sans-serif; box-sizing: border-box; font-size: 18px; font-weigh=
+t: 500; line-height: 35px;">
+                                <a href=3D"https://v2l62cdp.r.ap-south=
+-1.awstrack.me/L0/https:%2F%2Fdare2compete.com%2Finternship-stories%3F=
+utm_campaign=3Dsite-emails%26utm_medium=3Dsite-emails%26utm_source=3Ds=
+ubmission-deleted-for-myntra-hackerramp-campus-edition/1/0109017503b49=
+c36-2d1486a5-a414-41f0-b61e-87db9093e04c-000000/EFrwMHVhTCT6Y_3FJsz63N=
+YUJWQ=3D1" target=3D"_blank" style=3D"font-family: Avenir, Helvetica, =
+sans-serif; box-sizing: border-box; text-decoration: none; color: #3b3=
+e4d;">
+                                  Internship Stories
+                                </a>
+                              </span>
+                              <br><a href=3D"https://v2l62cdp.r.ap-sou=
+th-1.awstrack.me/L0/https:%2F%2Fdare2compete.com%2Fcompetition-stories=
+%3Futm_campaign=3Dsite-emails%26utm_medium=3Dsite-emails%26utm_source=3D=
+submission-deleted-for-myntra-hackerramp-campus-edition/4/0109017503b4=
+9c36-2d1486a5-a414-41f0-b61e-87db9093e04c-000000/LpDO7Z4a5RlUZF14J2_7D=
+9R9KjE=3D1" target=3D"_blank" style=3D"font-family: Avenir, Helvetica,=
+ sans-serif; box-sizing: border-box; text-decoration: none; color: #3b=
+3e4d;">
+                                For learnings and experiences from Int=
+ernship
+                                with various industry leaders
+                              </a>
+                            </td>
+                          </tr>
+<tr>
+<td colspan=3D"2" bgcolor=3D"#ffffff" height=3D"15" style=3D"font-fami=
+ly: Avenir, Helvetica, sans-serif; box-sizing: border-box; line-height=
+: 15px; font-size: 15px;">
+                              =C2=A0
+                            </td>
+                          </tr>
+<tr>
+<td align=3D"right" valign=3D"middle" width=3D"45" style=3D"font-famil=
+y: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+                              <img src=3D"https://d8it4huxumps7.cloudf=
+ront.net/uploads/images/emailer/placement-experience.png" border=3D"0"=
+ style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: bord=
+er-box; border: 0 !important; outline: none !important; max-width: 100=
+%; display: block;" width=3D"42" height=3D"43" alt=3D"Placement Experi=
+ences">
+</td>
+                            <td align=3D"left" valign=3D"top" width=3D=
+"20" style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: =
+border-box;"></td>
+
+                            <td class=3D"list" align=3D"left" valign=3D=
+"top" style=3D"box-sizing: border-box; color: #3b3e4d; font-family: Ro=
+boto,sans-serif,Helvetica,Arial; font-size: 15px; line-height: 20px; f=
+ont-weight: normal;">
+                              <span style=3D"font-family: Avenir, Helv=
+etica, sans-serif; box-sizing: border-box; font-size: 18px; font-weigh=
+t: 500; line-height: 35px;">
+                                <a href=3D"https://v2l62cdp.r.ap-south=
+-1.awstrack.me/L0/https:%2F%2Fdare2compete.com%2Fplacement-experiences=
+%3Futm_campaign=3Dsite-emails%26utm_medium=3Dsite-emails%26utm_source=3D=
+submission-deleted-for-myntra-hackerramp-campus-edition/1/0109017503b4=
+9c36-2d1486a5-a414-41f0-b61e-87db9093e04c-000000/bwopFxJQZT6ckj63XHtvk=
+lvPLho=3D1" target=3D"_blank" style=3D"font-family: Avenir, Helvetica,=
+ sans-serif; box-sizing: border-box; text-decoration: none; color: #3b=
+3e4d;">
+                                  Placement Experiences
+                                </a>
+                              </span>
+                              <br><a href=3D"https://v2l62cdp.r.ap-sou=
+th-1.awstrack.me/L0/https:%2F%2Fdare2compete.com%2Fcompetition-stories=
+%3Futm_campaign=3Dsite-emails%26utm_medium=3Dsite-emails%26utm_source=3D=
+submission-deleted-for-myntra-hackerramp-campus-edition/5/0109017503b4=
+9c36-2d1486a5-a414-41f0-b61e-87db9093e04c-000000/0DVtxcck10_smYDXJ1_hU=
+btuWVs=3D1" target=3D"_blank" style=3D"font-family: Avenir, Helvetica,=
+ sans-serif; box-sizing: border-box; text-decoration: none; color: #3b=
+3e4d;">
+                                For selection processes and tips to ge=
+t your
+                                Dream Job
+                              </a>
+                            </td>
+                          </tr>
+<tr>
+<td colspan=3D"2" bgcolor=3D"#ffffff" height=3D"15" style=3D"font-fami=
+ly: Avenir, Helvetica, sans-serif; box-sizing: border-box; line-height=
+: 15px; font-size: 15px;">
+                              =C2=A0
+                            </td>
+                          </tr>
+<tr>
+<td align=3D"right" valign=3D"middle" width=3D"45" style=3D"font-famil=
+y: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+                              <img src=3D"https://d8it4huxumps7.cloudf=
+ront.net/uploads/images/emailer/knowledge-bites.png" border=3D"0" styl=
+e=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-bo=
+x; border: 0 !important; outline: none !important; max-width: 100%; di=
+splay: block;" width=3D"42" height=3D"43" alt=3D"Knowledge Bites">
+</td>
+                            <td align=3D"left" valign=3D"top" width=3D=
+"20" style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: =
+border-box;"></td>
+
+                            <td class=3D"list" align=3D"left" valign=3D=
+"top" style=3D"box-sizing: border-box; color: #3b3e4d; font-family: Ro=
+boto,sans-serif,Helvetica,Arial; font-size: 15px; line-height: 20px; f=
+ont-weight: normal;">
+                              <span style=3D"font-family: Avenir, Helv=
+etica, sans-serif; box-sizing: border-box; font-size: 18px; font-weigh=
+t: 500; line-height: 35px;">
+                                <a href=3D"https://v2l62cdp.r.ap-south=
+-1.awstrack.me/L0/https:%2F%2Fdare2compete.com%2Fknowledge-bites%3Futm=
+_campaign=3Dsite-emails%26utm_medium=3Dsite-emails%26utm_source=3Dsubm=
+ission-deleted-for-myntra-hackerramp-campus-edition/1/0109017503b49c36=
+-2d1486a5-a414-41f0-b61e-87db9093e04c-000000/8C2J-WodruJ0xVTQK8SV2N3RF=
+fw=3D1" target=3D"_blank" style=3D"font-family: Avenir, Helvetica, san=
+s-serif; box-sizing: border-box; text-decoration: none; color: #3b3e4d=
+;">
+                                  Knowledge Bites
+                                </a>
+                              </span>
+                              <br><a href=3D"https://v2l62cdp.r.ap-sou=
+th-1.awstrack.me/L0/https:%2F%2Fdare2compete.com%2Fcompetition-stories=
+%3Futm_campaign=3Dsite-emails%26utm_medium=3Dsite-emails%26utm_source=3D=
+submission-deleted-for-myntra-hackerramp-campus-edition/6/0109017503b4=
+9c36-2d1486a5-a414-41f0-b61e-87db9093e04c-000000/d82tR4wDM5HSvyizqMZDQ=
+4QGaJI=3D1" target=3D"_blank" style=3D"font-family: Avenir, Helvetica,=
+ sans-serif; box-sizing: border-box; text-decoration: none; color: #3b=
+3e4d;">
+                                For guidance, tips, and tricks from th=
+e
+                                corporate world
+                              </a>
+                            </td>
+                          </tr>
+<tr>
+<td colspan=3D"2" bgcolor=3D"#ffffff" height=3D"15" style=3D"font-fami=
+ly: Avenir, Helvetica, sans-serif; box-sizing: border-box; line-height=
+: 15px; font-size: 15px;">
+                              =C2=A0
+                            </td>
+                          </tr>
+<tr>
+<td align=3D"right" valign=3D"middle" width=3D"45" style=3D"font-famil=
+y: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+                              <img src=3D"https://d8it4huxumps7.cloudf=
+ront.net/uploads/images/emailer/recruiter-diaries.png" border=3D"0" st=
+yle=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-=
+box; border: 0 !important; outline: none !important; max-width: 100%; =
+display: block;" width=3D"42" height=3D"43" alt=3D"Recruiter Diaries">
+</td>
+                            <td align=3D"left" valign=3D"top" width=3D=
+"20" style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: =
+border-box;"></td>
+
+                            <td class=3D"list" align=3D"left" valign=3D=
+"top" style=3D"box-sizing: border-box; color: #3b3e4d; font-family: Ro=
+boto,sans-serif,Helvetica,Arial; font-size: 15px; line-height: 20px; f=
+ont-weight: normal;">
+                              <span style=3D"font-family: Avenir, Helv=
+etica, sans-serif; box-sizing: border-box; font-size: 18px; font-weigh=
+t: 500; line-height: 35px;">
+                                <a href=3D"https://v2l62cdp.r.ap-south=
+-1.awstrack.me/L0/https:%2F%2Fdare2compete.com%2Frecruiter-diaries%3Fu=
+tm_campaign=3Dsite-emails%26utm_medium=3Dsite-emails%26utm_source=3Dsu=
+bmission-deleted-for-myntra-hackerramp-campus-edition/1/0109017503b49c=
+36-2d1486a5-a414-41f0-b61e-87db9093e04c-000000/IgCg5yF9VYgnfh56kW7VrFv=
+0JMA=3D1" target=3D"_blank" style=3D"font-family: Avenir, Helvetica, s=
+ans-serif; box-sizing: border-box; text-decoration: none; color: #3b3e=
+4d;">
+                                  Recruiter Diaries
+                                </a>
+                              </span>
+                              <br><a href=3D"https://v2l62cdp.r.ap-sou=
+th-1.awstrack.me/L0/https:%2F%2Fdare2compete.com%2Fcompetition-stories=
+%3Futm_campaign=3Dsite-emails%26utm_medium=3Dsite-emails%26utm_source=3D=
+submission-deleted-for-myntra-hackerramp-campus-edition/7/0109017503b4=
+9c36-2d1486a5-a414-41f0-b61e-87db9093e04c-000000/hBfV71Rg71wroKeMT8ig6=
+8l4MmM=3D1" target=3D"_blank" style=3D"font-family: Avenir, Helvetica,=
+ sans-serif; box-sizing: border-box; text-decoration: none; color: #3b=
+3e4d;">
+                                For information on the most coveted re=
+cruiters
+                              </a>
+                            </td>
+                          </tr>
+</tbody></table>
+</td>
+                  </tr>
+</tbody></table>
+</div>
+          </td>
+        </tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" align=3D"center" bgcolor=3D=
+"#EDF8FC" border=3D"0" width=3D"600" class=3D"full" style=3D"font-fami=
+ly: Avenir, Helvetica, sans-serif; box-sizing: border-box; border-coll=
+apse: collapse; mso-table-lspace: 0px; mso-table-rspace: 0px;"><tbody =
+style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: borde=
+r-box;"><tr>
+<td style=3D"box-sizing: border-box; padding: 12px; text-align: center=
+; color: #3b3e4d; font-family: Roboto,sans-serif,Helvetica,Arial; font=
+-size: 15px; line-height: 21px; font-weight: normal;">
+            Dare2Compete is
+            <a href=3D"https://v2l62cdp.r.ap-south-1.awstrack.me/L0/ht=
+tps:%2F%2Fdare2compete.com%2Fpartners-help%3Futm_campaign=3Dsite-email=
+s%26utm_medium=3Dsite-emails%26utm_source=3Dsubmission-deleted-for-myn=
+tra-hackerramp-campus-edition/1/0109017503b49c36-2d1486a5-a414-41f0-b6=
+1e-87db9093e04c-000000/YTrOsQeE14rNNFXeWSUBVo2G_N0=3D1" target=3D"_bla=
+nk" style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: b=
+order-box; text-decoration: underline; color: #1077d6;">
+              partnering with colleges
+            </a>
+          </td>
+        </tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" align=3D"center" bgcolor=3D=
+"#ffffff" border=3D"0" width=3D"600" class=3D"full" style=3D"font-fami=
+ly: Avenir, Helvetica, sans-serif; box-sizing: border-box; border-coll=
+apse: collapse; mso-table-lspace: 0px; mso-table-rspace: 0px; margin: =
+20px auto;"><tbody style=3D"font-family: Avenir, Helvetica, sans-serif=
+; box-sizing: border-box;">
+<tr>
+<td style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: b=
+order-box; text-align: center; padding-bottom: 15px;">
+            <table style=3D"font-family: Avenir, Helvetica, sans-serif=
+; box-sizing: border-box; border-collapse: collapse; mso-table-lspace:=
+ 0px; mso-table-rspace: 0px; width: 100%;"><tr>
+<td class=3D"appbtm appmr" style=3D"font-family: Avenir, Helvetica, sa=
+ns-serif; box-sizing: border-box; border-right: 1px dashed #d2d2d2;">
+                  <p style=3D"margin-top: 0; font-family: Avenir,Helve=
+tica,sans-serif; box-sizing: border-box; padding: 0; display: block; f=
+ont-style: normal; letter-spacing: normal; color: #777777; font-size: =
+14px; font-weight: 400; line-height: 20px; text-align: center; margin:=
+ 0 0 10px 0;">
+                    Stay Updated! Follow us on:
+                  </p>
+                  <div style=3D"font-family: Avenir,Helvetica,sans-ser=
+if; box-sizing: border-box;">
+                    <a href=3D"https://v2l62cdp.r.ap-south-1.awstrack.=
+me/L0/https:%2F%2Fwww.instagram.com%2Fdare2compete%2F/1/0109017503b49c=
+36-2d1486a5-a414-41f0-b61e-87db9093e04c-000000/reHnDVCYrQS2VUYPZu9gxv8=
+ROXI=3D1" style=3D"font-family: Avenir,Helvetica,sans-serif; box-sizin=
+g: border-box; color: #3869d4; margin: 0 2px; border: 0; text-decorati=
+on: none; display: inline-block;" target=3D"_blank">
+                      <img height=3D"40" src=3D"https://d8it4huxumps7.=
+cloudfront.net/uploads/images/emailer/d2c-instagram-icon.png" style=3D=
+"font-family: Avenir,Helvetica,sans-serif; box-sizing: border-box; out=
+line: none!important; display: block; height: auto; margin: 0px; paddi=
+ng: 0px; float: none; max-width: 100%; vertical-align: middle; border:=
+ none; color: #fff; width: 40px;" width=3D"40"></a>
+                    <a href=3D"https://v2l62cdp.r.ap-south-1.awstrack.=
+me/L0/https:%2F%2Fwww.facebook.com%2FDare2compete%3Ffref=3Dts/1/010901=
+7503b49c36-2d1486a5-a414-41f0-b61e-87db9093e04c-000000/9a_zKrILLs5_g53=
+CtSTr4jE4uKo=3D1" style=3D"font-family: Avenir,Helvetica,sans-serif; b=
+ox-sizing: border-box; color: #3869d4; margin: 0 2px; border: 0; text-=
+decoration: none; display: inline-block;" target=3D"_blank"><img heigh=
+t=3D"40" src=3D"https://d8it4huxumps7.cloudfront.net/uploads/images/em=
+ailer/d2c-facebook.png" style=3D"font-family: Avenir,Helvetica,sans-se=
+rif; box-sizing: border-box; outline: none!important; display: block; =
+height: auto; margin: 0px; padding: 0px; float: none; max-width: 100%;=
+ vertical-align: middle; border: none; color: #fff; width: 40px;" widt=
+h=3D"40"></a>
+                    <a href=3D"https://v2l62cdp.r.ap-south-1.awstrack.=
+me/L0/https:%2F%2Fwww.linkedin.com%2Fcompany%2F13605500%2F/1/010901750=
+3b49c36-2d1486a5-a414-41f0-b61e-87db9093e04c-000000/NKslZ7wpTQp2l5jzIw=
+bhDVjZmUs=3D1" style=3D"font-family: Avenir,Helvetica,sans-serif; box-=
+sizing: border-box; color: #3869d4; margin: 0 2px; border: 0; text-dec=
+oration: none; display: inline-block;" target=3D"_blank">
+                      <img height=3D"40" src=3D"https://d8it4huxumps7.=
+cloudfront.net/uploads/images/emailer/d2c-linkedin.png" style=3D"font-=
+family: Avenir,Helvetica,sans-serif; box-sizing: border-box; outline: =
+none!important; display: block; height: auto; margin: 0px; padding: 0p=
+x; float: none; max-width: 100%; vertical-align: middle; border: none;=
+ color: #fff; width: 40px;" width=3D"40"></a>
+                    <a href=3D"https://v2l62cdp.r.ap-south-1.awstrack.=
+me/L0/https:%2F%2Ftwitter.com%2FDare2Compete/1/0109017503b49c36-2d1486=
+a5-a414-41f0-b61e-87db9093e04c-000000/6JqyDcYNAKqpTBfltosbpFljktk=3D1"=
+ style=3D"font-family: Avenir,Helvetica,sans-serif; box-sizing: border=
+-box; color: #3869d4; margin: 0 2px; border: 0; text-decoration: none;=
+ display: inline-block;" target=3D"_blank">
+                      <img height=3D"40" src=3D"https://d8it4huxumps7.=
+cloudfront.net/uploads/images/emailer/d2c-twitter.png" style=3D"font-f=
+amily: Avenir,Helvetica,sans-serif; box-sizing: border-box; outline: n=
+one!important; display: block; height: auto; margin: 0px; padding: 0px=
+; float: none; max-width: 100%; vertical-align: middle; border: none; =
+color: #fff; width: 40px;" width=3D"40"></a>
+                    <a href=3D"https://v2l62cdp.r.ap-south-1.awstrack.=
+me/L0/https:%2F%2Fwww.youtube.com%2Fchannel%2FUC8g9cWvHj0_qkxBJlhACeHQ=
+/1/0109017503b49c36-2d1486a5-a414-41f0-b61e-87db9093e04c-000000/fQWb6i=
+6AwLQax27P_p8Iwsb3rIg=3D1" style=3D"font-family: Avenir,Helvetica,sans=
+-serif; box-sizing: border-box; color: #3869d4; margin: 0 2px; border:=
+ 0; text-decoration: none; display: inline-block;" target=3D"_blank">
+                      <img height=3D"40" src=3D"https://d8it4huxumps7.=
+cloudfront.net/uploads/images/emailer/d2c-youtube.png" style=3D"font-f=
+amily: Avenir,Helvetica,sans-serif; box-sizing: border-box; outline: n=
+one!important; display: block; height: auto; margin: 0px; padding: 0px=
+; float: none; max-width: 100%; vertical-align: middle; border: none; =
+color: #fff; width: 40px;" width=3D"40"></a>
+                  </div>
+                </td>
+                <td class=3D"appbtm" style=3D"font-family: Avenir, Hel=
+vetica, sans-serif; box-sizing: border-box;">
+                  <p style=3D"margin-top: 0; font-family: Avenir,Helve=
+tica,sans-serif; box-sizing: border-box; padding: 0; display: block; f=
+ont-style: normal; letter-spacing: normal; color: #777777; font-size: =
+14px; font-weight: 400; line-height: 20px; text-align: center; margin:=
+ 0 0 10px 0;">
+                    Download Our App
+                  </p>
+                  <div style=3D"font-family: Avenir,Helvetica,sans-ser=
+if; box-sizing: border-box;">
+                    <a href=3D"https://v2l62cdp.r.ap-south-1.awstrack.=
+me/L0/https:%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid=3Dcom.=
+dare2compete.app/2/0109017503b49c36-2d1486a5-a414-41f0-b61e-87db9093e0=
+4c-000000/jkYMhlH5cJVH0_KhEVhFA4gV6ok=3D1" style=3D"font-family: Aveni=
+r,Helvetica,sans-serif; box-sizing: border-box; color: #3869d4; margin=
+: 0 2px; border: 0; text-decoration: none; display: inline-block;" tar=
+get=3D"_blank">
+                      <img height=3D"40" src=3D"https://d8it4huxumps7.=
+cloudfront.net/uploads/images/emailer/d2c-play-store.png" style=3D"fon=
+t-family: Avenir,Helvetica,sans-serif; box-sizing: border-box; outline=
+: none!important; display: block; height: auto; margin: 0px; padding: =
+0px; float: none; max-width: 100%; vertical-align: middle; border: non=
+e; color: #fff;" width=3D"135"></a>
+                  </div>
+                </td>
+              </tr></table>
+</td>
+        </tr>
+<tr>
+<td style=3D"font-family: Avenir,Helvetica,sans-serif; box-sizing: bor=
+der-box; padding: 0;" valign=3D"top">
+            <p style=3D"font-family: Avenir,Helvetica,sans-serif; box-=
+sizing: border-box; padding: 0; display: block; font-style: normal; le=
+tter-spacing: normal; margin-top: 0; color: #777777; font-size: 12px; =
+font-weight: 400; line-height: 20px; text-align: center; margin: 0;">
+            In case you have any queries, please reach out to us at=20
+              <a href=3D"http://v2l62cdp.r.ap-south-1.awstrack.me/L0/m=
+ailTo:help@dare2compete.com/1/0109017503b49c36-2d1486a5-a414-41f0-b61e=
+-87db9093e04c-000000/r3L5N10AIJ6H_bwR0CIn7qn7D4M=3D1" style=3D"font-fa=
+mily: Avenir,Helvetica,sans-serif; box-sizing: border-box; color: #777=
+777; text-decoration: underline;" target=3D"_blank">help@dare2compete.=
+com</a>
+            </p>
+            <p style=3D"font-family: Avenir,Helvetica,sans-serif; box-=
+sizing: border-box; padding: 0; display: block; font-style: normal; le=
+tter-spacing: normal; margin-top: 0; color: #777777; font-size: 12px; =
+font-weight: 400; line-height: 20px; text-align: center; margin: 0;">
+              =C2=A9 2020 Dare2Compete. All rights reserved
+            </p>
+          </td>
+        </tr>
+</tbody></table>
+<img alt=3D"" src=3D"http://v2l62cdp.r.ap-south-1.awstrack.me/I0/01090=
+17503b49c36-2d1486a5-a414-41f0-b61e-87db9093e04c-000000/zccHY8kBvrvNYQ=
+AtLrje6B5-dD4=3D1" style=3D"display: none; width: 1px; height: 1px;">
+</body>
+</html>
+
+--=-9fJgBR4U3/qhio9HYWYP5g==--
